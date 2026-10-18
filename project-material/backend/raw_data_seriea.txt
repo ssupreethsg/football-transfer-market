@@ -1,0 +1,577 @@
+### Atalanta BC
+Marco Carnesecchi | GK | 24 | Italy | Atalanta
+Rui Patrício | GK | 36 | Portugal | Atalanta
+Francesco Rossi | GK | 33 | Italy | Atalanta
+Rafael Tolói | DEF | 34 | Italy | Atalanta
+Odilon Kossounou | DEF | 23 | Ivory Coast | Atalanta
+Isak Hien | DEF | 25 | Sweden | Atalanta
+Ben Godfrey | DEF | 26 | England | Atalanta
+Berat Djimsiti | DEF | 31 | Albania | Atalanta
+Giorgio Scalvini | DEF | 21 | Italy | Atalanta
+Sead Kolašinac | DEF | 31 | Bosnia and Herzegovina | Atalanta
+Raoul Bellanova | DEF | 24 | Italy | Atalanta
+Matteo Ruggeri | DEF | 22 | Italy | Atalanta
+Davide Zappacosta | DEF | 32 | Italy | Atalanta
+Brandon Soppy | DEF | 22 | France | Atalanta
+Marten de Roon | MID | 33 | Netherlands | Atalanta
+Mario Pašalić | MID | 29 | Croatia | Atalanta
+Éderson | MID | 25 | Brazil | Atalanta
+Lazar Samardžić | MID | 22 | Serbia | Atalanta
+Ibrahim Sulemana | MID | 21 | Ghana | Atalanta
+Marco Brescianini | MID | 24 | Italy | Atalanta
+Juan Cuadrado | MID | 36 | Colombia | Atalanta
+Charles De Ketelaere | FWD | 23 | Belgium | Atalanta
+Ademola Lookman | FWD | 27 | Nigeria | Atalanta
+Nicolò Zaniolo | FWD | 25 | Italy | Atalanta
+Gianluca Scamacca | FWD | 25 | Italy | Atalanta
+Mateo Retegui | FWD | 25 | Italy | Atalanta
+
+### Bologna FC 1909
+Łukasz Skorupski | GK | 33 | Poland | Bologna
+Federico Ravaglia | GK | 25 | Italy | Bologna
+Nicola Bagnolini | GK | 20 | Italy | Bologna
+Stefan Posch | DEF | 27 | Austria | Bologna
+Emil Holm | DEF | 24 | Sweden | Bologna
+Martin Erlić | DEF | 26 | Croatia | Bologna
+Nicolò Casale | DEF | 26 | Italy | Bologna
+Sam Beukema | DEF | 26 | Netherlands | Bologna
+Jhon Lucumí | DEF | 26 | Colombia | Bologna
+Juan Miranda | DEF | 24 | Spain | Bologna
+Charalampos Lykogiannis | DEF | 31 | Greece | Bologna
+Tommaso Corazza | DEF | 20 | Italy | Bologna
+Lorenzo De Silvestri | DEF | 36 | Italy | Bologna
+Nikola Moro | MID | 26 | Croatia | Bologna
+Remo Freuler | MID | 32 | Switzerland | Bologna
+Michel Aebischer | MID | 27 | Switzerland | Bologna
+Tommaso Pobega | MID | 25 | Italy | Bologna
+Lewis Ferguson | MID | 25 | Scotland | Bologna
+Giovanni Fabbian | MID | 21 | Italy | Bologna
+Kacper Urbański | MID | 20 | Poland | Bologna
+Oussama El Azzouzi | MID | 23 | Morocco | Bologna
+Niklas Pyyhtiä | MID | 21 | Finland | Bologna
+Riccardo Orsolini | FWD | 27 | Italy | Bologna
+Dan Ndoye | FWD | 24 | Switzerland | Bologna
+Jens Odgaard | FWD | 25 | Denmark | Bologna
+Jesper Karlsson | FWD | 26 | Sweden | Bologna
+Samuel Iling-Junior | FWD | 21 | England | Bologna
+Benjamín Domínguez | FWD | 21 | Argentina | Bologna
+Santiago Castro | FWD | 20 | Argentina | Bologna
+Thijs Dallinga | FWD | 24 | Netherlands | Bologna
+Nicolò Cambiaghi | FWD | 24 | Italy | Bologna
+
+### Cagliari Calcio
+Simone Scuffet | GK | 28 | Italy | Cagliari
+Alen Sherri | GK | 27 | Albania | Cagliari
+Giuseppe Ciocci | GK | 22 | Italy | Cagliari
+Tommaso Augello | DEF | 30 | Italy | Cagliari
+Sebastiano Luperto | DEF | 28 | Italy | Cagliari
+José Luis Palomino | DEF | 34 | Argentina | Cagliari
+Yerry Mina | DEF | 30 | Colombia | Cagliari
+Gabriele Zappa | DEF | 25 | Italy | Cagliari
+Mattia Felici | DEF | 23 | Italy | Cagliari
+Mateusz Wieteska | DEF | 27 | Poland | Cagliari
+Adam Obert | DEF | 22 | Slovakia | Cagliari
+Paulo Azzi | DEF | 30 | Brazil | Cagliari
+Gianluca Gaetano | MID | 24 | Italy | Cagliari
+Michel Adopo | MID | 24 | France | Cagliari
+Matteo Prati | MID | 20 | Italy | Cagliari
+Răzvan Marin | MID | 28 | Romania | Cagliari
+Jakub Jankto | MID | 28 | Czech Republic | Cagliari
+Nicolas Viola | MID | 35 | Italy | Cagliari
+Alessandro Deiola | MID | 29 | Italy | Cagliari
+Antoine Makoumbou | MID | 26 | Congo | Cagliari
+Gianluca Lapadula | FWD | 34 | Peru | Cagliari
+Roberto Piccoli | FWD | 23 | Italy | Cagliari
+Zito Luvumbo | FWD | 22 | Angola | Cagliari
+Kingstone Mutandwa | FWD | 21 | Zambia | Cagliari
+Leonardo Pavoletti | FWD | 36 | Italy | Cagliari
+
+### Como 1907
+Pepe Reina | GK | 42 | Spain | Como
+Emil Audero | GK | 27 | Italy | Como
+Mauro Vigorito | GK | 34 | Italy | Como
+Marc-Oliver Kempf | DEF | 29 | Germany | Como
+Alberto Moreno | DEF | 32 | Spain | Como
+Edoardo Goldaniga | DEF | 31 | Italy | Como
+Alberto Dossena | DEF | 26 | Italy | Como
+Ignace Van der Brempt | DEF | 22 | Belgium | Como
+Álex Valle | DEF | 20 | Spain | Como
+Federico Barba | DEF | 31 | Italy | Como
+Marco Sala | DEF | 25 | Italy | Como
+Felipe Jack | DEF | 18 | Brazil | Como
+Nico Paz | MID | 20 | Argentina | Como
+Máximo Perrone | MID | 21 | Argentina | Como
+Yannik Engelhardt | MID | 23 | Germany | Como
+Sergi Roberto | MID | 32 | Spain | Como
+Daniele Baselli | MID | 32 | Italy | Como
+Lucas Da Cunha | MID | 23 | France | Como
+Ben Lhassine Kone | MID | 24 | Ivory Coast | Como
+Gabriel Strefezza | FWD | 27 | Brazil | Como
+Alieu Fadera | FWD | 23 | Gambia | Como
+Patrick Cutrone | FWD | 26 | Italy | Como
+Andrea Belotti | FWD | 30 | Italy | Como
+Ali Jasim | FWD | 20 | Iraq | Como
+Simone Verdi | FWD | 32 | Italy | Como
+Alessandro Gabrielloni | FWD | 30 | Italy | Como
+Alberto Cerri | FWD | 28 | Italy | Como
+
+### Empoli FC
+Devis Vásquez | GK | 26 | Colombia | Empoli
+Samuele Perisan | GK | 27 | Italy | Empoli
+Federico Brancolini | GK | 23 | Italy | Empoli
+Jacopo Seghetti | GK | 19 | Italy | Empoli
+Saba Goglichidze | DEF | 20 | Georgia | Empoli
+Ardian Ismajli | DEF | 28 | Albania | Empoli
+Mattia Viti | DEF | 22 | Italy | Empoli
+Giuseppe Pezzella | DEF | 27 | Italy | Empoli
+Liberato Cacace | DEF | 24 | New Zealand | Empoli
+Mattia De Sciglio | DEF | 32 | Italy | Empoli
+Tyronne Ebuehi | DEF | 29 | Nigeria | Empoli
+Junior Sambia | DEF | 28 | France | Empoli
+Luca Marianucci | DEF | 20 | Italy | Empoli
+Liam Henderson | MID | 28 | Scotland | Empoli
+Alberto Grassi | MID | 29 | Italy | Empoli
+Youssef Maleh | MID | 26 | Morocco | Empoli
+Jacopo Fazzini | MID | 21 | Italy | Empoli
+Faustino Anjorin | MID | 23 | England | Empoli
+Nicolas Haas | MID | 28 | Switzerland | Empoli
+Szymon Żurkowski | MID | 27 | Poland | Empoli
+Emmanuel Gyasi | FWD | 30 | Ghana | Empoli
+Sebastiano Esposito | FWD | 22 | Italy | Empoli
+Lorenzo Colombo | FWD | 22 | Italy | Empoli
+Ola Solbakken | FWD | 26 | Norway | Empoli
+Pietro Pellegri | FWD | 23 | Italy | Empoli
+Ismaël Konaté | FWD | 18 | Ivory Coast | Empoli
+
+### ACF Fiorentina
+David De Gea | GK | 34 | Spain | Fiorentina
+Pietro Terracciano | GK | 34 | Italy | Fiorentina
+Tommaso Martinelli | GK | 18 | Italy | Fiorentina
+Dodô | DEF | 26 | Brazil | Fiorentina
+Robin Gosens | DEF | 30 | Germany | Fiorentina
+Luca Ranieri | DEF | 25 | Italy | Fiorentina
+Pietro Comuzzo | DEF | 19 | Italy | Fiorentina
+Fabiano Parisi | DEF | 24 | Italy | Fiorentina
+Marin Pongračić | DEF | 27 | Croatia | Fiorentina
+Lucas Martínez Quarta | DEF | 28 | Argentina | Fiorentina
+Cristiano Biraghi | DEF | 32 | Italy | Fiorentina
+Michael Kayode | DEF | 20 | Italy | Fiorentina
+Matías Moreno | DEF | 21 | Argentina | Fiorentina
+Danilo Cataldi | MID | 30 | Italy | Fiorentina
+Rolando Mandragora | MID | 27 | Italy | Fiorentina
+Yacine Adli | MID | 24 | France | Fiorentina
+Amir Richardson | MID | 22 | Morocco | Fiorentina
+Edoardo Bove | MID | 22 | Italy | Fiorentina
+Andrea Colpani | MID | 25 | Italy | Fiorentina
+Cher Ndour | MID | 20 | Italy | Fiorentina
+Albert Guðmundsson | FWD | 27 | Iceland | Fiorentina
+Moise Kean | FWD | 24 | Italy | Fiorentina
+Lucas Beltrán | FWD | 23 | Argentina | Fiorentina
+Riccardo Sottil | FWD | 25 | Italy | Fiorentina
+Christian Kouamé | FWD | 27 | Ivory Coast | Fiorentina
+Jonathan Ikoné | FWD | 26 | France | Fiorentina
+
+### Genoa CFC
+Nicola Leali | GK | 31 | Italy | Genoa
+Pierluigi Gollini | GK | 29 | Italy | Genoa
+Franz Stolz | GK | 23 | Austria | Genoa
+Daniele Sommariva | GK | 27 | Italy | Genoa
+Stefano Sabelli | DEF | 31 | Italy | Genoa
+Aarón Martín | DEF | 27 | Spain | Genoa
+Johan Vásquez | DEF | 26 | Mexico | Genoa
+Alessandro Zanoli | DEF | 24 | Italy | Genoa
+Koni De Winter | DEF | 22 | Belgium | Genoa
+Mattia Bani | DEF | 31 | Italy | Genoa
+Brooke Norton-Cuffy | DEF | 20 | England | Genoa
+Alan Matturro | DEF | 20 | Uruguay | Genoa
+Alessandro Vogliacco | DEF | 26 | Italy | Genoa
+Honest Ahanor | DEF | 16 | Italy | Genoa
+Morten Frendrup | MID | 23 | Denmark | Genoa
+Morten Thorsby | MID | 28 | Norway | Genoa
+Fabio Miretti | MID | 21 | Italy | Genoa
+Milan Badelj | MID | 35 | Croatia | Genoa
+Patrizio Masini | MID | 23 | Italy | Genoa
+Ruslan Malinovskyi | MID | 31 | Ukraine | Genoa
+Emil Bohinen | MID | 25 | Norway | Genoa
+Junior Messias | MID | 33 | Brazil | Genoa
+Andrea Pinamonti | FWD | 25 | Italy | Genoa
+Vitinha | FWD | 24 | Portugal | Genoa
+Jeff Ekhator | FWD | 18 | Italy | Genoa
+Caleb Ekuban | FWD | 30 | Ghana | Genoa
+Mario Balotelli | FWD | 34 | Italy | Genoa
+David Ankeye | FWD | 22 | Nigeria | Genoa
+
+### Hellas Verona FC
+Lorenzo Montipò | GK | 28 | Italy | Hellas Verona
+Simone Perilli | GK | 29 | Italy | Hellas Verona
+Alessandro Berardi | GK | 33 | Italy | Hellas Verona
+Giangiacomo Magnani | DEF | 29 | Italy | Hellas Verona
+Paweł Dawidowicz | DEF | 29 | Poland | Hellas Verona
+Jackson Tchatchoua | DEF | 23 | Cameroon | Hellas Verona
+Domagoj Bradarić | DEF | 24 | Croatia | Hellas Verona
+Diego Coppola | DEF | 20 | Italy | Hellas Verona
+Flavius Daniliuc | DEF | 23 | Austria | Hellas Verona
+Daniele Ghilardi | DEF | 21 | Italy | Hellas Verona
+Martin Frese | DEF | 26 | Denmark | Hellas Verona
+Yllan Okou | DEF | 21 | France | Hellas Verona
+Christian Corradi | DEF | 19 | Italy | Hellas Verona
+Ondrej Duda | MID | 30 | Slovakia | Hellas Verona
+Suat Serdar | MID | 27 | Germany | Hellas Verona
+Reda Belahyane | MID | 20 | Morocco | Hellas Verona
+Abdou Harroui | MID | 26 | Morocco | Hellas Verona
+Tomáš Suslov | MID | 22 | Slovakia | Hellas Verona
+Darko Lazović | MID | 34 | Serbia | Hellas Verona
+Dani Silva | MID | 24 | Portugal | Hellas Verona
+Ayanda Sishuba | MID | 19 | Belgium | Hellas Verona
+Casper Tengstedt | FWD | 24 | Denmark | Hellas Verona
+Daniel Mosquera | FWD | 25 | Colombia | Hellas Verona
+Amin Sarr | FWD | 23 | Sweden | Hellas Verona
+Dailon Livramento | FWD | 23 | Cape Verde | Hellas Verona
+Faride Alidou | FWD | 23 | Germany | Hellas Verona
+Mathis Lambourde | FWD | 18 | France | Hellas Verona
+
+### Inter Milan
+Yann Sommer | GK | 36 | Switzerland | Inter Milan
+Josep Martínez | GK | 26 | Spain | Inter Milan
+Raffaele Di Gennaro | GK | 31 | Italy | Inter Milan
+Denzel Dumfries | DEF | 28 | Netherlands | Inter Milan
+Federico Dimarco | DEF | 27 | Italy | Inter Milan
+Alessandro Bastoni | DEF | 25 | Italy | Inter Milan
+Francesco Acerbi | DEF | 36 | Italy | Inter Milan
+Matteo Darmian | DEF | 35 | Italy | Inter Milan
+Stefan de Vrij | DEF | 32 | Netherlands | Inter Milan
+Yann Aurel Bisseck | DEF | 24 | Germany | Inter Milan
+Carlos Augusto | DEF | 25 | Brazil | Inter Milan
+Benjamin Pavard | DEF | 28 | France | Inter Milan
+Tomás Palacios | DEF | 21 | Argentina | Inter Milan
+Tajon Buchanan | DEF | 25 | Canada | Inter Milan
+Henrikh Mkhitaryan | MID | 35 | Armenia | Inter Milan
+Nicolò Barella | MID | 27 | Italy | Inter Milan
+Hakan Çalhanoğlu | MID | 30 | Turkey | Inter Milan
+Davide Frattesi | MID | 25 | Italy | Inter Milan
+Piotr Zieliński | MID | 30 | Poland | Inter Milan
+Kristjan Asllani | MID | 22 | Albania | Inter Milan
+Lautaro Martínez | FWD | 27 | Argentina | Inter Milan
+Marcus Thuram | FWD | 27 | France | Inter Milan
+Mehdi Taremi | FWD | 32 | Iran | Inter Milan
+Marko Arnautović | FWD | 35 | Austria | Inter Milan
+Joaquín Correa | FWD | 30 | Argentina | Inter Milan
+
+### Juventus FC
+Michele Di Gregorio | GK | 27 | Italy | Juventus
+Mattia Perin | GK | 32 | Italy | Juventus
+Carlo Pinsoglio | GK | 34 | Italy | Juventus
+Bremer | DEF | 27 | Brazil | Juventus
+Federico Gatti | DEF | 26 | Italy | Juventus
+Pierre Kalulu | DEF | 24 | France | Juventus
+Danilo | DEF | 33 | Brazil | Juventus
+Juan Cabal | DEF | 23 | Colombia | Juventus
+Andrea Cambiaso | DEF | 24 | Italy | Juventus
+Nicolò Savona | DEF | 21 | Italy | Juventus
+Jonas Rouhi | DEF | 20 | Sweden | Juventus
+Manuel Locatelli | MID | 26 | Italy | Juventus
+Teun Koopmeiners | MID | 26 | Netherlands | Juventus
+Khéphren Thuram | MID | 23 | France | Juventus
+Douglas Luiz | MID | 26 | Brazil | Juventus
+Weston McKennie | MID | 26 | United States | Juventus
+Nicolò Fagioli | MID | 23 | Italy | Juventus
+Arthur Melo | MID | 28 | Brazil | Juventus
+Vasilije Adžić | MID | 18 | Montenegro | Juventus
+Dušan Vlahović | FWD | 24 | Serbia | Juventus
+Kenan Yıldız | FWD | 19 | Turkey | Juventus
+Nico González | FWD | 26 | Argentina | Juventus
+Francisco Conceição | FWD | 22 | Portugal | Juventus
+Timothy Weah | FWD | 24 | United States | Juventus
+Arkadiusz Milik | FWD | 30 | Poland | Juventus
+Samuel Mbangula | FWD | 20 | Belgium | Juventus
+
+### SS Lazio
+Ivan Provedel | GK | 30 | Italy | Lazio
+Christos Mandas | GK | 23 | Greece | Lazio
+Alessio Furlanetto | GK | 22 | Italy | Lazio
+Davide Renzetti | GK | 18 | Italy | Lazio
+Adam Marušić | DEF | 32 | Montenegro | Lazio
+Alessio Romagnoli | DEF | 29 | Italy | Lazio
+Samuel Gigot | DEF | 31 | France | Lazio
+Nuno Tavares | DEF | 24 | Portugal | Lazio
+Luca Pellegrini | DEF | 25 | Italy | Lazio
+Patric | DEF | 31 | Spain | Lazio
+Mario Gila | DEF | 24 | Spain | Lazio
+Elseid Hysaj | DEF | 30 | Albania | Lazio
+Manuel Lazzari | DEF | 31 | Italy | Lazio
+Matteo Guendouzi | MID | 25 | France | Lazio
+Nicolò Rovella | MID | 23 | Italy | Lazio
+Gaetano Castrovilli | MID | 27 | Italy | Lazio
+Matías Vecino | MID | 33 | Uruguay | Lazio
+Fisayo Dele-Bashiru | MID | 23 | Nigeria | Lazio
+Toma Bašić | MID | 28 | Croatia | Lazio
+Jean-Daniel Akpa Akpro | MID | 32 | Ivory Coast | Lazio
+André Anderson | MID | 25 | Italy | Lazio
+Valentín Castellanos | FWD | 26 | Argentina | Lazio
+Mattia Zaccagni | FWD | 29 | Italy | Lazio
+Pedro | FWD | 37 | Spain | Lazio
+Boulaye Dia | FWD | 28 | Senegal | Lazio
+Gustav Isaksen | FWD | 23 | Denmark | Lazio
+Tijjani Noslin | FWD | 25 | Netherlands | Lazio
+Loum Tchaouna | FWD | 21 | France | Lazio
+Diego González | FWD | 21 | Paraguay | Lazio
+
+### US Lecce
+Wladimiro Falcone | GK | 29 | Italy | Lecce
+Marco Bleve | GK | 29 | Italy | Lecce
+Alexandru Borbei | GK | 21 | Romania | Lecce
+Christian Früchtl | GK | 24 | Germany | Lecce
+Federico Baschirotto | DEF | 28 | Italy | Lecce
+Kialonda Gaspar | DEF | 27 | Angola | Lecce
+Antonino Gallo | DEF | 24 | Italy | Lecce
+Frédéric Guilbert | DEF | 29 | France | Lecce
+Gaby Jean | DEF | 24 | France | Lecce
+Andy Pelmard | DEF | 24 | France | Lecce
+Kevin Bonifazi | DEF | 28 | Italy | Lecce
+Lassana Coulibaly | MID | 28 | Mali | Lecce
+Ylber Ramadani | MID | 28 | Albania | Lecce
+Hamza Rafia | MID | 25 | Tunisia | Lecce
+Mohamed Kaba | MID | 23 | France | Lecce
+Balthazar Pierret | MID | 24 | France | Lecce
+Medon Berisha | MID | 21 | Albania | Lecce
+Filip Marchwiński | MID | 22 | Poland | Lecce
+Þórir Jóhann Helgason | MID | 24 | Iceland | Lecce
+Nikola Krstović | FWD | 24 | Montenegro | Lecce
+Lameck Banda | FWD | 23 | Zambia | Lecce
+Santiago Pierotti | FWD | 23 | Argentina | Lecce
+Ante Rebić | FWD | 31 | Croatia | Lecce
+Tete Morente | FWD | 28 | Spain | Lecce
+Nicola Sansone | FWD | 33 | Italy | Lecce
+Rareș Burnete | FWD | 20 | Romania | Lecce
+
+### AC Milan
+Mike Maignan | GK | 29 | France | AC Milan
+Marco Sportiello | GK | 32 | Italy | AC Milan
+Lorenzo Torriani | GK | 19 | Italy | AC Milan
+Theo Hernández | DEF | 27 | France | AC Milan
+Fikayo Tomori | DEF | 27 | England | AC Milan
+Malick Thiaw | DEF | 23 | Germany | AC Milan
+Matteo Gabbia | DEF | 25 | Italy | AC Milan
+Emerson Royal | DEF | 25 | Brazil | AC Milan
+Davide Calabria | DEF | 28 | Italy | AC Milan
+Strahinja Pavlović | DEF | 23 | Serbia | AC Milan
+Filippo Terracciano | DEF | 21 | Italy | AC Milan
+Álex Jiménez | DEF | 19 | Spain | AC Milan
+Youssouf Fofana | MID | 25 | France | AC Milan
+Ruben Loftus-Cheek | MID | 28 | England | AC Milan
+Tijjani Reijnders | MID | 26 | Netherlands | AC Milan
+Yunus Musah | MID | 22 | United States | AC Milan
+Ismaël Bennacer | MID | 27 | Algeria | AC Milan
+Kevin Zeroli | MID | 19 | Italy | AC Milan
+Christian Pulisic | FWD | 26 | United States | AC Milan
+Rafael Leão | FWD | 25 | Portugal | AC Milan
+Álvaro Morata | FWD | 32 | Spain | AC Milan
+Tammy Abraham | FWD | 27 | England | AC Milan
+Noah Okafor | FWD | 24 | Switzerland | AC Milan
+Samuel Chukwueze | FWD | 25 | Nigeria | AC Milan
+Luka Jović | FWD | 27 | Serbia | AC Milan
+Francesco Camarda | FWD | 16 | Italy | AC Milan
+
+### AC Monza
+Stefano Turati | GK | 23 | Italy | Monza
+Semuel Pizzignacco | GK | 23 | Italy | Monza
+Alessandro Sorrentino | GK | 22 | Italy | Monza
+Pedro Pereira | DEF | 26 | Portugal | Monza
+Georgios Kyriakopoulos | DEF | 28 | Greece | Monza
+Armando Izzo | DEF | 32 | Italy | Monza
+Andrea Carboni | DEF | 23 | Italy | Monza
+Pablo Marí | DEF | 31 | Spain | Monza
+Samuele Birindelli | DEF | 25 | Italy | Monza
+Danilo D'Ambrosio | DEF | 36 | Italy | Monza
+Luca Caldirola | DEF | 33 | Italy | Monza
+Alessandro Bianco | MID | 22 | Italy | Monza
+Warren Bondo | MID | 21 | France | Monza
+Patrick Ciurria | MID | 29 | Italy | Monza
+Matteo Pessina | MID | 27 | Italy | Monza
+Mattia Valoti | MID | 31 | Italy | Monza
+Roberto Gagliardini | MID | 30 | Italy | Monza
+Stefano Sensi | MID | 29 | Italy | Monza
+Omari Forson | MID | 20 | England | Monza
+Dany Mota | FWD | 26 | Portugal | Monza
+Gianluca Caprari | FWD | 31 | Italy | Monza
+Daniel Maldini | FWD | 23 | Italy | Monza
+Milan Đurić | FWD | 34 | Bosnia and Herzegovina | Monza
+Samuele Vignato | FWD | 20 | Italy | Monza
+Mirko Marić | FWD | 29 | Croatia | Monza
+Andrea Petagna | FWD | 29 | Italy | Monza
+
+### SSC Napoli
+Alex Meret | GK | 27 | Italy | Napoli
+Elia Caprile | GK | 23 | Italy | Napoli
+Nikita Contini | GK | 28 | Italy | Napoli
+Giovanni Di Lorenzo | DEF | 31 | Italy | Napoli
+Alessandro Buongiorno | DEF | 25 | Italy | Napoli
+Amir Rrahmani | DEF | 30 | Kosovo | Napoli
+Mathías Olivera | DEF | 27 | Uruguay | Napoli
+Leonardo Spinazzola | DEF | 31 | Italy | Napoli
+Pasquale Mazzocchi | DEF | 29 | Italy | Napoli
+Juan Jesus | DEF | 33 | Brazil | Napoli
+Rafa Marín | DEF | 22 | Spain | Napoli
+Stanislav Lobotka | MID | 30 | Slovakia | Napoli
+André-Frank Zambo Anguissa | MID | 29 | Cameroon | Napoli
+Scott McTominay | MID | 28 | Scotland | Napoli
+Billy Gilmour | MID | 23 | Scotland | Napoli
+Michael Folorunsho | MID | 26 | Italy | Napoli
+Romelu Lukaku | FWD | 31 | Belgium | Napoli
+Khvicha Kvaratskhelia | FWD | 23 | Georgia | Napoli
+Matteo Politano | FWD | 31 | Italy | Napoli
+David Neres | FWD | 27 | Brazil | Napoli
+Giacomo Raspadori | FWD | 24 | Italy | Napoli
+Giovanni Simeone | FWD | 29 | Argentina | Napoli
+Cyril Ngonge | FWD | 24 | Belgium | Napoli
+Alessio Zerbin | FWD | 25 | Italy | Napoli
+
+### Parma Calcio 1913
+Zion Suzuki | GK | 22 | Japan | Parma
+Leandro Chichizola | GK | 34 | Argentina | Parma
+Edoardo Corvi | GK | 23 | Italy | Parma
+Enrico Del Prato | DEF | 25 | Italy | Parma
+Emanuele Valeri | DEF | 26 | Italy | Parma
+Botond Balogh | DEF | 22 | Hungary | Parma
+Lautaro Valenti | DEF | 25 | Argentina | Parma
+Yordan Osorio | DEF | 30 | Venezuela | Parma
+Woyo Coulibaly | DEF | 25 | France | Parma
+Giovanni Leoni | DEF | 18 | Italy | Parma
+Alessandro Circati | DEF | 21 | Australia | Parma
+Gianluca Di Chiara | DEF | 31 | Italy | Parma
+Adrián Bernabé | MID | 23 | Spain | Parma
+Hernani | MID | 30 | Brazil | Parma
+Simon Sohm | MID | 23 | Switzerland | Parma
+Nahuel Estévez | MID | 29 | Argentina | Parma
+Mandela Keita | MID | 22 | Belgium | Parma
+Antoine Hainaut | MID | 22 | France | Parma
+Drissa Camara | MID | 22 | Ivory Coast | Parma
+Wylan Cyprien | MID | 29 | France | Parma
+Ange-Yoan Bonny | FWD | 21 | France | Parma
+Dennis Man | FWD | 26 | Romania | Parma
+Valentin Mihăilă | FWD | 24 | Romania | Parma
+Pontus Almqvist | FWD | 25 | Sweden | Parma
+Matteo Cancellieri | FWD | 22 | Italy | Parma
+Adrian Benedyczak | FWD | 24 | Poland | Parma
+Gabriel Charpentier | FWD | 25 | Congo | Parma
+Mateusz Kowalski | FWD | 19 | Poland | Parma
+
+### AS Roma
+Mile Svilar | GK | 25 | Serbia | AS Roma
+Mathew Ryan | GK | 32 | Australia | AS Roma
+Renato Marin | GK | 18 | Italy | AS Roma
+Zeki Çelik | DEF | 27 | Turkey | AS Roma
+Angeliño | DEF | 27 | Spain | AS Roma
+Evan Ndicka | DEF | 25 | Ivory Coast | AS Roma
+Gianluca Mancini | DEF | 28 | Italy | AS Roma
+Mats Hummels | DEF | 36 | Germany | AS Roma
+Mario Hermoso | DEF | 29 | Spain | AS Roma
+Saud Abdulhamid | DEF | 25 | Saudi Arabia | AS Roma
+Samuel Dahl | DEF | 21 | Sweden | AS Roma
+Buba Sangaré | DEF | 17 | Spain | AS Roma
+Manu Koné | MID | 23 | France | AS Roma
+Bryan Cristante | MID | 29 | Italy | AS Roma
+Lorenzo Pellegrini | MID | 28 | Italy | AS Roma
+Leandro Paredes | MID | 30 | Argentina | AS Roma
+Enzo Le Fée | MID | 24 | France | AS Roma
+Tommaso Baldanzi | MID | 21 | Italy | AS Roma
+Niccolò Pisilli | MID | 20 | Italy | AS Roma
+Nicola Zalewski | MID | 22 | Poland | AS Roma
+Artem Dovbyk | FWD | 27 | Ukraine | AS Roma
+Paulo Dybala | FWD | 31 | Argentina | AS Roma
+Matías Soulé | FWD | 21 | Argentina | AS Roma
+Stephan El Shaarawy | FWD | 32 | Italy | AS Roma
+Alexis Saelemaekers | FWD | 25 | Belgium | AS Roma
+Eldor Shomurodov | FWD | 29 | Uzbekistan | AS Roma
+
+### Torino FC
+Vanja Milinković-Savić | GK | 27 | Serbia | Torino
+Alberto Paleari | GK | 32 | Italy | Torino
+Antonio Donnarumma | GK | 34 | Italy | Torino
+Perr Schuurs | DEF | 25 | Netherlands | Torino
+Sebastian Walukiewicz | DEF | 24 | Poland | Torino
+Saul Coco | DEF | 25 | Equatorial Guinea | Torino
+Adam Masina | DEF | 31 | Morocco | Torino
+Guillermo Maripán | DEF | 30 | Chile | Torino
+Borna Sosa | DEF | 26 | Croatia | Torino
+Mërgim Vojvoda | DEF | 29 | Kosovo | Torino
+Marcus Pedersen | DEF | 24 | Norway | Torino
+Brian Bayeye | DEF | 24 | DR Congo | Torino
+Côme Bianay Balcot | DEF | 19 | France | Torino
+Samuele Ricci | MID | 23 | Italy | Torino
+Ivan Ilić | MID | 23 | Serbia | Torino
+Karol Linetty | MID | 29 | Poland | Torino
+Adrien Tameze | MID | 30 | Cameroon | Torino
+Nikola Vlašić | MID | 27 | Croatia | Torino
+Valentino Lazaro | MID | 28 | Austria | Torino
+Gvidas Gineitis | MID | 20 | Lithuania | Torino
+Emirhan İlkhan | MID | 20 | Turkey | Torino
+Aaron Ciammaglichella | MID | 19 | Italy | Torino
+Duván Zapata | FWD | 33 | Colombia | Torino
+Ché Adams | FWD | 28 | Scotland | Torino
+Antonio Sanabria | FWD | 28 | Paraguay | Torino
+Yann Karamoh | FWD | 26 | Ivory Coast | Torino
+Zanos Savva | FWD | 19 | Cyprus | Torino
+Alieu Njie | FWD | 19 | Sweden | Torino
+
+### Udinese Calcio
+Maduka Okoye | GK | 25 | Nigeria | Udinese
+Răzvan Sava | GK | 22 | Romania | Udinese
+Daniele Padelli | GK | 39 | Italy | Udinese
+Edoardo Piana | GK | 21 | Italy | Udinese
+Jaka Bijol | DEF | 25 | Slovenia | Udinese
+Lautaro Giannetti | DEF | 31 | Argentina | Udinese
+Christian Kabasele | DEF | 33 | Belgium | Udinese
+Thomas Kristensen | DEF | 22 | Denmark | Udinese
+Isaak Touré | DEF | 21 | France | Udinese
+Enzo Ebosse | DEF | 25 | Cameroon | Udinese
+Jordan Zemura | DEF | 25 | Zimbabwe | Udinese
+Hassane Kamara | DEF | 30 | Ivory Coast | Udinese
+Kingsley Ehizibue | DEF | 29 | Nigeria | Udinese
+James Abankwah | DEF | 20 | Ireland | Udinese
+Matteo Palma | DEF | 16 | Germany | Udinese
+Sandi Lovrić | MID | 26 | Slovenia | Udinese
+Martín Payero | MID | 26 | Argentina | Udinese
+Oier Zarraga | MID | 25 | Spain | Udinese
+Jesper Karlström | MID | 29 | Sweden | Udinese
+Jürgen Ekkelenkamp | MID | 24 | Netherlands | Udinese
+Arthur Atta | MID | 21 | France | Udinese
+Rui Modesto | MID | 25 | Angola | Udinese
+Lorenzo Lucca | FWD | 24 | Italy | Udinese
+Alexis Sánchez | FWD | 36 | Chile | Udinese
+Florian Thauvin | FWD | 31 | France | Udinese
+Keinan Davis | FWD | 26 | England | Udinese
+Brenner | FWD | 24 | Brazil | Udinese
+Iker Bravo | FWD | 19 | Spain | Udinese
+Damián Pizarro | FWD | 19 | Chile | Udinese
+Gerard Deulofeu | FWD | 30 | Spain | Udinese
+
+### Venezia FC
+Jesse Joronen | GK | 31 | Finland | Venezia
+Filip Stanković | GK | 22 | Serbia | Venezia
+Matteo Grandi | GK | 32 | Italy | Venezia
+Jay Idzes | DEF | 24 | Indonesia | Venezia
+Michael Svoboda | DEF | 26 | Austria | Venezia
+Marin Šverko | DEF | 26 | Croatia | Venezia
+Giorgio Altare | DEF | 26 | Italy | Venezia
+Joel Schingtienne | DEF | 22 | Belgium | Venezia
+Fali Candé | DEF | 26 | Guinea-Bissau | Venezia
+Ridgeciano Haps | DEF | 31 | Suriname | Venezia
+Francesco Zampano | DEF | 31 | Italy | Venezia
+Franco Carboni | DEF | 21 | Argentina | Venezia
+Gianluca Busio | MID | 22 | United States | Venezia
+Hans Nicolussi Caviglia | MID | 24 | Italy | Venezia
+Alfred Duncan | MID | 31 | Ghana | Venezia
+Mikael Egill Ellertsson | MID | 22 | Iceland | Venezia
+Magnus Kofod Andersen | MID | 25 | Denmark | Venezia
+Domen Črnigoj | MID | 29 | Slovenia | Venezia
+Bjarki Steinn Bjarkason | MID | 24 | Iceland | Venezia
+Issa Doumbia | MID | 21 | Italy | Venezia
+Antonio Candela | MID | 24 | Italy | Venezia
+Joel Pohjanpalo | FWD | 30 | Finland | Venezia
+Gaetano Oristanio | FWD | 22 | Italy | Venezia
+John Yeboah | FWD | 24 | Ecuador | Venezia
+Christian Gytkjær | FWD | 34 | Denmark | Venezia
+Antonio Raimondo | FWD | 20 | Italy | Venezia
+Saad El Haddad | FWD | 19 | Morocco | Venezia
+Richie Sagrado | FWD | 20 | Belgium | Venezia

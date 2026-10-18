@@ -1,0 +1,552 @@
+### Athletic Club (Bilbao)
+Unai Simón | GK | 27 | Spain | Athletic Club
+Julen Agirrezabala | GK | 24 | Spain | Athletic Club
+Álex Padilla | GK | 21 | Mexico | Athletic Club
+Andoni Gorosabel | DEF | 28 | Spain | Athletic Club
+Dani Vivian | DEF | 25 | Spain | Athletic Club
+Aitor Paredes | DEF | 24 | Spain | Athletic Club
+Yeray Álvarez | DEF | 30 | Spain | Athletic Club
+Unai Núñez | DEF | 28 | Spain | Athletic Club
+Iñigo Lekue | DEF | 31 | Spain | Athletic Club
+Yuri Berchiche | DEF | 35 | Spain | Athletic Club
+Adama Boiro | DEF | 22 | Spain | Athletic Club
+Mikel Vesga | MID | 31 | Spain | Athletic Club
+Oihan Sancet | MID | 24 | Spain | Athletic Club
+Iñigo Ruiz de Galarreta | MID | 31 | Spain | Athletic Club
+Unai Gómez | MID | 21 | Spain | Athletic Club
+Ander Herrera | MID | 35 | Spain | Athletic Club
+Beñat Prados | MID | 24 | Spain | Athletic Club
+Mikel Jauregizar | MID | 21 | Spain | Athletic Club
+Álex Berenguer | FWD | 29 | Spain | Athletic Club
+Iñaki Williams | FWD | 30 | Ghana | Athletic Club
+Nico Williams | FWD | 22 | Spain | Athletic Club
+Álvaro Djaló | FWD | 25 | Spain | Athletic Club
+Gorka Guruzeta | FWD | 28 | Spain | Athletic Club
+Javier Martón | FWD | 25 | Spain | Athletic Club
+Nico Serrano | FWD | 22 | Spain | Athletic Club
+
+### Atlético Madrid
+Juan Musso | GK | 30 | Argentina | Atlético Madrid
+Jan Oblak | GK | 32 | Slovenia | Atlético Madrid
+Antonio Gomis | GK | 21 | Spain | Atlético Madrid
+José María Giménez | DEF | 30 | Uruguay | Atlético Madrid
+César Azpilicueta | DEF | 35 | Spain | Atlético Madrid
+Clément Lenglet | DEF | 29 | France | Atlético Madrid
+Nahuel Molina | DEF | 27 | Argentina | Atlético Madrid
+Axel Witsel | DEF | 36 | Belgium | Atlético Madrid
+Javi Galán | DEF | 30 | Spain | Atlético Madrid
+Reinildo Mandava | DEF | 31 | Mozambique | Atlético Madrid
+Robin Le Normand | DEF | 28 | Spain | Atlético Madrid
+Conor Gallagher | MID | 25 | England | Atlético Madrid
+Rodrigo De Paul | MID | 30 | Argentina | Atlético Madrid
+Koke | MID | 33 | Spain | Atlético Madrid
+Pablo Barrios | MID | 21 | Spain | Atlético Madrid
+Thomas Lemar | MID | 29 | France | Atlético Madrid
+Samuel Lino | MID | 25 | Brazil | Atlético Madrid
+Marcos Llorente | MID | 30 | Spain | Atlético Madrid
+Rodrigo Riquelme | MID | 24 | Spain | Atlético Madrid
+Antoine Griezmann | FWD | 34 | France | Atlético Madrid
+Alexander Sørloth | FWD | 29 | Norway | Atlético Madrid
+Ángel Correa | FWD | 30 | Argentina | Atlético Madrid
+Julián Alvarez | FWD | 25 | Argentina | Atlético Madrid
+Giuliano Simeone | FWD | 22 | Argentina | Atlético Madrid
+
+### FC Barcelona
+Marc-André ter Stegen | GK | 32 | Germany | FC Barcelona
+Iñaki Peña | GK | 26 | Spain | FC Barcelona
+Wojciech Szczęsny | GK | 34 | Poland | FC Barcelona
+Pau Cubarsí | DEF | 18 | Spain | FC Barcelona
+Alejandro Balde | DEF | 21 | Spain | FC Barcelona
+Ronald Araújo | DEF | 26 | Uruguay | FC Barcelona
+Íñigo Martínez | DEF | 33 | Spain | FC Barcelona
+Andreas Christensen | DEF | 28 | Denmark | FC Barcelona
+Jules Koundé | DEF | 26 | France | FC Barcelona
+Eric García | DEF | 24 | Spain | FC Barcelona
+Héctor Fort | DEF | 18 | Spain | FC Barcelona
+Gerard Martín | DEF | 23 | Spain | FC Barcelona
+Gavi | MID | 20 | Spain | FC Barcelona
+Pedri | MID | 22 | Spain | FC Barcelona
+Pablo Torre | MID | 21 | Spain | FC Barcelona
+Fermín López | MID | 21 | Spain | FC Barcelona
+Marc Casadó | MID | 21 | Spain | FC Barcelona
+Dani Olmo | MID | 26 | Spain | FC Barcelona
+Frenkie de Jong | MID | 27 | Netherlands | FC Barcelona
+Marc Bernal | MID | 17 | Spain | FC Barcelona
+Ferran Torres | FWD | 25 | Spain | FC Barcelona
+Robert Lewandowski | FWD | 36 | Poland | FC Barcelona
+Ansu Fati | FWD | 22 | Spain | FC Barcelona
+Raphinha | FWD | 28 | Brazil | FC Barcelona
+Pau Víctor | FWD | 23 | Spain | FC Barcelona
+Lamine Yamal | FWD | 17 | Spain | FC Barcelona
+
+### Real Betis
+Rui Silva | GK | 31 | Portugal | Real Betis
+Fran Vieites | GK | 25 | Spain | Real Betis
+Adrián | GK | 38 | Spain | Real Betis
+Héctor Bellerín | DEF | 30 | Spain | Real Betis
+Diego Llorente | DEF | 31 | Spain | Real Betis
+Marc Bartra | DEF | 34 | Spain | Real Betis
+Natan | DEF | 24 | Brazil | Real Betis
+Ricardo Rodríguez | DEF | 32 | Switzerland | Real Betis
+Romain Perraud | DEF | 27 | France | Real Betis
+Youssouf Sabaly | DEF | 32 | Senegal | Real Betis
+Nobel Mendy | DEF | 20 | Senegal | Real Betis
+Johnny Cardoso | MID | 23 | United States | Real Betis
+Marc Roca | MID | 28 | Spain | Real Betis
+Sergi Altimira | MID | 23 | Spain | Real Betis
+William Carvalho | MID | 32 | Portugal | Real Betis
+Pablo Fornals | MID | 29 | Spain | Real Betis
+Iker Losada | MID | 23 | Spain | Real Betis
+Giovani Lo Celso | MID | 28 | Argentina | Real Betis
+Isco | MID | 32 | Spain | Real Betis
+Abde Ezzalzouli | FWD | 23 | Morocco | Real Betis
+Chimy Ávila | FWD | 31 | Argentina | Real Betis
+Vitor Roque | FWD | 20 | Brazil | Real Betis
+Cédric Bakambu | FWD | 33 | DR Congo | Real Betis
+Juanmi | FWD | 31 | Spain | Real Betis
+Aitor Ruibal | FWD | 29 | Spain | Real Betis
+Assane Diao | FWD | 19 | Spain | Real Betis
+
+### Celta Vigo
+Iván Villar | GK | 27 | Spain | Celta Vigo
+Vicente Guaita | GK | 38 | Spain | Celta Vigo
+Carl Starfelt | DEF | 29 | Sweden | Celta Vigo
+Óscar Mingueza | DEF | 25 | Spain | Celta Vigo
+Sergio Carreira | DEF | 24 | Spain | Celta Vigo
+Joseph Aidoo | DEF | 29 | Ghana | Celta Vigo
+Jailson | DEF | 29 | Brazil | Celta Vigo
+Javi Manquillo | DEF | 30 | Spain | Celta Vigo
+Carlos Domínguez | DEF | 24 | Spain | Celta Vigo
+Mihailo Ristić | DEF | 29 | Serbia | Celta Vigo
+Marcos Alonso | DEF | 34 | Spain | Celta Vigo
+Javi Rodríguez | DEF | 21 | Spain | Celta Vigo
+Ilaix Moriba | MID | 22 | Guinea | Celta Vigo
+Fran Beltrán | MID | 26 | Spain | Celta Vigo
+Franco Cervi | MID | 30 | Argentina | Celta Vigo
+Luca de la Torre | MID | 26 | United States | Celta Vigo
+Damián Rodríguez | MID | 21 | Spain | Celta Vigo
+Hugo Sotelo | MID | 21 | Spain | Celta Vigo
+Borja Iglesias | FWD | 32 | Spain | Celta Vigo
+Anastasios Douvikas | FWD | 25 | Greece | Celta Vigo
+Iago Aspas | FWD | 37 | Spain | Celta Vigo
+Jonathan Bamba | FWD | 28 | Ivory Coast | Celta Vigo
+Pablo Durán | FWD | 23 | Spain | Celta Vigo
+Williot Swedberg | FWD | 21 | Sweden | Celta Vigo
+Tadeo Allende | FWD | 25 | Argentina | Celta Vigo
+Alfon González | FWD | 25 | Spain | Celta Vigo
+Hugo Álvarez | FWD | 21 | Spain | Celta Vigo
+
+### RCD Espanyol
+Joan García | GK | 23 | Spain | RCD Espanyol
+Fernando Pacheco | GK | 32 | Spain | RCD Espanyol
+Ángel Fortuño | GK | 23 | Spain | RCD Espanyol
+Sergi Gómez | DEF | 32 | Spain | RCD Espanyol
+Marash Kumbulla | DEF | 25 | Albania | RCD Espanyol
+Fernando Calero | DEF | 29 | Spain | RCD Espanyol
+Leandro Cabrera | DEF | 33 | Uruguay | RCD Espanyol
+Álvaro Tejero | DEF | 28 | Spain | RCD Espanyol
+Brian Oliván | DEF | 30 | Spain | RCD Espanyol
+Carlos Romero | DEF | 23 | Spain | RCD Espanyol
+Omar El Hilali | DEF | 21 | Morocco | RCD Espanyol
+Urko González de Zárate | MID | 23 | Spain | RCD Espanyol
+Pol Lozano | MID | 25 | Spain | RCD Espanyol
+Pere Milla | MID | 32 | Spain | RCD Espanyol
+José Gragera | MID | 24 | Spain | RCD Espanyol
+Edu Expósito | MID | 28 | Spain | RCD Espanyol
+Alex Král | MID | 26 | Czech Republic | RCD Espanyol
+Álvaro Aguado | MID | 28 | Spain | RCD Espanyol
+Antoniu Roca | MID | 22 | Spain | RCD Espanyol
+Javi Puado | FWD | 26 | Spain | RCD Espanyol
+Alejo Véliz | FWD | 21 | Argentina | RCD Espanyol
+Walid Cheddira | FWD | 27 | Morocco | RCD Espanyol
+Salvi Sánchez | FWD | 34 | Spain | RCD Espanyol
+Jofre Carreras | FWD | 23 | Spain | RCD Espanyol
+Irvin Cardona | FWD | 27 | France | RCD Espanyol
+Naci Ünüvar | FWD | 21 | Netherlands | RCD Espanyol
+Roberto Fernández | FWD | 22 | Spain | RCD Espanyol
+
+### Getafe CF
+David Soria | GK | 31 | Spain | Getafe
+Jiří Letáček | GK | 25 | Czech Republic | Getafe
+Djene Dakonam | DEF | 33 | Togo | Getafe
+Fabrizio Angileri | DEF | 30 | Argentina | Getafe
+Juan Berrocal | DEF | 26 | Spain | Getafe
+Álex Sola | DEF | 25 | Spain | Getafe
+Omar Alderete | DEF | 28 | Paraguay | Getafe
+Diego Rico | DEF | 32 | Spain | Getafe
+Juan Iglesias | DEF | 26 | Spain | Getafe
+Domingos Duarte | DEF | 29 | Portugal | Getafe
+Allan Nyom | DEF | 36 | Cameroon | Getafe
+Luis Milla | MID | 30 | Spain | Getafe
+Chrisantus Uche | MID | 21 | Nigeria | Getafe
+Mauro Arambarri | MID | 29 | Uruguay | Getafe
+Carles Aleñá | MID | 27 | Spain | Getafe
+Yellu Santiago | MID | 20 | Spain | Getafe
+Carles Pérez | FWD | 27 | Spain | Getafe
+Borja Mayoral | FWD | 27 | Spain | Getafe
+Bertuğ Yıldırım | FWD | 22 | Turkey | Getafe
+Peter Federico | FWD | 22 | Dominican Republic | Getafe
+Álvaro Rodríguez | FWD | 20 | Uruguay | Getafe
+Coba da Costa | FWD | 22 | Equatorial Guinea | Getafe
+
+### Girona FC
+Juan Carlos | GK | 37 | Spain | Girona
+Paulo Gazzaniga | GK | 33 | Argentina | Girona
+Pau López | GK | 30 | Spain | Girona
+Miguel Gutiérrez | DEF | 23 | Spain | Girona
+Arnau Martínez | DEF | 21 | Spain | Girona
+David López | DEF | 35 | Spain | Girona
+Juanpe | DEF | 33 | Spain | Girona
+Alejandro Francés | DEF | 22 | Spain | Girona
+Daley Blind | DEF | 34 | Netherlands | Girona
+Ladislav Krejčí | DEF | 25 | Czech Republic | Girona
+Donny van de Beek | MID | 27 | Netherlands | Girona
+Viktor Tsygankov | MID | 27 | Ukraine | Girona
+Yáser Asprilla | MID | 21 | Colombia | Girona
+Oriol Romeu | MID | 33 | Spain | Girona
+Yangel Herrera | MID | 27 | Venezuela | Girona
+Jhon Solís | MID | 20 | Colombia | Girona
+Iván Martín | MID | 26 | Spain | Girona
+Gabriel Misehouy | MID | 19 | Netherlands | Girona
+Cristhian Stuani | FWD | 38 | Uruguay | Girona
+Abel Ruiz | FWD | 25 | Spain | Girona
+Bojan Miovski | FWD | 25 | North Macedonia | Girona
+Bryan Gil | FWD | 24 | Spain | Girona
+Portu | FWD | 32 | Spain | Girona
+Arnaut Danjuma | FWD | 28 | Netherlands | Girona
+
+### CD Leganés
+Juan Soriano | GK | 27 | Spain | CD Leganés
+Marko Dmitrović | GK | 33 | Serbia | CD Leganés
+Alvin Abajas | GK | 21 | Spain | CD Leganés
+Adrià Altimira | DEF | 23 | Spain | CD Leganés
+Jorge Sáenz | DEF | 28 | Spain | CD Leganés
+Jackson Porozo | DEF | 24 | Ecuador | CD Leganés
+Sergio González | DEF | 32 | Spain | CD Leganés
+Enric Franquesa | DEF | 28 | Spain | CD Leganés
+Valentin Rosier | DEF | 28 | France | CD Leganés
+Javi Hernández | DEF | 26 | Spain | CD Leganés
+Matija Nastasić | DEF | 31 | Serbia | CD Leganés
+Renato Tapia | MID | 29 | Peru | CD Leganés
+Óscar Rodríguez | MID | 26 | Spain | CD Leganés
+Darko Brašanac | MID | 33 | Serbia | CD Leganés
+Seydouba Cissé | MID | 24 | Guinea | CD Leganés
+Yvan Neyou | MID | 28 | Cameroon | CD Leganés
+Roberto López | MID | 24 | Spain | CD Leganés
+Julián Chicco | MID | 27 | Argentina | CD Leganés
+Juan Cruz | FWD | 24 | Spain | CD Leganés
+Miguel de la Fuente | FWD | 25 | Spain | CD Leganés
+Dani Raba | FWD | 29 | Spain | CD Leganés
+Sébastien Haller | FWD | 30 | Ivory Coast | CD Leganés
+Munir El Haddadi | FWD | 29 | Morocco | CD Leganés
+Diego García | FWD | 24 | Spain | CD Leganés
+Naim García | FWD | 22 | Spain | CD Leganés
+
+### UD Las Palmas
+Jasper Cillessen | GK | 35 | Netherlands | UD Las Palmas
+Dinko Horkaš | GK | 25 | Croatia | UD Las Palmas
+Álvaro Killane | GK | 20 | Argentina | UD Las Palmas
+Marvin Park | DEF | 24 | Spain | UD Las Palmas
+Álex Muñoz | DEF | 30 | Spain | UD Las Palmas
+Álex Suárez | DEF | 31 | Spain | UD Las Palmas
+Scott McKenna | DEF | 28 | Scotland | UD Las Palmas
+Mika Mármol | DEF | 23 | Spain | UD Las Palmas
+Daley Sinkgraven | DEF | 29 | Netherlands | UD Las Palmas
+Juanma Herzog | DEF | 20 | Spain | UD Las Palmas
+Viti Rozada | DEF | 27 | Spain | UD Las Palmas
+Javi Muñoz | MID | 30 | Spain | UD Las Palmas
+Fabio González | MID | 28 | Spain | UD Las Palmas
+Pejiño | MID | 28 | Spain | UD Las Palmas
+José Campaña | MID | 31 | Spain | UD Las Palmas
+Alberto Moleiro | MID | 21 | Spain | UD Las Palmas
+Enzo Loiodice | MID | 24 | France | UD Las Palmas
+Manuel Fuster | MID | 27 | Spain | UD Las Palmas
+Kirian Rodríguez | MID | 28 | Spain | UD Las Palmas
+Dário Essugo | MID | 19 | Portugal | UD Las Palmas
+Oliver McBurnie | FWD | 28 | Scotland | UD Las Palmas
+Marc Cardona | FWD | 29 | Spain | UD Las Palmas
+Benito Ramírez | FWD | 29 | Spain | UD Las Palmas
+Sandro Ramírez | FWD | 29 | Spain | UD Las Palmas
+Jaime Mata | FWD | 36 | Spain | UD Las Palmas
+Adnan Januzaj | FWD | 30 | Belgium | UD Las Palmas
+Fábio Silva | FWD | 22 | Portugal | UD Las Palmas
+
+### RCD Mallorca
+Dominik Greif | GK | 27 | Slovakia | RCD Mallorca
+Leo Román | GK | 24 | Spain | RCD Mallorca
+Iván Cuéllar | GK | 40 | Spain | RCD Mallorca
+Mateu Morey | DEF | 24 | Spain | RCD Mallorca
+Pablo Maffeo | DEF | 27 | Spain | RCD Mallorca
+Antonio Raíllo | DEF | 33 | Spain | RCD Mallorca
+Martin Valjent | DEF | 29 | Slovakia | RCD Mallorca
+José Manuel Copete | DEF | 25 | Spain | RCD Mallorca
+Siebe Van der Heyden | DEF | 26 | Belgium | RCD Mallorca
+Johan Mojica | DEF | 32 | Colombia | RCD Mallorca
+Toni Lato | DEF | 27 | Spain | RCD Mallorca
+Valery Fernández | DEF | 25 | Spain | RCD Mallorca
+Omar Mascarell | MID | 31 | Equatorial Guinea | RCD Mallorca
+Samú Costa | MID | 24 | Portugal | RCD Mallorca
+Manu Morlanes | MID | 26 | Spain | RCD Mallorca
+Sergi Darder | MID | 31 | Spain | RCD Mallorca
+Antonio Sánchez | MID | 28 | Spain | RCD Mallorca
+Dani Rodríguez | MID | 36 | Spain | RCD Mallorca
+Robert Navarro | MID | 22 | Spain | RCD Mallorca
+Javi Llabrés | MID | 22 | Spain | RCD Mallorca
+Chiquinho | MID | 24 | Portugal | RCD Mallorca
+Vedat Muriqi | FWD | 30 | Kosovo | RCD Mallorca
+Cyle Larin | FWD | 29 | Canada | RCD Mallorca
+Abdón Prats | FWD | 32 | Spain | RCD Mallorca
+Takuma Asano | FWD | 30 | Japan | RCD Mallorca
+Marc Domènech | FWD | 18 | Spain | RCD Mallorca
+
+### CA Osasuna
+Sergio Herrera | GK | 31 | Spain | Osasuna
+Aitor Fernández | GK | 33 | Spain | Osasuna
+Dimitrios Stamatakis | GK | 21 | Greece | Osasuna
+Nacho Vidal | DEF | 29 | Spain | Osasuna
+Jesús Areso | DEF | 25 | Spain | Osasuna
+Unai García | DEF | 32 | Spain | Osasuna
+Alejandro Catena | DEF | 30 | Spain | Osasuna
+Flavien Boyomo | DEF | 23 | Cameroon | Osasuna
+Jorge Herrando | DEF | 23 | Spain | Osasuna
+Juan Cruz | DEF | 32 | Spain | Osasuna
+Abel Bretones | DEF | 24 | Spain | Osasuna
+Lucas Torró | MID | 30 | Spain | Osasuna
+Jon Moncayola | MID | 26 | Spain | Osasuna
+Pablo Ibáñez | MID | 26 | Spain | Osasuna
+Aimar Oroz | MID | 23 | Spain | Osasuna
+Moi Gómez | MID | 30 | Spain | Osasuna
+Iker Muñoz | MID | 22 | Spain | Osasuna
+Javi Martínez | MID | 25 | Spain | Osasuna
+Ante Budimir | FWD | 33 | Croatia | Osasuna
+Raúl García de Haro | FWD | 24 | Spain | Osasuna
+Rubén García | FWD | 31 | Spain | Osasuna
+Rubén Peña | FWD | 33 | Spain | Osasuna
+Bryan Zaragoza | FWD | 23 | Spain | Osasuna
+Kike Barja | FWD | 27 | Spain | Osasuna
+José Manuel Arnaiz | FWD | 29 | Spain | Osasuna
+Iker Benito | FWD | 22 | Spain | Osasuna
+
+### Rayo Vallecano
+Augusto Batalla | GK | 28 | Argentina | Rayo Vallecano
+Dani Cárdenas | GK | 27 | Spain | Rayo Vallecano
+Andrei Rațiu | DEF | 26 | Romania | Rayo Vallecano
+Iván Balliu | DEF | 33 | Albania | Rayo Vallecano
+Florian Lejeune | DEF | 33 | France | Rayo Vallecano
+Abdul Mumin | DEF | 26 | Ghana | Rayo Vallecano
+Aridane Hernández | DEF | 35 | Spain | Rayo Vallecano
+Pelayo Fernández | DEF | 21 | Spain | Rayo Vallecano
+Pep Chavarría | DEF | 26 | Spain | Rayo Vallecano
+Alfonso Espino | DEF | 32 | Uruguay | Rayo Vallecano
+Óscar Valentín | MID | 31 | Spain | Rayo Vallecano
+Pathé Ciss | MID | 30 | Senegal | Rayo Vallecano
+Unai López | MID | 29 | Spain | Rayo Vallecano
+Gerard Gumbau | MID | 30 | Spain | Rayo Vallecano
+Pedro Díaz | MID | 26 | Spain | Rayo Vallecano
+Óscar Trejo | MID | 36 | Argentina | Rayo Vallecano
+James Rodríguez | MID | 33 | Colombia | Rayo Vallecano
+Joni Montiel | MID | 26 | Spain | Rayo Vallecano
+Isi Palazón | FWD | 30 | Spain | Rayo Vallecano
+Jorge de Frutos | FWD | 27 | Spain | Rayo Vallecano
+Álvaro García | FWD | 32 | Spain | Rayo Vallecano
+Adrián Embarba | FWD | 32 | Spain | Rayo Vallecano
+Sergio Camello | FWD | 23 | Spain | Rayo Vallecano
+Randy Nteka | FWD | 27 | Angola | Rayo Vallecano
+Sergi Guardiola | FWD | 33 | Spain | Rayo Vallecano
+Raúl de Tomás | FWD | 30 | Spain | Rayo Vallecano
+
+### Real Madrid
+Thibaut Courtois | GK | 32 | Belgium | Real Madrid
+Andriy Lunin | GK | 25 | Ukraine | Real Madrid
+Fran González | GK | 19 | Spain | Real Madrid
+Dani Carvajal | DEF | 33 | Spain | Real Madrid
+Lucas Vázquez | DEF | 33 | Spain | Real Madrid
+Éder Militão | DEF | 27 | Brazil | Real Madrid
+Antonio Rüdiger | DEF | 31 | Germany | Real Madrid
+David Alaba | DEF | 32 | Austria | Real Madrid
+Jesús Vallejo | DEF | 28 | Spain | Real Madrid
+Ferland Mendy | DEF | 29 | France | Real Madrid
+Fran García | DEF | 25 | Spain | Real Madrid
+Raúl Asencio | DEF | 21 | Spain | Real Madrid
+Jude Bellingham | MID | 21 | England | Real Madrid
+Federico Valverde | MID | 26 | Uruguay | Real Madrid
+Eduardo Camavinga | MID | 22 | France | Real Madrid
+Aurélien Tchouaméni | MID | 25 | France | Real Madrid
+Luka Modrić | MID | 39 | Croatia | Real Madrid
+Dani Ceballos | MID | 28 | Spain | Real Madrid
+Arda Güler | MID | 19 | Turkey | Real Madrid
+Brahim Díaz | MID | 25 | Morocco | Real Madrid
+Vinícius Júnior | FWD | 24 | Brazil | Real Madrid
+Kylian Mbappé | FWD | 26 | France | Real Madrid
+Rodrygo | FWD | 24 | Brazil | Real Madrid
+Endrick | FWD | 18 | Brazil | Real Madrid
+
+### Real Sociedad
+Álex Remiro | GK | 29 | Spain | Real Sociedad
+Unai Marrero | GK | 23 | Spain | Real Sociedad
+Aitor Fraga | GK | 21 | Spain | Real Sociedad
+Álvaro Odriozola | DEF | 29 | Spain | Real Sociedad
+Jon Aramburu | DEF | 22 | Venezuela | Real Sociedad
+Igor Zubeldia | DEF | 27 | Spain | Real Sociedad
+Aritz Elustondo | DEF | 30 | Spain | Real Sociedad
+Nayef Aguerd | DEF | 28 | Morocco | Real Sociedad
+Jon Pacheco | DEF | 24 | Spain | Real Sociedad
+Jon Martín | DEF | 18 | Spain | Real Sociedad
+Aihen Muñoz | DEF | 27 | Spain | Real Sociedad
+Javi López | DEF | 22 | Spain | Real Sociedad
+Hamari Traoré | DEF | 32 | Mali | Real Sociedad
+Martín Zubimendi | MID | 26 | Spain | Real Sociedad
+Beñat Turrientes | MID | 23 | Spain | Real Sociedad
+Brais Méndez | MID | 28 | Spain | Real Sociedad
+Luka Sučić | MID | 22 | Croatia | Real Sociedad
+Sergio Gómez | MID | 24 | Spain | Real Sociedad
+Jon Ander Olasagasti | MID | 24 | Spain | Real Sociedad
+Pablo Marín | MID | 21 | Spain | Real Sociedad
+Arsen Zakharyan | MID | 21 | Russia | Real Sociedad
+Urko González de Zárate | MID | 23 | Spain | Real Sociedad
+Jon Magunazelaia | MID | 23 | Spain | Real Sociedad
+Takefusa Kubo | FWD | 23 | Japan | Real Sociedad
+Mikel Oyarzabal | FWD | 27 | Spain | Real Sociedad
+Ander Barrenetxea | FWD | 23 | Spain | Real Sociedad
+Sheraldo Becker | FWD | 29 | Suriname | Real Sociedad
+Orri Óskarsson | FWD | 20 | Iceland | Real Sociedad
+Umar Sadiq | FWD | 27 | Nigeria | Real Sociedad
+
+### Sevilla FC
+Ørjan Nyland | GK | 34 | Norway | Sevilla
+Álvaro Fernández | GK | 26 | Spain | Sevilla
+Alberto Flores | GK | 21 | Spain | Sevilla
+José Ángel Carmona | DEF | 22 | Spain | Sevilla
+Gonzalo Montiel | DEF | 28 | Argentina | Sevilla
+Jesús Navas | DEF | 39 | Spain | Sevilla
+Loïc Badé | DEF | 24 | France | Sevilla
+Kike Salas | DEF | 22 | Spain | Sevilla
+Marcão | DEF | 28 | Brazil | Sevilla
+Tanguy Nianzou | DEF | 22 | France | Sevilla
+Nemanja Gudelj | DEF | 33 | Serbia | Sevilla
+Adrià Pedrosa | DEF | 26 | Spain | Sevilla
+Valentín Barco | DEF | 20 | Argentina | Sevilla
+Juanlu Sánchez | DEF | 21 | Spain | Sevilla
+Lucien Agoumé | MID | 23 | France | Sevilla
+Albert Sambi Lokonga | MID | 25 | Belgium | Sevilla
+Djibril Sow | MID | 28 | Switzerland | Sevilla
+Saúl Ñíguez | MID | 30 | Spain | Sevilla
+Pedro Ortiz | MID | 24 | Spain | Sevilla
+Manu Bueno | MID | 20 | Spain | Sevilla
+Dodi Lukebakio | FWD | 27 | Belgium | Sevilla
+Chidera Ejuke | FWD | 27 | Nigeria | Sevilla
+Suso | FWD | 31 | Spain | Sevilla
+Isaac Romero | FWD | 24 | Spain | Sevilla
+Peque Fernández | FWD | 22 | Spain | Sevilla
+Kelechi Iheanacho | FWD | 28 | Nigeria | Sevilla
+Stanis Idumbo Muzambo | FWD | 19 | Belgium | Sevilla
+
+### Valencia CF
+Giorgi Mamardashvili | GK | 24 | Georgia | Valencia
+Stole Dimitrievski | GK | 31 | North Macedonia | Valencia
+Jaume Doménech | GK | 34 | Spain | Valencia
+Thierry Correia | DEF | 25 | Portugal | Valencia
+Dimitri Foulquier | DEF | 31 | Guadeloupe | Valencia
+Cristhian Mosquera | DEF | 20 | Spain | Valencia
+César Tárrega | DEF | 22 | Spain | Valencia
+Yarek Gasiorowski | DEF | 20 | Spain | Valencia
+Cenk Özkacar | DEF | 24 | Turkey | Valencia
+Mouctar Diakhaby | DEF | 28 | Guinea | Valencia
+José Gayà | DEF | 29 | Spain | Valencia
+Jesús Vázquez | DEF | 22 | Spain | Valencia
+Maximiliano Caufriez | DEF | 27 | Belgium | Valencia
+Pepelu | MID | 26 | Spain | Valencia
+Javi Guerra | MID | 21 | Spain | Valencia
+Enzo Barrenechea | MID | 23 | Argentina | Valencia
+André Almeida | MID | 24 | Portugal | Valencia
+Hugo Guillamón | MID | 25 | Spain | Valencia
+Diego López | FWD | 22 | Spain | Valencia
+Luis Rioja | FWD | 31 | Spain | Valencia
+Fran Pérez | FWD | 22 | Spain | Valencia
+Sergi Canós | FWD | 27 | Spain | Valencia
+Germán Valera | FWD | 22 | Spain | Valencia
+Hugo Duro | FWD | 25 | Spain | Valencia
+Rafa Mir | FWD | 27 | Spain | Valencia
+Dani Gómez | FWD | 26 | Spain | Valencia
+Martín Tejón | FWD | 20 | Spain | Valencia
+
+### Real Valladolid
+Karl Hein | GK | 22 | Estonia | Real Valladolid
+André Ferreira | GK | 28 | Portugal | Real Valladolid
+Álvaro Aceves | GK | 21 | Spain | Real Valladolid
+Luis Pérez | DEF | 29 | Spain | Real Valladolid
+Lucas Rosa | DEF | 24 | Brazil | Real Valladolid
+Javi Sánchez | DEF | 27 | Spain | Real Valladolid
+Eray Cömert | DEF | 26 | Switzerland | Real Valladolid
+David Torres | DEF | 21 | Spain | Real Valladolid
+Cenk Özkacar | DEF | 24 | Turkey | Real Valladolid
+Stanko Jurić | MID | 28 | Croatia | Real Valladolid
+Mario Martín | MID | 20 | Spain | Real Valladolid
+Kike Pérez | MID | 27 | Spain | Real Valladolid
+Selim Amallah | MID | 28 | Morocco | Real Valladolid
+Anuar Tuhami | MID | 30 | Morocco | Real Valladolid
+Víctor Meseguer | MID | 25 | Spain | Real Valladolid
+César de la Hoz | MID | 32 | Spain | Real Valladolid
+Chuki | MID | 20 | Spain | Real Valladolid
+Raúl Moro | FWD | 22 | Spain | Real Valladolid
+Darwin Machís | FWD | 31 | Venezuela | Real Valladolid
+Amath Ndiaye | FWD | 28 | Senegal | Real Valladolid
+Mamadou Sylla | FWD | 30 | Senegal | Real Valladolid
+Juanmi Latasa | FWD | 23 | Spain | Real Valladolid
+Marcos André | FWD | 28 | Brazil | Real Valladolid
+Kenedy | FWD | 28 | Brazil | Real Valladolid
+Iván Sánchez | FWD | 32 | Spain | Real Valladolid
+
+### Villarreal CF
+Diego Conde | GK | 26 | Spain | Villarreal
+Luiz Júnior | GK | 24 | Brazil | Villarreal
+Iker Álvarez | GK | 23 | Andorra | Villarreal
+Juan Foyth | DEF | 27 | Argentina | Villarreal
+Kiko Femenía | DEF | 33 | Spain | Villarreal
+Raúl Albiol | DEF | 39 | Spain | Villarreal
+Eric Bailly | DEF | 30 | Ivory Coast | Villarreal
+Logan Costa | DEF | 23 | Cape Verde | Villarreal
+Willy Kambwala | DEF | 20 | France | Villarreal
+Pau Navarro | DEF | 19 | Spain | Villarreal
+Alfonso Pedraza | DEF | 28 | Spain | Villarreal
+Sergi Cardona | DEF | 25 | Spain | Villarreal
+Juan Bernat | DEF | 31 | Spain | Villarreal
+Dani Parejo | MID | 35 | Spain | Villarreal
+Santi Comesaña | MID | 28 | Spain | Villarreal
+Pape Gueye | MID | 26 | Senegal | Villarreal
+Álex Baena | MID | 23 | Spain | Villarreal
+Denis Suárez | MID | 31 | Spain | Villarreal
+Ramon Terrats | MID | 24 | Spain | Villarreal
+Gerard Moreno | FWD | 32 | Spain | Villarreal
+Ayoze Pérez | FWD | 31 | Spain | Villarreal
+Nicolas Pépé | FWD | 29 | Ivory Coast | Villarreal
+Yeremy Pino | FWD | 22 | Spain | Villarreal
+Thierno Barry | FWD | 22 | France | Villarreal
+Ilias Akhomach | FWD | 20 | Morocco | Villarreal
+
+### Deportivo Alavés
+Antonio Sivera | GK | 28 | Spain | Deportivo Alavés
+Jesús Owono | GK | 23 | Equatorial Guinea | Deportivo Alavés
+Adrián Rodríguez | GK | 23 | Argentina | Deportivo Alavés
+Nahuel Tenaglia | DEF | 28 | Argentina | Deportivo Alavés
+Hugo Novoa | DEF | 21 | Spain | Deportivo Alavés
+Abdel Abqar | DEF | 25 | Morocco | Deportivo Alavés
+Aleksandar Sedlar | DEF | 33 | Serbia | Deportivo Alavés
+Santiago Mouriño | DEF | 22 | Uruguay | Deportivo Alavés
+Moussa Diarra | DEF | 24 | Mali | Deportivo Alavés
+Manu Sánchez | DEF | 24 | Spain | Deportivo Alavés
+Antonio Blanco | MID | 24 | Spain | Deportivo Alavés
+Ander Guevara | MID | 27 | Spain | Deportivo Alavés
+Jon Guridi | MID | 29 | Spain | Deportivo Alavés
+Joan Jordán | MID | 30 | Spain | Deportivo Alavés
+Carlos Benavídez | MID | 26 | Uruguay | Deportivo Alavés
+Carles Aleñá | MID | 27 | Spain | Deportivo Alavés
+Stoichkov | MID | 31 | Spain | Deportivo Alavés
+Carlos Vicente | FWD | 25 | Spain | Deportivo Alavés
+Tomás Conechny | FWD | 26 | Argentina | Deportivo Alavés
+Luka Romero | FWD | 20 | Argentina | Deportivo Alavés
+Carlos Martín | FWD | 22 | Spain | Deportivo Alavés
+Kike García | FWD | 35 | Spain | Deportivo Alavés
+Toni Martínez | FWD | 27 | Spain | Deportivo Alavés
+Asier Villalibre | FWD | 27 | Spain | Deportivo Alavés
+Abde Rebbach | FWD | 26 | Algeria | Deportivo Alavés

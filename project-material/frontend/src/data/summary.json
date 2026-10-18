@@ -1,0 +1,13 @@
+{
+  "total_players": 2521,
+  "players_with_release_clause": 213,
+  "total_competition_records": 24384,
+  "last_updated": "2026-10-18T18:25:00.000Z",
+  "most_valuable_player": {
+    "name": "Erling Haaland",
+    "team": "Manchester City",
+    "value_eur": 220000000.0,
+    "release_clause_eur": null,
+    "rating_score": 94.0
+  }
+}

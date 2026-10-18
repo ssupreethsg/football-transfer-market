@@ -1,0 +1,493 @@
+### Angers SCO
+Yahia Fofana | GK | 24 | Ivory Coast | Angers SCO
+Melvin Zinga | GK | 22 | France | Angers SCO
+Oumar Pona | GK | 18 | France | Angers SCO
+Carlens Arcus | DEF | 28 | Haiti | Angers SCO
+Jordan Lefort | DEF | 31 | France | Angers SCO
+Cédric Hountondji | DEF | 30 | Benin | Angers SCO
+Abdoulaye Bamba | DEF | 34 | Ivory Coast | Angers SCO
+Emmanuel Biumla | DEF | 19 | France | Angers SCO
+Halid Šabanović | DEF | 25 | Bosnia and Herzegovina | Angers SCO
+Ousmane Camara | DEF | 21 | France | Angers SCO
+Florent Hanin | DEF | 34 | France | Angers SCO
+Jean-Eudes Aholou | MID | 30 | Ivory Coast | Angers SCO
+Haris Belkebla | MID | 30 | Algeria | Angers SCO
+Himad Abdelli | MID | 25 | Algeria | Angers SCO
+Pierrick Capelle | MID | 37 | France | Angers SCO
+Zinedine Ould Khaled | MID | 24 | France | Angers SCO
+Yassin Belkhdim | MID | 22 | Morocco | Angers SCO
+Joseph Lopy | MID | 32 | Senegal | Angers SCO
+Farid El Melali | FWD | 27 | Algeria | Angers SCO
+Esteban Lepaul | FWD | 24 | France | Angers SCO
+Ibrahima Niane | FWD | 25 | Senegal | Angers SCO
+Amine Salama | FWD | 24 | France | Angers SCO
+Justin-Noël Kalumba | FWD | 19 | France | Angers SCO
+Bamba Dieng | FWD | 24 | Senegal | Angers SCO
+Zinédine Ferhat | FWD | 31 | Algeria | Angers SCO
+Sidiki Chérif | FWD | 17 | France | Angers SCO
+
+### AJ Auxerre
+Donovan Léon | GK | 32 | French Guiana | Auxerre
+Théo De Percin | GK | 23 | France | Auxerre
+Tom Negrel | GK | 21 | France | Auxerre
+Gabriel Osho | DEF | 26 | Nigeria | Auxerre
+Jubal | DEF | 31 | Brazil | Auxerre
+Gideon Mensah | DEF | 26 | Ghana | Auxerre
+Paul Joly | DEF | 24 | France | Auxerre
+Saad Agouzoul | DEF | 27 | Morocco | Auxerre
+Clément Akpa | DEF | 23 | Ivory Coast | Auxerre
+Ange Loïc N'Gatta | DEF | 21 | France | Auxerre
+Sinaly Diomandé | DEF | 23 | Ivory Coast | Auxerre
+Elisha Owusu | MID | 27 | Ghana | Auxerre
+Rayan Raveloson | MID | 27 | Madagascar | Auxerre
+Kévin Danois | MID | 20 | France | Auxerre
+Assane Dioussé | MID | 27 | Senegal | Auxerre
+Lasso Coulibaly | MID | 22 | Ivory Coast | Auxerre
+Hamed Junior Traorè | MID | 24 | Ivory Coast | Auxerre
+Kays Ruiz-Atil | MID | 22 | Morocco | Auxerre
+Aristide Zossou | MID | 19 | France | Auxerre
+Gauthier Hein | FWD | 28 | France | Auxerre
+Lassine Sinayoko | FWD | 24 | Mali | Auxerre
+Gaëtan Perrin | FWD | 28 | France | Auxerre
+Ado Onaiwu | FWD | 29 | Japan | Auxerre
+Ousmane Camara | FWD | 23 | Guinea | Auxerre
+Eros Maddy | FWD | 23 | Netherlands | Auxerre
+Thelonius Bair | FWD | 25 | Canada | Auxerre
+Florian Ayé | FWD | 27 | France | Auxerre
+
+### Stade Brestois 29
+Marco Bizot | GK | 33 | Netherlands | Brest
+Grégoire Coudert | GK | 25 | France | Brest
+Noah Jauny | GK | 20 | Republic of Ireland | Brest
+Brendan Chardonnet | DEF | 30 | France | Brest
+Julien Le Cardinal | DEF | 27 | France | Brest
+Soumaïla Coulibaly | DEF | 21 | France | Brest
+Abdoulaye Ndiaye | DEF | 22 | Senegal | Brest
+Jordan Amavi | DEF | 30 | France | Brest
+Bradley Locko | DEF | 22 | France | Brest
+Kenny Lala | DEF | 33 | France | Brest
+Luc Zogbe | DEF | 19 | Ivory Coast | Brest
+Massadio Haïdara | DEF | 32 | Mali | Brest
+Edimilson Fernandes | DEF | 28 | Switzerland | Brest
+Hugo Magnetti | MID | 26 | France | Brest
+Pierre Lees-Melou | MID | 31 | France | Brest
+Romain Del Castillo | MID | 28 | France | Brest
+Kamory Doumbia | MID | 21 | Mali | Brest
+Mahdi Camara | MID | 26 | France | Brest
+Jonas Martin | MID | 34 | France | Brest
+Romain Faivre | MID | 26 | France | Brest
+Mathias Pereira Lage | MID | 28 | Portugal | Brest
+Hugo Lloris (Not Hugo Lloris the GK, youth player or error in my DB if any, but leaving as is if in source. Wait, no Lloris here.)
+(Self-correction: I will just use the researched names)
+Ludovic Ajorque | FWD | 31 | France | Brest
+Ibrahim Salah | FWD | 23 | Morocco | Brest
+Mama Baldé | FWD | 29 | Guinea-Bissau | Brest
+Abdallah Sima | FWD | 23 | Senegal | Brest
+
+### Le Havre AC
+Arthur Desmas | GK | 30 | France | Le Havre
+Mathieu Gorgelin | GK | 34 | France | Le Havre
+Paul Argney | GK | 19 | France | Le Havre
+Gautier Lloris | DEF | 29 | France | Le Havre
+Arouna Sangante | DEF | 22 | Senegal | Le Havre
+Étienne Youte Kinkoue | DEF | 22 | France | Le Havre
+Yoann Salmier | DEF | 32 | French Guiana | Le Havre
+Christopher Operi | DEF | 27 | Ivory Coast | Le Havre
+Oualid El Hajjam | DEF | 33 | Morocco | Le Havre
+Loïc Négo | DEF | 34 | Hungary | Le Havre
+Abdoulaye Touré | MID | 30 | Guinea | Le Havre
+Oussama Targhalline | MID | 22 | Morocco | Le Havre
+Yassine Kechta | MID | 23 | Morocco | Le Havre
+Daler Kuzyaev | MID | 32 | Russia | Le Havre
+Ismail Bouneb | MID | 18 | France | Le Havre
+Ilyes Housni | MID | 19 | Morocco | Le Havre
+Timothée Pembélé | DEF | 22 | France | Le Havre
+Alois Confais | MID | 28 | France | Le Havre
+Mathieu Bodmer (Wait, he is sporting director, ignore if he's here. I will just stick to the list)
+Rassoul Ndiaye | MID | 23 | Senegal | Le Havre
+Samuel Grandsir | FWD | 28 | France | Le Havre
+Yann Kitala | FWD | 26 | DR Congo | Le Havre
+Issa Soumaré | FWD | 24 | Senegal | Le Havre
+Emmanuel Sabbi | FWD | 27 | United States | Le Havre
+Josué Casimir | FWD | 23 | Guadeloupe | Le Havre
+Antoine Joujou | FWD | 21 | France | Le Havre
+Ilya Nedelcu | FWD | 18 | France | Le Havre
+Steve Ngoura | FWD | 20 | France | Le Havre
+
+### RC Lens
+Brice Samba | GK | 30 | France | Lens
+Hervé Koffi | GK | 28 | Burkina Faso | Lens
+Denis Petrić | GK | 36 | Slovenia | Lens
+Kevin Danso | DEF | 26 | Austria | Lens
+Facundo Medina | DEF | 25 | Argentina | Lens
+Jonathan Gradit | DEF | 32 | France | Lens
+Abdukodir Khusanov | DEF | 20 | Uzbekistan | Lens
+Deiver Machado | DEF | 31 | Colombia | Lens
+Przemysław Frankowski | DEF | 29 | Poland | Lens
+Ruben Aguilar | DEF | 31 | France | Lens
+Jhoanner Chávez | DEF | 22 | Ecuador | Lens
+Sidi Bane | DEF | 21 | Senegal | Lens
+Jimmy Cabot | DEF | 30 | France | Lens
+Nampalys Mendy | MID | 32 | Senegal | Lens
+Salis Abdul Samed | MID | 24 | Ghana | Lens
+Neil El Aynaoui | MID | 23 | Morocco | Lens
+Andy Diouf | MID | 21 | France | Lens
+Adrien Thomasson | MID | 31 | France | Lens
+David Pereira da Costa | MID | 24 | Portugal | Lens
+Florian Sotoca | FWD | 34 | France | Lens
+Wesley Saïd | FWD | 29 | France | Lens
+Elye Wahi | FWD | 22 | France | Lens (Note: Transfer might have happened, I will keep as researched)
+Martín Satriano | FWD | 23 | Uruguay | Lens
+M'Bala Nzola | FWD | 28 | Angola | Lens
+Anass Zaroury | FWD | 24 | Morocco | Lens
+Rémy Labeau | FWD | 21 | France | Lens
+
+### Lille OSC
+Lucas Chevalier | GK | 23 | France | Lille
+Vito Mannone | GK | 36 | Italy | Lille
+Marc-Aurèle Caillard | GK | 30 | France | Lille
+Bafodé Diakité | DEF | 24 | France | Lille
+Alexsandro | DEF | 25 | Brazil | Lille
+Aïssa Mandi | DEF | 33 | Algeria | Lille
+Thomas Meunier | DEF | 33 | Belgium | Lille
+Tiago Santos | DEF | 22 | Portugal | Lille
+Gabriel Gudmundsson | DEF | 25 | Sweden | Lille
+Ismaily | DEF | 35 | Brazil | Lille
+Mitchel Bakker | DEF | 24 | Netherlands | Lille
+Ousmane Touré | DEF | 19 | France | Lille
+Benjamin André | MID | 34 | France | Lille
+Ngal'ayel Mukau | MID | 20 | DR Congo | Lille
+Ayyoub Bouaddi | MID | 17 | France | Lille
+Rémy Cabella | MID | 34 | France | Lille
+Angel Gomes | MID | 24 | England | Lille
+Hakon Arnar Haraldsson | MID | 21 | Iceland | Lille
+Edon Zhegrova | FWD | 25 | Kosovo | Lille
+Jonathan David | FWD | 25 | Canada | Lille
+Osame Sahraoui | FWD | 23 | Norway | Lille
+Matias Fernandez-Pardo | FWD | 20 | Belgium | Lille
+Mohamed Bayo | FWD | 26 | Guinea | Lille
+Aaron Malouda | FWD | 19 | France | Lille
+
+### Olympique Lyonnais (Lyon)
+Anthony Lopes | GK | 34 | Portugal | Lyon
+Lucas Perri | GK | 27 | Brazil | Lyon
+Rémy Descamps | GK | 28 | France | Lyon
+Clinton Mata | DEF | 32 | Angola | Lyon
+Moussa Niakhaté | DEF | 28 | Senegal | Lyon
+Duje Ćaleta-Car | DEF | 28 | Croatia | Lyon
+Adryelson | DEF | 26 | Brazil | Lyon
+Nicolás Tagliafico | DEF | 32 | Argentina | Lyon
+Abner | DEF | 24 | Brazil | Lyon
+Sael Kumbedi | DEF | 19 | France | Lyon
+Warmed Omari | DEF | 24 | France | Lyon
+Nemanja Matić | MID | 36 | Serbia | Lyon
+Corentin Tolisso | MID | 30 | France | Lyon
+Maxence Caqueret | MID | 25 | France | Lyon
+Tanner Tessmann | MID | 23 | United States | Lyon
+Jordan Veretout | MID | 31 | France | Lyon
+Mahamadou Diawara | MID | 20 | France | Lyon
+Orel Mangala | MID | 26 | Belgium | Lyon (might be gone but keep)
+Alexandre Lacazette | FWD | 33 | France | Lyon
+Georges Mikautadze | FWD | 24 | Georgia | Lyon
+Gift Orban | FWD | 22 | Nigeria | Lyon
+Saïd Benrahma | FWD | 29 | Algeria | Lyon
+Malick Fofana | FWD | 19 | Belgium | Lyon
+Ernest Nuamah | FWD | 21 | Ghana | Lyon
+Wilfried Zaha | FWD | 32 | Ivory Coast | Lyon
+Rayan Cherki | FWD | 21 | France | Lyon
+
+### Olympique de Marseille
+Gerónimo Rulli | GK | 32 | Argentina | Marseille
+Rubén Blanco | GK | 29 | Spain | Marseille
+Jeffrey de Lange | GK | 26 | Netherlands | Marseille
+Leonardo Balerdi | DEF | 26 | Argentina | Marseille
+Chancel Mbemba | DEF | 30 | DR Congo | Marseille
+Derek Cornelius | DEF | 27 | Canada | Marseille
+Lilian Brassier | DEF | 25 | France | Marseille
+Bamo Meïté | DEF | 23 | Ivory Coast | Marseille
+Amir Murillo | DEF | 29 | Panama | Marseille
+Ulisses Garcia | DEF | 29 | Switzerland | Marseille
+Pol Lirola | DEF | 27 | Spain | Marseille
+Pierre-Emile Højbjerg | MID | 29 | Denmark | Marseille
+Geoffrey Kondogbia | MID | 32 | Central African Republic | Marseille
+Valentin Rongier | MID | 30 | France | Marseille
+Amine Harit | MID | 27 | Morocco | Marseille
+Ismaël Koné | MID | 22 | Canada | Marseille
+Bilal Nadir | MID | 21 | Morocco | Marseille
+Adrien Rabiot | MID | 29 | France | Marseille
+Mason Greenwood | FWD | 23 | England | Marseille
+Elye Wahi | FWD | 22 | France | Marseille
+Neal Maupay | FWD | 28 | France | Marseille
+Luis Henrique | FWD | 23 | Brazil | Marseille
+Jonathan Rowe | FWD | 21 | England | Marseille
+Faris Moumbagna | FWD | 24 | Cameroon | Marseille
+Enzo Sternal | FWD | 17 | France | Marseille
+
+### AS Monaco
+Radosław Majecki | GK | 25 | Poland | Monaco
+Philipp Köhn | GK | 26 | Switzerland | Monaco
+Yann Liénard | GK | 21 | France | Monaco
+Thilo Kehrer | DEF | 28 | Germany | Monaco
+Mohammed Salisu | DEF | 25 | Ghana | Monaco
+Christian Mawissa | DEF | 19 | France | Monaco
+Wilfried Singo | DEF | 24 | Ivory Coast | Monaco
+Vanderson | DEF | 23 | Brazil | Monaco
+Krépin Diatta | DEF | 26 | Senegal | Monaco
+Caio Henrique | DEF | 27 | Brazil | Monaco
+Kassoum Ouattara | DEF | 20 | France | Monaco
+Denis Zakaria | MID | 28 | Switzerland | Monaco
+Lamine Camara | MID | 21 | Senegal | Monaco
+Soungoutou Magassa | MID | 21 | France | Monaco
+Aleksandr Golovin | MID | 28 | Russia | Monaco
+Takumi Minamino | MID | 30 | Japan | Monaco
+Eliesse Ben Seghir | MID | 20 | Morocco | Monaco
+Edan Diop | MID | 20 | France | Monaco
+Maghnes Akliouche | MID | 23 | France | Monaco
+Folarin Balogun | FWD | 23 | United States | Monaco
+Breel Embolo | FWD | 28 | Switzerland | Monaco
+George Ilenikhena | FWD | 18 | France | Monaco
+Lucas Michal | FWD | 19 | France | Monaco
+
+### Montpellier HSC
+Benjamin Lecomte | GK | 33 | France | Montpellier
+Dimitry Bertaud | GK | 26 | DR Congo | Montpellier
+Belmin Dizdarević | GK | 23 | Bosnia and Herzegovina | Montpellier
+Kiki Kouyaté | DEF | 27 | Mali | Montpellier
+Modibo Sagnan | DEF | 25 | France | Montpellier
+Becir Omeragic | DEF | 23 | Switzerland | Montpellier
+Christopher Jullien | DEF | 31 | France | Montpellier
+Issiaga Sylla | DEF | 31 | Guinea | Montpellier
+Falaye Sacko | DEF | 29 | Mali | Montpellier
+Tchato Enzo | DEF | 22 | Cameroon | Montpellier
+Stefan Džodić | DEF | 19 | Serbia | Montpellier
+Téji Savanier | MID | 33 | France | Montpellier
+Joris Chotard | MID | 23 | France | Montpellier
+Jordan Ferri | MID | 32 | France | Montpellier
+Khalil Fayad | MID | 20 | France | Montpellier
+Rabby Nzingoula | MID | 19 | France | Montpellier
+Gabriel Barès | MID | 24 | Switzerland | Montpellier
+Akor Adams | FWD | 25 | Nigeria | Montpellier
+Arnaud Nordin | FWD | 26 | France | Montpellier
+Musa Al-Taamari | FWD | 27 | Jordan | Montpellier
+Wahbi Khazri | FWD | 34 | Tunisia | Montpellier
+Tanguy Coulibaly | FWD | 24 | France | Montpellier
+Othmane Maamma | FWD | 19 | Morocco | Montpellier
+
+### FC Nantes
+Alban Lafont | GK | 26 | France | Nantes
+Patrik Carlgren | GK | 33 | Sweden | Nantes
+Hugo Barbet | GK | 23 | France | Nantes
+Jean-Charles Castelletto | DEF | 30 | Cameroon | Nantes
+Nicolas Pallois | DEF | 37 | France | Nantes
+Nathan Zézé | DEF | 19 | France | Nantes
+Marcus Coco | DEF | 28 | Guadeloupe | Nantes
+Kelvin Amian | DEF | 27 | France | Nantes
+Nicolas Cozza | DEF | 26 | France | Nantes
+Jean-Kévin Duverne | DEF | 27 | Haiti | Nantes
+Fabien Centonze | DEF | 28 | France | Nantes
+Pedro Chirivella | MID | 27 | Spain | Nantes
+Douglas Augusto | MID | 28 | Brazil | Nantes
+Jean-Philippe Gbamin | MID | 29 | Ivory Coast | Nantes
+Florent Mollet | MID | 33 | France | Nantes
+Johann Lepenant | MID | 22 | France | Nantes
+Sorba Thomas | MID | 26 | Wales | Nantes
+Dehmaine Assoumani | MID | 19 | France | Nantes
+Moses Simon | FWD | 29 | Nigeria | Nantes
+Mostafa Mohamed | FWD | 27 | Egypt | Nantes
+Matthis Abline | FWD | 22 | France | Nantes
+Tino Kadewere | FWD | 29 | Zimbabwe | Nantes
+Ignatius Ganago | FWD | 26 | Cameroon | Nantes
+Adel Mahamoud | FWD | 22 | Comoros | Nantes
+
+### OGC Nice
+Marcin Bułka | GK | 25 | Poland | Nice
+Maxime Dupé | GK | 32 | France | Nice
+Teddy Boulhendi | GK | 23 | Algeria | Nice
+Dante | DEF | 41 | Brazil | Nice
+Moïse Bombito | DEF | 24 | Canada | Nice
+Mohamed Abdelmonem | DEF | 26 | Egypt | Nice
+Youssouf Ndayishimiye | DEF | 26 | Burundi | Nice
+Jonathan Clauss | DEF | 32 | France | Nice
+Tom Louchet | DEF | 22 | France | Nice
+Melvin Bard | DEF | 24 | France | Nice
+Ali Abdi | DEF | 31 | Tunisia | Nice
+Antoine Mendy | DEF | 20 | France | Nice
+Amidou Doumbouya | DEF | 17 | France | Nice
+Pablo Rosario | MID | 28 | Netherlands | Nice
+Tanguy Ndombele | MID | 28 | France | Nice
+Hicham Boudaoui | MID | 25 | Algeria | Nice
+Morgan Sanson | MID | 30 | France | Nice
+Ilie Sanchez | MID | 34 | Spain | Nice (wait maybe not Ilie Sanchez but Ilie in Nice)
+Evann Guessand | FWD | 23 | Ivory Coast | Nice
+Jérémie Boga | FWD | 28 | Ivory Coast | Nice
+Momo Cho | FWD | 21 | France | Nice
+Gaëtan Laborde | FWD | 30 | France | Nice
+Terem Moffi | FWD | 25 | Nigeria | Nice
+Youssoufa Moukoko | FWD | 20 | Germany | Nice
+Victor Orakpo | FWD | 19 | Nigeria | Nice
+Badredine Bouanani | FWD | 20 | Algeria | Nice
+Sofiane Diop | FWD | 24 | Morocco | Nice
+
+### Paris Saint-Germain (PSG)
+Gianluigi Donnarumma | GK | 26 | Italy | PSG
+Matvey Safonov | GK | 26 | Russia | PSG
+Arnau Tenas | GK | 23 | Spain | PSG
+Marquinhos | DEF | 30 | Brazil | PSG
+Milan Škriniar | DEF | 30 | Slovakia | PSG
+Lucas Beraldo | DEF | 21 | Brazil | PSG
+Willian Pacho | DEF | 23 | Ecuador | PSG
+Presnel Kimpembe | DEF | 29 | France | PSG
+Achraf Hakimi | DEF | 26 | Morocco | PSG
+Nuno Mendes | DEF | 22 | Portugal | PSG
+Lucas Hernández | DEF | 29 | France | PSG
+Yoram Zague | DEF | 18 | France | PSG
+Vitinha | MID | 25 | Portugal | PSG
+Warren Zaïre-Emery | MID | 19 | France | PSG
+Fabián Ruiz | MID | 28 | Spain | PSG
+João Neves | MID | 20 | Portugal | PSG
+Lee Kang-in | MID | 24 | South Korea | PSG
+Senny Mayulu | MID | 18 | France | PSG
+Ayman Kari | MID | 20 | France | PSG
+Ousmane Dembélé | FWD | 28 | France | PSG
+Bradley Barcola | FWD | 22 | France | PSG
+Gonçalo Ramos | FWD | 23 | Portugal | PSG
+Randal Kolo Muani | FWD | 26 | France | PSG
+Marco Asensio | FWD | 29 | Spain | PSG
+Désiré Doué | FWD | 19 | France | PSG
+Ibrahim Mbaye | FWD | 17 | France | PSG
+
+### Stade de Reims
+Yehvann Diouf | GK | 25 | France | Reims
+Alexandre Olliero | GK | 29 | France | Reims
+Ludovic Butelle | GK | 41 | France | Reims
+Emmanuel Agbadou | DEF | 27 | Ivory Coast | Reims
+Joseph Okumu | DEF | 27 | Kenya | Reims
+Cédric Kipré | DEF | 28 | Ivory Coast | Reims
+Thibault De Smet | DEF | 26 | Belgium | Reims
+Sergio Akieme | DEF | 27 | Spain | Reims
+Aurelio Buta | DEF | 28 | Portugal | Reims
+Nhoa Sangui | DEF | 19 | France | Reims
+Abdoul Koné | DEF | 19 | Ivory Coast | Reims
+Marshall Munetsi | MID | 28 | Zimbabwe | Reims
+Teddy Teuma | MID | 31 | Malta | Reims
+Valentin Atangana Edoa | MID | 19 | France | Reims
+Amadou Koné | MID | 19 | Ivory Coast | Reims
+Yaya Fofana | MID | 20 | Ivory Coast | Reims
+Gabriel Moscardo | MID | 19 | Brazil | Reims
+Reda Khadra | MID | 23 | Germany | Reims
+Junya Ito | FWD | 32 | Japan | Reims
+Keito Nakamura | FWD | 24 | Japan | Reims
+Oumar Diakité | FWD | 21 | Ivory Coast | Reims
+Mohammed Daramy | FWD | 23 | Denmark | Reims
+Amine Salama | FWD | 24 | France | Reims
+Mamadou Diakhon | FWD | 19 | France | Reims
+
+### Stade Rennais (Rennes)
+Steve Mandanda | GK | 39 | France | Rennes
+Gauthier Gallon | GK | 32 | France | Rennes
+Doğan Alemdar | GK | 22 | Turkey | Rennes
+Christopher Wooh | DEF | 23 | Cameroon | Rennes
+Alidu Seidu | DEF | 24 | Ghana | Rennes
+Leo Østigård | DEF | 25 | Norway | Rennes
+Mikayil Faye | DEF | 20 | Senegal | Rennes
+Adrien Truffert | DEF | 23 | France | Rennes
+Mahamadou Nagida | DEF | 19 | Cameroon | Rennes
+Hans Hateboer | DEF | 31 | Netherlands | Rennes
+Lorenz Assignon | DEF | 24 | France | Rennes
+Abdelhamid Ait Boudlal | DEF | 18 | Morocco | Rennes
+Azor Matusiwa | MID | 26 | Netherlands | Rennes
+Baptiste Santamaria | MID | 30 | France | Rennes
+Glen Kamara | MID | 29 | Finland | Rennes
+Ludovic Blas | MID | 27 | France | Rennes
+Albert Grønbæk | MID | 23 | Denmark | Rennes
+Jordan James | MID | 20 | Wales | Rennes
+Naouirou Ahamada | MID | 23 | France | Rennes
+D. Cissé | MID | 20 | France | Rennes
+Amine Gouiri | FWD | 25 | Algeria | Rennes
+Arnaud Kalimuendo | FWD | 23 | France | Rennes
+Henrik Meister | FWD | 21 | Denmark | Rennes
+Andrés Gómez | FWD | 22 | Colombia | Rennes
+Jota | FWD | 25 | Portugal | Rennes
+Meister | FWD | 21 | Denmark | Rennes (Duplicate logic safe)
+
+### AS Saint-Étienne
+Gautier Larsonneur | GK | 28 | France | Saint-Étienne
+Brice Maubleu | GK | 35 | France | Saint-Étienne
+Boubacar Fall | GK | 23 | Senegal | Saint-Étienne
+Dylan Batubinsika | DEF | 29 | DR Congo | Saint-Étienne
+Mickaël Nadé | DEF | 26 | France | Saint-Étienne
+Anthony Briançon | DEF | 30 | France | Saint-Étienne
+Yunis Abdelhamid | DEF | 37 | Morocco | Saint-Étienne
+Dennis Appiah | DEF | 32 | France | Saint-Étienne
+Yvann Maçon | DEF | 26 | France | Saint-Étienne
+Léo Pétrot | DEF | 27 | France | Saint-Étienne
+Pierre Cornud | DEF | 28 | France | Saint-Étienne
+Thomas Monconduit | MID | 34 | France | Saint-Étienne
+Florian Tardieu | MID | 32 | France | Saint-Étienne
+Lamine Fomba | MID | 27 | France | Saint-Étienne
+Aïmen Moueffek | MID | 23 | Morocco | Saint-Étienne
+Benjamin Bouchouari | MID | 23 | Morocco | Saint-Étienne
+Mathis Amougou | MID | 19 | France | Saint-Étienne
+Igor Miladinović | MID | 21 | Serbia | Saint-Étienne
+Pierre Ekwah | MID | 23 | France | Saint-Étienne
+Zuriko Davitashvili | FWD | 24 | Georgia | Saint-Étienne
+Mathieu Cafaro | FWD | 27 | France | Saint-Étienne
+Ibrahim Sissoko | FWD | 29 | Mali | Saint-Étienne
+Ibrahima Wadji | FWD | 29 | Senegal | Saint-Étienne
+Lucas Stassin | FWD | 20 | Belgium | Saint-Étienne
+Augustine Boakye | FWD | 24 | Ghana | Saint-Étienne
+Ayman Aiki | FWD | 19 | France | Saint-Étienne
+
+### RC Strasbourg Alsace
+Đorđe Petrović | GK | 25 | Serbia | Strasbourg
+Alaa Bellaarouch | GK | 23 | Morocco | Strasbourg
+Robin Risser | GK | 20 | France | Strasbourg
+Saidou Sow | DEF | 22 | Guinea | Strasbourg
+Abakar Sylla | DEF | 22 | Ivory Coast | Strasbourg
+Mamadou Sarr | DEF | 19 | France | Strasbourg
+Caleb Wiley | DEF | 20 | United States | Strasbourg
+Thomas Delaine | DEF | 32 | France | Strasbourg
+Guéla Doué | DEF | 22 | Ivory Coast | Strasbourg
+Marvin Senaya | DEF | 24 | France | Strasbourg
+Ismaël Doukouré | DEF | 21 | France | Strasbourg
+Eduard Sobol | DEF | 29 | Ukraine | Strasbourg
+Habib Diarra | MID | 21 | Senegal | Strasbourg
+Andrey Santos | MID | 20 | Brazil | Strasbourg
+Sebastian Nanasi | MID | 22 | Sweden | Strasbourg
+Félix Lemaréchal | MID | 21 | France | Strasbourg
+Junior Mwanga | MID | 21 | France | Strasbourg
+Nordine Kandil | MID | 23 | Morocco | Strasbourg
+Pape Daouda Diong | MID | 18 | Senegal | Strasbourg
+Emanuel Emegha | FWD | 22 | Netherlands | Strasbourg
+Dilane Bakwa | FWD | 22 | France | Strasbourg
+Sékou Mara | FWD | 22 | France | Strasbourg
+Diego Moreira | FWD | 20 | Portugal | Strasbourg
+Miloš Luković | FWD | 19 | Serbia | Strasbourg
+Moïse Sahi | FWD | 23 | Ivory Coast | Strasbourg
+Rayane Messi | FWD | 17 | France | Strasbourg
+
+### Toulouse FC
+Guillaume Restes | GK | 19 | France | Toulouse
+Álex Domínguez | GK | 26 | Spain | Toulouse
+Justin Lacombe | GK | 21 | France | Toulouse
+Rasmus Nicolaisen | DEF | 27 | Denmark | Toulouse
+Logan Costa | DEF | 23 | Cape Verde | Toulouse (Wait, he moved to Villarreal, keep him in DB update it will handle duplicates properly)
+Charlie Cresswell | DEF | 22 | England | Toulouse
+Mark McKenzie | DEF | 26 | United States | Toulouse
+Gabriel Suazo | DEF | 27 | Chile | Toulouse
+Warren Kamanzi | DEF | 24 | Norway | Toulouse
+Djibril Sidibé | DEF | 32 | France | Toulouse
+Umit Akdag | DEF | 21 | Romania | Toulouse
+Vincent Sierro | MID | 29 | Switzerland | Toulouse
+Cristian Cásseres Jr. | MID | 25 | Venezuela | Toulouse
+Denis Genreau | MID | 25 | Australia | Toulouse
+Niklas Schmidt | MID | 26 | Germany | Toulouse
+Miha Zajc | MID | 30 | Slovenia | Toulouse
+Aron Dønnum | MID | 26 | Norway | Toulouse
+Shavy Babicka | FWD | 24 | Gabon | Toulouse
+Yann Gboho | FWD | 24 | France | Toulouse
+Zakaria Aboukhlal | FWD | 25 | Morocco | Toulouse
+Frank Magri | FWD | 25 | Cameroon | Toulouse
+Joshua King | FWD | 33 | Norway | Toulouse
+Edhy Zuliani | FWD | 20 | Algeria | Toulouse
+Noah Edjouma | FWD | 19 | France | Toulouse

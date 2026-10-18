@@ -1,0 +1,477 @@
+### 1. FC Augsburg
+Finn Dahmen | GK | 26 | Germany | FC Augsburg
+Nediljko Labrović | GK | 25 | Croatia | FC Augsburg
+Daniel Klein | GK | 23 | Germany | FC Augsburg
+Jeffrey Gouweleeuw | DEF | 33 | Netherlands | FC Augsburg
+Felix Uduokhai | DEF | 27 | Germany | FC Augsburg
+Maximilian Bauer | DEF | 25 | Germany | FC Augsburg
+Keven Schlotterbeck | DEF | 27 | Germany | FC Augsburg
+Chrislain Matsima | DEF | 22 | France | FC Augsburg
+Mads Valentin | DEF | 28 | Denmark | FC Augsburg
+Dimitrios Giannoulis | DEF | 29 | Greece | FC Augsburg
+Robert Gumny | DEF | 26 | Poland | FC Augsburg
+Marius Wolf | DEF | 29 | Germany | FC Augsburg
+Henri Koudossou | DEF | 25 | Germany | FC Augsburg
+Niklas Dorsch | MID | 27 | Germany | FC Augsburg
+Elvis Rexhbeçaj | MID | 27 | Germany | FC Augsburg
+Arne Maier | MID | 26 | Germany | FC Augsburg
+Kristijan Jakić | MID | 27 | Croatia | FC Augsburg
+Fredrik Jensen | MID | 27 | Finland | FC Augsburg
+Tim Breithaupt | MID | 23 | Germany | FC Augsburg
+Frank Onyeka | MID | 27 | Nigeria | FC Augsburg
+Alexis Claude-Maurice | MID | 26 | France | FC Augsburg
+Arne Engels | MID | 21 | Belgium | FC Augsburg
+Ruben Vargas | FWD | 26 | Switzerland | FC Augsburg
+Ermedin Demirović | FWD | 26 | Bosnia and Herzegovina | FC Augsburg
+Phillip Tietz | FWD | 27 | Germany | FC Augsburg
+Samuel Essende | FWD | 27 | DR Congo | FC Augsburg
+Steve Mounié | FWD | 30 | Benin | FC Augsburg
+
+### 2. Bayer Leverkusen
+Lukas Hradecky | GK | 35 | Finland | Bayer Leverkusen
+Matěj Kovář | GK | 24 | Czech Republic | Bayer Leverkusen
+Niklas Lomb | GK | 31 | Germany | Bayer Leverkusen
+Jonathan Tah | DEF | 29 | Germany | Bayer Leverkusen
+Edmond Tapsoba | DEF | 26 | Burkina Faso | Bayer Leverkusen
+Piero Hincapié | DEF | 23 | Ecuador | Bayer Leverkusen
+Odilon Kossounou | DEF | 24 | Ivory Coast | Bayer Leverkusen
+Nordi Mukiele | DEF | 27 | France | Bayer Leverkusen
+Jeanuël Belocian | DEF | 20 | France | Bayer Leverkusen
+Alejandro Grimaldo | DEF | 29 | Spain | Bayer Leverkusen
+Arthur | DEF | 21 | Brazil | Bayer Leverkusen
+Jeremie Frimpong | DEF | 24 | Netherlands | Bayer Leverkusen
+Granit Xhaka | MID | 32 | Switzerland | Bayer Leverkusen
+Robert Andrich | MID | 30 | Germany | Bayer Leverkusen
+Exequiel Palacios | MID | 26 | Argentina | Bayer Leverkusen
+Aleix García | MID | 27 | Spain | Bayer Leverkusen
+Florian Wirtz | MID | 21 | Germany | Bayer Leverkusen
+Jonas Hofmann | MID | 32 | Germany | Bayer Leverkusen
+Amine Adli | FWD | 24 | Morocco | Bayer Leverkusen
+Nathan Tella | FWD | 25 | Nigeria | Bayer Leverkusen
+Victor Boniface | FWD | 24 | Nigeria | Bayer Leverkusen
+Patrik Schick | FWD | 29 | Czech Republic | Bayer Leverkusen
+Martin Terrier | FWD | 28 | France | Bayer Leverkusen
+
+### 3. Bayern Munich
+Manuel Neuer | GK | 38 | Germany | Bayern Munich
+Sven Ulreich | GK | 36 | Germany | Bayern Munich
+Daniel Peretz | GK | 24 | Israel | Bayern Munich
+Dayot Upamecano | DEF | 26 | France | Bayern Munich
+Kim Min-jae | DEF | 28 | South Korea | Bayern Munich
+Eric Dier | DEF | 31 | England | Bayern Munich
+Hiroki Ito | DEF | 25 | Japan | Bayern Munich
+Tarek Buchmann | DEF | 20 | Germany | Bayern Munich
+Alphonso Davies | DEF | 24 | Canada | Bayern Munich
+Raphaël Guerreiro | DEF | 31 | Portugal | Bayern Munich
+Sacha Boey | DEF | 24 | France | Bayern Munich
+Josip Stanišić | DEF | 24 | Croatia | Bayern Munich
+Joshua Kimmich | MID | 30 | Germany | Bayern Munich
+Leon Goretzka | MID | 30 | Germany | Bayern Munich
+Konrad Laimer | MID | 27 | Austria | Bayern Munich
+João Palhinha | MID | 29 | Portugal | Bayern Munich
+Aleksandar Pavlović | MID | 20 | Germany | Bayern Munich
+Jamal Musiala | MID | 22 | Germany | Bayern Munich
+Thomas Müller | MID | 35 | Germany | Bayern Munich
+Leroy Sané | FWD | 29 | Germany | Bayern Munich
+Kingsley Coman | FWD | 28 | France | Bayern Munich
+Serge Gnabry | FWD | 29 | Germany | Bayern Munich
+Michael Olise | FWD | 23 | France | Bayern Munich
+Mathys Tel | FWD | 19 | France | Bayern Munich
+Harry Kane | FWD | 31 | England | Bayern Munich
+
+### 4. VfL Bochum
+Manuel Riemann | GK | 36 | Germany | VfL Bochum
+Patrick Drewes | GK | 32 | Germany | VfL Bochum
+Timo Horn | GK | 31 | Germany | VfL Bochum
+Ivan Ordets | DEF | 32 | Ukraine | VfL Bochum
+Erhan Mašović | DEF | 26 | Serbia | VfL Bochum
+Bernardo | DEF | 29 | Brazil | VfL Bochum
+Jakov Medić | DEF | 26 | Croatia | VfL Bochum
+Tim Oermann | DEF | 21 | Germany | VfL Bochum
+Noah Loosli | DEF | 28 | Switzerland | VfL Bochum
+Maximilian Wittek | DEF | 29 | Germany | VfL Bochum
+Felix Passlack | DEF | 26 | Germany | VfL Bochum
+Cristian Gamboa | DEF | 35 | Costa Rica | VfL Bochum
+Anthony Losilla | MID | 38 | France | VfL Bochum
+Ibrahima Sissoko | MID | 27 | France | VfL Bochum
+Matúš Bero | MID | 29 | Slovakia | VfL Bochum
+Dani de Wit | MID | 26 | Netherlands | VfL Bochum
+Lukas Daschner | MID | 26 | Germany | VfL Bochum
+Agon Elezi | MID | 24 | North Macedonia | VfL Bochum
+Mats Pannewig | MID | 20 | Germany | VfL Bochum
+Moritz Kwarteng | MID | 26 | Germany | VfL Bochum
+Koji Miyoshi | MID | 27 | Japan | VfL Bochum
+Philipp Hofmann | FWD | 31 | Germany | VfL Bochum
+Moritz Broschinski | FWD | 24 | Germany | VfL Bochum
+Aliou Baldé | FWD | 22 | Guinea | VfL Bochum
+Samuel Bamba | FWD | 21 | Germany | VfL Bochum
+Myron Boadu | FWD | 24 | Netherlands | VfL Bochum
+Gerrit Holtmann | FWD | 29 | Philippines | VfL Bochum
+
+### 5. Werder Bremen
+Michael Zetterer | GK | 29 | Germany | Werder Bremen
+Mio Backhaus | GK | 20 | Germany | Werder Bremen
+Marco Friedl | DEF | 26 | Austria | Werder Bremen
+Miloš Veljković | DEF | 29 | Serbia | Werder Bremen
+Niklas Stark | DEF | 29 | Germany | Werder Bremen
+Amos Pieper | DEF | 27 | Germany | Werder Bremen
+Anthony Jung | DEF | 33 | Germany | Werder Bremen
+Derrick Köhn | DEF | 26 | Germany | Werder Bremen
+Mitchell Weiser | DEF | 30 | Germany | Werder Bremen
+Felix Agu | DEF | 25 | Germany | Werder Bremen
+Senny Mayulu | MID | 18 | France | Werder Bremen
+Jens Stage | MID | 28 | Denmark | Werder Bremen
+Skelly Alvero | MID | 22 | France | Werder Bremen
+Senna Miangue | MID | 28 | Belgium | Werder Bremen
+Romano Schmid | MID | 25 | Austria | Werder Bremen
+Leonardo Bittencourt | MID | 31 | Germany | Werder Bremen
+Naby Keïta | MID | 30 | Guinea | Werder Bremen
+Justin Njinmah | FWD | 24 | Germany | Werder Bremen
+Marvin Ducksch | FWD | 30 | Germany | Werder Bremen
+Keke Topp | FWD | 20 | Germany | Werder Bremen
+Marco Grüll | FWD | 26 | Austria | Werder Bremen
+Oliver Burke | FWD | 27 | Scotland | Werder Bremen
+Abdenego Nankishi | FWD | 22 | Germany | Werder Bremen
+
+### 6. Borussia Dortmund
+Gregor Kobel | GK | 27 | Switzerland | Borussia Dortmund
+Alexander Meyer | GK | 33 | Germany | Borussia Dortmund
+Marcel Lotka | GK | 23 | Poland | Borussia Dortmund
+Nico Schlotterbeck | DEF | 25 | Germany | Borussia Dortmund
+Waldemar Anton | DEF | 28 | Germany | Borussia Dortmund
+Niklas Süle | DEF | 29 | Germany | Borussia Dortmund
+Ramy Bensebaini | DEF | 29 | Algeria | Borussia Dortmund
+Julian Ryerson | DEF | 27 | Norway | Borussia Dortmund
+Yan Couto | DEF | 22 | Brazil | Borussia Dortmund
+Emre Can | MID | 31 | Germany | Borussia Dortmund
+Pascal Groß | MID | 33 | Germany | Borussia Dortmund
+Marcel Sabitzer | MID | 30 | Austria | Borussia Dortmund
+Felix Nmecha | MID | 24 | Germany | Borussia Dortmund
+Julian Brandt | MID | 28 | Germany | Borussia Dortmund
+Giovanni Reyna | MID | 22 | United States | Borussia Dortmund
+Kjell Wätjen | MID | 19 | Germany | Borussia Dortmund
+Karim Adeyemi | FWD | 23 | Germany | Borussia Dortmund
+Donyell Malen | FWD | 26 | Netherlands | Borussia Dortmund
+Jamie Gittens | FWD | 20 | England | Borussia Dortmund
+Julien Duranville | FWD | 18 | Belgium | Borussia Dortmund
+Serhou Guirassy | FWD | 28 | Guinea | Borussia Dortmund
+Maximilian Beier | FWD | 22 | Germany | Borussia Dortmund
+Cole Campbell | FWD | 19 | United States | Borussia Dortmund
+
+### 7. Eintracht Frankfurt
+Kevin Trapp | GK | 34 | Germany | Eintracht Frankfurt
+Kauã Santos | GK | 21 | Brazil | Eintracht Frankfurt
+Jens Grahl | GK | 36 | Germany | Eintracht Frankfurt
+Robin Koch | DEF | 28 | Germany | Eintracht Frankfurt
+Arthur Theate | DEF | 24 | Belgium | Eintracht Frankfurt
+Tuta | DEF | 25 | Brazil | Eintracht Frankfurt
+Aurèle Amenda | DEF | 21 | Switzerland | Eintracht Frankfurt
+Nnamdi Collins | DEF | 21 | Germany | Eintracht Frankfurt
+Niels Nkounkou | DEF | 24 | France | Eintracht Frankfurt
+Rasmus Kristensen | DEF | 27 | Denmark | Eintracht Frankfurt
+Timothy Chandler | DEF | 34 | United States | Eintracht Frankfurt
+Ellyes Skhiri | MID | 29 | Tunisia | Eintracht Frankfurt
+Hugo Larsson | MID | 20 | Sweden | Eintracht Frankfurt
+Mahmoud Dahoud | MID | 29 | Germany | Eintracht Frankfurt
+Mario Götze | MID | 32 | Germany | Eintracht Frankfurt
+Éric Junior Dina Ebimbe | MID | 24 | France | Eintracht Frankfurt
+Fares Chaibi | MID | 22 | Algeria | Eintracht Frankfurt
+Can Uzun | MID | 19 | Turkey | Eintracht Frankfurt
+Oscar Højlund | MID | 20 | Denmark | Eintracht Frankfurt
+Jean-Mattéo Bahoya | MID | 19 | France | Eintracht Frankfurt
+Timothy Chandler | MID | 34 | United States | Eintracht Frankfurt
+Omar Marmoush | FWD | 26 | Egypt | Eintracht Frankfurt
+Hugo Ekitike | FWD | 22 | France | Eintracht Frankfurt
+Igor Matanović | FWD | 21 | Croatia | Eintracht Frankfurt
+Ansgar Knauff | FWD | 23 | Germany | Eintracht Frankfurt
+
+### 8. SC Freiburg
+Noah Atubolu | GK | 22 | Germany | SC Freiburg
+Florian Müller | GK | 27 | Germany | SC Freiburg
+Matthias Ginter | DEF | 31 | Germany | SC Freiburg
+Philipp Lienhart | DEF | 28 | Austria | SC Freiburg
+Max Rosenfelder | DEF | 22 | Germany | SC Freiburg
+Manuel Gulde | DEF | 34 | Germany | SC Freiburg
+Christian Günter | DEF | 32 | Germany | SC Freiburg
+Jordy Makengo | DEF | 23 | France | SC Freiburg
+Lukas Kübler | DEF | 32 | Germany | SC Freiburg
+Kiliann Sildillia | DEF | 22 | France | SC Freiburg
+Nicolas Höfler | MID | 34 | Germany | SC Freiburg
+Maximilian Eggestein | MID | 28 | Germany | SC Freiburg
+Patrick Osterhage | MID | 25 | Germany | SC Freiburg
+Ritsu Doan | MID | 26 | Japan | SC Freiburg
+Vincenzo Grifo | MID | 31 | Italy | SC Freiburg
+Noah Weißhaupt | MID | 23 | Germany | SC Freiburg
+Florent Muslija | MID | 26 | Kosovo | SC Freiburg
+Merlin Röhl | MID | 22 | Germany | SC Freiburg
+Daniel-Kofi Kyereh | MID | 28 | Ghana | SC Freiburg
+Michael Gregoritsch | FWD | 30 | Austria | SC Freiburg
+Lucas Höler | FWD | 30 | Germany | SC Freiburg
+Junior Adamu | FWD | 23 | Austria | SC Freiburg
+Eren Dinkçi | FWD | 23 | Germany | SC Freiburg
+Maximilian Philipp | FWD | 31 | Germany | SC Freiburg
+
+### 9. 1. FC Heidenheim
+Kevin Müller | GK | 33 | Germany | 1. FC Heidenheim
+Vitus Eicher | GK | 34 | Germany | 1. FC Heidenheim
+Frank Feller | GK | 21 | Germany | 1. FC Heidenheim
+Patrick Mainka | DEF | 30 | Germany | 1. FC Heidenheim
+Benedikt Gimber | DEF | 28 | Germany | 1. FC Heidenheim
+Tim Siersleben | DEF | 24 | Germany | 1. FC Heidenheim
+Jonas Föhrenbach | DEF | 29 | Germany | 1. FC Heidenheim
+Marnon Busch | DEF | 30 | Germany | 1. FC Heidenheim
+Omar Haktab Traoré | DEF | 27 | Germany | 1. FC Heidenheim
+Lennard Maloney | MID | 25 | United States | 1. FC Heidenheim
+Jan Schöppner | MID | 25 | Germany | 1. FC Heidenheim
+Norman Theuerkauf | MID | 38 | Germany | 1. FC Heidenheim
+Luca Kerber | MID | 23 | Germany | 1. FC Heidenheim
+Paul Wanner | MID | 19 | Germany | 1. FC Heidenheim
+Niklas Dorsch | MID | 27 | Germany | 1. FC Heidenheim
+Denis Thomalla | MID | 32 | Germany | 1. FC Heidenheim
+Luka Janeš | MID | 21 | Germany | 1. FC Heidenheim
+Tim Kleindienst | FWD | 29 | Germany | 1. FC Heidenheim
+Marvin Pieringer | FWD | 25 | Germany | 1. FC Heidenheim
+Mikkel Kaufmann | FWD | 24 | Denmark | 1. FC Heidenheim
+Maximilian Breunig | FWD | 24 | Germany | 1. FC Heidenheim
+Leonardo Scienza | FWD | 26 | Brazil | 1. FC Heidenheim
+Sirlord Conteh | FWD | 28 | Germany | 1. FC Heidenheim
+Mathias Honsak | FWD | 28 | Austria | 1. FC Heidenheim
+Stefan Schimmer | FWD | 30 | Germany | 1. FC Heidenheim
+
+### 10. TSG Hoffenheim
+Oliver Baumann | GK | 34 | Germany | TSG Hoffenheim
+Luca Philipp | GK | 24 | Germany | TSG Hoffenheim
+Ozan Kabak | DEF | 24 | Turkey | TSG Hoffenheim
+Anton Stach | DEF | 26 | Germany | TSG Hoffenheim
+Kevin Akpoguma | DEF | 29 | Nigeria | TSG Hoffenheim
+Stanley Nsoki | DEF | 25 | France | TSG Hoffenheim
+Tim Drexler | DEF | 20 | Germany | TSG Hoffenheim
+Robin Hranáč | DEF | 25 | Czech Republic | TSG Hoffenheim
+Arthur Chaves | DEF | 24 | Brazil | TSG Hoffenheim
+Alexander Prass | DEF | 23 | Austria | TSG Hoffenheim
+Pavel Kadeřábek | DEF | 32 | Czech Republic | TSG Hoffenheim
+Valentin Gendrey | DEF | 24 | France | TSG Hoffenheim
+David Jurásek | DEF | 24 | Czech Republic | TSG Hoffenheim
+Grischa Prömel | MID | 30 | Germany | TSG Hoffenheim
+Dennis Geiger | MID | 26 | Germany | TSG Hoffenheim
+Florian Grillitsch | MID | 29 | Austria | TSG Hoffenheim
+Tom Bischof | MID | 19 | Germany | TSG Hoffenheim
+Umut Tohumcu | MID | 20 | Germany | TSG Hoffenheim
+Andrej Kramarić | FWD | 33 | Croatia | TSG Hoffenheim
+Marius Bülter | FWD | 31 | Germany | TSG Hoffenheim
+Adam Hložek | FWD | 22 | Czech Republic | TSG Hoffenheim
+Ihlas Bebou | FWD | 30 | Togo | TSG Hoffenheim
+Haris Tabaković | FWD | 30 | Bosnia and Herzegovina | TSG Hoffenheim
+Mërgim Berisha | FWD | 26 | Germany | TSG Hoffenheim
+Jacob Bruun Larsen | FWD | 26 | Denmark | TSG Hoffenheim
+
+### 11. Holstein Kiel
+Timon Weiner | GK | 26 | Germany | Holstein Kiel
+Thomas Dähne | GK | 31 | Germany | Holstein Kiel
+Marcel Engelhardt | GK | 31 | Germany | Holstein Kiel
+Carl Johansson | DEF | 30 | Sweden | Holstein Kiel
+Colin Kleine-Bekel | DEF | 22 | Germany | Holstein Kiel
+Patrick Erras | DEF | 30 | Germany | Holstein Kiel
+Marco Komenda | DEF | 28 | Germany | Holstein Kiel
+Timo Becker | DEF | 27 | Germany | Holstein Kiel
+Max Geschwill | DEF | 23 | Germany | Holstein Kiel
+Tymoteusz Puchacz | DEF | 26 | Poland | Holstein Kiel
+Lasse Rosenboom | DEF | 23 | Germany | Holstein Kiel
+Magnus Knudsen | MID | 23 | Norway | Holstein Kiel
+Lewis Holtby | MID | 34 | Germany | Holstein Kiel
+Nicolai Remberg | MID | 24 | Germany | Holstein Kiel
+Marvin Schulz | MID | 30 | Germany | Holstein Kiel
+Armin Gigović | MID | 22 | Bosnia and Herzegovina | Holstein Kiel
+Finn Porath | MID | 28 | Germany | Holstein Kiel
+Steven Skrzybski | MID | 32 | Germany | Holstein Kiel
+Marko Ivezić | MID | 23 | Serbia | Holstein Kiel
+Alexander Bernhardsson | FWD | 26 | Sweden | Holstein Kiel
+Shuto Machino | FWD | 25 | Japan | Holstein Kiel
+Fiete Arp | FWD | 25 | Germany | Holstein Kiel
+Benedikt Pichler | FWD | 27 | Austria | Holstein Kiel
+Phil Harres | FWD | 22 | Germany | Holstein Kiel
+Andu Kelati | FWD | 22 | Germany | Holstein Kiel
+
+### 12. RB Leipzig
+Péter Gulácsi | GK | 34 | Hungary | RB Leipzig
+Maarten Vandevoordt | GK | 23 | Belgium | RB Leipzig
+Leopold Zingerle | GK | 30 | Germany | RB Leipzig
+Willi Orbán | DEF | 32 | Hungary | RB Leipzig
+Castello Lukeba | DEF | 22 | France | RB Leipzig
+El Chadaille Bitshiabu | DEF | 19 | France | RB Leipzig
+Lukas Klostermann | DEF | 28 | Germany | RB Leipzig
+David Raum | DEF | 26 | Germany | RB Leipzig
+Lutsharel Geertruida | DEF | 24 | Netherlands | RB Leipzig
+Benjamin Henrichs | DEF | 28 | Germany | RB Leipzig
+Amadou Haidara | MID | 27 | Mali | RB Leipzig
+Xaver Schlager | MID | 27 | Austria | RB Leipzig
+Kevin Kampl | MID | 34 | Slovenia | RB Leipzig
+Nicolas Seiwald | MID | 23 | Austria | RB Leipzig
+Arthur Vermeeren | MID | 20 | Belgium | RB Leipzig
+Assan Ouédraogo | MID | 18 | Germany | RB Leipzig
+Xavi Simons | MID | 21 | Netherlands | RB Leipzig
+Christoph Baumgartner | MID | 25 | Austria | RB Leipzig
+Eljif Elmas | MID | 25 | North Macedonia | RB Leipzig
+Antonio Nusa | FWD | 19 | Norway | RB Leipzig
+Loïs Openda | FWD | 25 | Belgium | RB Leipzig
+Benjamin Šeško | FWD | 21 | Slovenia | RB Leipzig
+Yussuf Poulsen | FWD | 30 | Denmark | RB Leipzig
+André Silva | FWD | 29 | Portugal | RB Leipzig
+
+### 13. FSV Mainz 05
+Robin Zentner | GK | 30 | Germany | FSV Mainz 05
+Lasse Rieß | GK | 23 | Germany | FSV Mainz 05
+Moritz Jenz | DEF | 25 | Germany | FSV Mainz 05
+Andreas Hanche-Olsen | DEF | 28 | Norway | FSV Mainz 05
+Maxim Leitsch | DEF | 26 | Germany | FSV Mainz 05
+Stefan Bell | DEF | 33 | Germany | FSV Mainz 05
+Anthony Caci | DEF | 27 | France | FSV Mainz 05
+Phillipp Mwene | DEF | 31 | Austria | FSV Mainz 05
+Silvan Widmer | DEF | 32 | Switzerland | FSV Mainz 05
+Danny da Costa | DEF | 31 | Germany | FSV Mainz 05
+Nadiem Amiri | MID | 28 | Germany | FSV Mainz 05
+Dominik Kohr | MID | 31 | Germany | FSV Mainz 05
+Kaishu Sano | MID | 24 | Japan | FSV Mainz 05
+Aymen Barkok | MID | 26 | Morocco | FSV Mainz 05
+Hyun-seok Hong | MID | 25 | South Korea | FSV Mainz 05
+Lee Jae-sung | MID | 32 | South Korea | FSV Mainz 05
+Nikolas Veratschnig | MID | 22 | Austria | FSV Mainz 05
+Jonathan Burkardt | FWD | 24 | Germany | FSV Mainz 05
+Karim Onisiwo | FWD | 32 | Austria | FSV Mainz 05
+Paul Nebel | FWD | 22 | Germany | FSV Mainz 05
+Armindo Sieb | FWD | 22 | Germany | FSV Mainz 05
+Nelson Weiper | FWD | 20 | Germany | FSV Mainz 05
+Gabriel Vidović | FWD | 21 | Croatia | FSV Mainz 05
+
+### 14. Borussia Mönchengladbach
+Jonas Omlin | GK | 31 | Switzerland | Borussia Mönchengladbach
+Moritz Nicolas | GK | 27 | Germany | Borussia Mönchengladbach
+Jan Olschowsky | GK | 23 | Germany | Borussia Mönchengladbach
+Ko Itakura | DEF | 28 | Japan | Borussia Mönchengladbach
+Nico Elvedi | DEF | 28 | Switzerland | Borussia Mönchengladbach
+Marvin Friedrich | DEF | 29 | Germany | Borussia Mönchengladbach
+Fabio Chiarodia | DEF | 19 | Italy | Borussia Mönchengladbach
+Luca Netz | DEF | 21 | Germany | Borussia Mönchengladbach
+Lukas Ullrich | DEF | 21 | Germany | Borussia Mönchengladbach
+Joe Scally | DEF | 22 | United States | Borussia Mönchengladbach
+Stefan Lainer | DEF | 32 | Austria | Borussia Mönchengladbach
+Julian Weigl | MID | 29 | Germany | Borussia Mönchengladbach
+Rocco Reitz | MID | 22 | Germany | Borussia Mönchengladbach
+Florian Neuhaus | MID | 28 | Germany | Borussia Mönchengladbach
+Philipp Sander | MID | 27 | Germany | Borussia Mönchengladbach
+Kevin Stöger | MID | 31 | Austria | Borussia Mönchengladbach
+Alassane Pléa | FWD | 31 | France | Borussia Mönchengladbach
+Franck Honorat | FWD | 28 | France | Borussia Mönchengladbach
+Nathan Ngoumou | FWD | 24 | France | Borussia Mönchengladbach
+Robin Hack | FWD | 26 | Germany | Borussia Mönchengladbach
+Tim Kleindienst | FWD | 29 | Germany | Borussia Mönchengladbach
+Tomáš Čvančara | FWD | 24 | Czech Republic | Borussia Mönchengladbach
+Grant-Leon Ranos | FWD | 21 | Armenia | Borussia Mönchengladbach
+Shio Fukuda | FWD | 20 | Japan | Borussia Mönchengladbach
+
+### 15. FC St. Pauli
+Nikola Vasilj | GK | 29 | Bosnia and Herzegovina | FC St. Pauli
+Ben Voll | GK | 24 | Germany | FC St. Pauli
+Sascha Burchert | GK | 35 | Germany | FC St. Pauli
+Eric Smith | DEF | 28 | Sweden | FC St. Pauli
+Hauke Wahl | DEF | 30 | Germany | FC St. Pauli
+Karol Mets | DEF | 31 | Estonia | FC St. Pauli
+David Nemeth | DEF | 23 | Austria | FC St. Pauli
+Philipp Treu | DEF | 24 | Germany | FC St. Pauli
+Fin Stevens | DEF | 21 | Wales | FC St. Pauli
+Manolis Saliakas | DEF | 28 | Greece | FC St. Pauli
+Lars Ritzka | DEF | 26 | Germany | FC St. Pauli
+Jackson Irvine | MID | 32 | Australia | FC St. Pauli
+Connor Metcalfe | MID | 25 | Australia | FC St. Pauli
+Carlo Boukhalfa | MID | 25 | Germany | FC St. Pauli
+Robert Wagner | MID | 21 | Germany | FC St. Pauli
+Alexander Vasiljevic | MID | 22 | Germany | FC St. Pauli
+Johannes Eggestein | FWD | 26 | Germany | FC St. Pauli
+Oladapo Afolayan | FWD | 27 | England | FC St. Pauli
+Elias Saad | FWD | 25 | Tunisia | FC St. Pauli
+Danel Sinani | FWD | 27 | Luxembourg | FC St. Pauli
+Simon Zoller | FWD | 33 | Germany | FC St. Pauli
+Maurides | FWD | 31 | Brazil | FC St. Pauli
+Scott Banks | FWD | 23 | Scotland | FC St. Pauli
+Andreas Albers | FWD | 35 | Denmark | FC St. Pauli
+
+### 16. VfB Stuttgart
+Alexander Nübel | GK | 28 | Germany | VfB Stuttgart
+Fabian Bredlow | GK | 30 | Germany | VfB Stuttgart
+Stefan Drljača | GK | 25 | Germany | VfB Stuttgart
+Jeff Chabot | DEF | 27 | Germany | VfB Stuttgart
+Dan-Axel Zagadou | DEF | 25 | France | VfB Stuttgart
+Anthony Rouault | DEF | 23 | France | VfB Stuttgart
+Leonidas Stergiou | DEF | 23 | Switzerland | VfB Stuttgart
+Ameen Al-Dakhil | DEF | 23 | Belgium | VfB Stuttgart
+Maximilian Mittelstädt | DEF | 28 | Germany | VfB Stuttgart
+Ramon Hendriks | DEF | 23 | Netherlands | VfB Stuttgart
+Josha Vagnoman | DEF | 24 | Germany | VfB Stuttgart
+Pascal Stenzel | DEF | 28 | Germany | VfB Stuttgart
+Atakan Karazor | MID | 28 | Germany | VfB Stuttgart
+Angelo Stiller | MID | 23 | Germany | VfB Stuttgart
+Yannik Keitel | MID | 25 | Germany | VfB Stuttgart
+Enzo Millot | MID | 22 | France | VfB Stuttgart
+Fabian Rieder | MID | 23 | Switzerland | VfB Stuttgart
+Ermedin Demirović | FWD | 26 | Bosnia and Herzegovina | VfB Stuttgart
+Deniz Undav | FWD | 28 | Germany | VfB Stuttgart
+Chris Führich | FWD | 27 | Germany | VfB Stuttgart
+Jamie Leweling | FWD | 24 | Germany | VfB Stuttgart
+Nick Woltemade | FWD | 23 | Germany | VfB Stuttgart
+El Bilal Touré | FWD | 23 | Mali | VfB Stuttgart
+Justin Diehl | FWD | 20 | Germany | VfB Stuttgart
+Thomas Kastanaras | FWD | 22 | Germany | VfB Stuttgart
+
+### 17. Union Berlin
+Frederik Rønnow | GK | 32 | Denmark | Union Berlin
+Alexander Schwolow | GK | 32 | Germany | Union Berlin
+Carl Klaus | GK | 31 | Germany | Union Berlin
+Danilho Doekhi | DEF | 26 | Netherlands | Union Berlin
+Kevin Vogt | DEF | 33 | Germany | Union Berlin
+Diogo Leite | DEF | 26 | Portugal | Union Berlin
+Leopold Querfeld | DEF | 21 | Austria | Union Berlin
+Christopher Trimmel | DEF | 38 | Austria | Union Berlin
+Josip Juranović | DEF | 29 | Croatia | Union Berlin
+Janik Haberer | DEF | 30 | Germany | Union Berlin
+Jérôme Roussillon | DEF | 32 | France | Union Berlin
+Tom Rothe | DEF | 20 | Germany | Union Berlin
+Rani Khedira | MID | 31 | Germany | Union Berlin
+András Schäfer | MID | 25 | Hungary | Union Berlin
+Lucas Tousart | MID | 27 | France | Union Berlin
+Aljoscha Kemlein | MID | 20 | Germany | Union Berlin
+László Bénes | MID | 27 | Slovakia | Union Berlin
+Jeong Woo-yeong | MID | 25 | South Korea | Union Berlin
+Kevin Volland | FWD | 32 | Germany | Union Berlin
+Jordan Siebatcheu | FWD | 28 | United States | Union Berlin
+Yorbe Vertessen | FWD | 24 | Belgium | Union Berlin
+Benedict Hollerbach | FWD | 23 | Germany | Union Berlin
+Ivan Prtajin | FWD | 28 | Croatia | Union Berlin
+Tim Skarke | FWD | 28 | Germany | Union Berlin
+
+### 18. VfL Wolfsburg
+Kamil Grabara | GK | 26 | Poland | VfL Wolfsburg
+Pavao Pervan | GK | 37 | Austria | VfL Wolfsburg
+Marius Müller | GK | 31 | Germany | VfL Wolfsburg
+Sebastiaan Bornauw | DEF | 25 | Belgium | VfL Wolfsburg
+Maxence Lacroix | DEF | 24 | France | VfL Wolfsburg
+Cedric Zesiger | DEF | 26 | Switzerland | VfL Wolfsburg
+Moritz Jenz | DEF | 25 | Germany | VfL Wolfsburg
+Joakim Mæhle | DEF | 27 | Denmark | VfL Wolfsburg
+Ridle Baku | DEF | 26 | Germany | VfL Wolfsburg
+Kilian Fischer | DEF | 24 | Germany | VfL Wolfsburg
+Rogerio | DEF | 27 | Brazil | VfL Wolfsburg
+Kostas Koulierakis | DEF | 21 | Greece | VfL Wolfsburg
+Maximilian Arnold | MID | 30 | Germany | VfL Wolfsburg
+Mattias Svanberg | MID | 25 | Sweden | VfL Wolfsburg
+Aster Vranckx | MID | 22 | Belgium | VfL Wolfsburg
+Yannick Gerhardt | MID | 31 | Germany | VfL Wolfsburg
+Lovro Majer | MID | 27 | Croatia | VfL Wolfsburg
+Salih Özcan | MID | 27 | Turkey | VfL Wolfsburg
+Bence Dárdai | MID | 19 | Germany | VfL Wolfsburg
+Jonas Wind | FWD | 26 | Denmark | VfL Wolfsburg
+Tiago Tomás | FWD | 22 | Portugal | VfL Wolfsburg
+Mohamed Amoura | FWD | 24 | Algeria | VfL Wolfsburg
+Jakub Kamiński | FWD | 22 | Poland | VfL Wolfsburg
+Patrick Wimmer | FWD | 23 | Austria | VfL Wolfsburg
+Kevin Behrens | FWD | 34 | Germany | VfL Wolfsburg
+Lukas Nmecha | FWD | 26 | Germany | VfL Wolfsburg

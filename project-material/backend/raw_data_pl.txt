@@ -1,0 +1,586 @@
+### 1. Arsenal
+David Raya | GK | 29 | Spain | Arsenal
+Neto | GK | 35 | Brazil | Arsenal
+Tommy Setford | GK | 18 | England | Arsenal
+William Saliba | DEF | 23 | France | Arsenal
+Gabriel Magalhães | DEF | 27 | Brazil | Arsenal
+Ben White | DEF | 27 | England | Arsenal
+Jurriën Timber | DEF | 23 | Netherlands | Arsenal
+Riccardo Calafiori | DEF | 22 | Italy | Arsenal
+Oleksandr Zinchenko | DEF | 28 | Ukraine | Arsenal
+Takehiro Tomiyasu | DEF | 26 | Japan | Arsenal
+Jakub Kiwior | DEF | 25 | Poland | Arsenal
+Kieran Tierney | DEF | 27 | Scotland | Arsenal
+Myles Lewis-Skelly | DEF | 18 | England | Arsenal
+Martin Ødegaard | MID | 26 | Norway | Arsenal
+Declan Rice | MID | 26 | England | Arsenal
+Thomas Partey | MID | 31 | Ghana | Arsenal
+Mikel Merino | MID | 28 | Spain | Arsenal
+Jorginho | MID | 33 | Italy | Arsenal
+Ethan Nwaneri | MID | 17 | England | Arsenal
+Bukayo Saka | FWD | 23 | England | Arsenal
+Kai Havertz | FWD | 25 | Germany | Arsenal
+Gabriel Martinelli | FWD | 23 | Brazil | Arsenal
+Gabriel Jesus | FWD | 27 | Brazil | Arsenal
+Leandro Trossard | FWD | 30 | Belgium | Arsenal
+Raheem Sterling | FWD | 30 | England | Arsenal
+
+### 2. Aston Villa
+Emiliano Martínez | GK | 32 | Argentina | Aston Villa
+Robin Olsen | GK | 35 | Sweden | Aston Villa
+Joe Gauci | GK | 24 | Australia | Aston Villa
+Matty Cash | DEF | 27 | Poland | Aston Villa
+Diego Carlos | DEF | 31 | Brazil | Aston Villa
+Ezri Konsa | DEF | 27 | England | Aston Villa
+Tyrone Mings | DEF | 31 | England | Aston Villa
+Pau Torres | DEF | 28 | Spain | Aston Villa
+Lucas Digne | DEF | 31 | France | Aston Villa
+Ian Maatsen | DEF | 22 | Netherlands | Aston Villa
+Kosta Nedeljković | DEF | 19 | Serbia | Aston Villa
+Kortney Hause | DEF | 29 | England | Aston Villa
+John McGinn | MID | 30 | Scotland | Aston Villa
+Youri Tielemans | MID | 27 | Belgium | Aston Villa
+Boubacar Kamara | MID | 25 | France | Aston Villa
+Amadou Onana | MID | 23 | Belgium | Aston Villa
+Jacob Ramsey | MID | 23 | England | Aston Villa
+Ross Barkley | MID | 31 | England | Aston Villa
+Emiliano Buendía | MID | 28 | Argentina | Aston Villa
+Morgan Rogers | MID | 22 | England | Aston Villa
+Ollie Watkins | FWD | 29 | England | Aston Villa
+Jhon Durán | FWD | 21 | Colombia | Aston Villa
+Leon Bailey | FWD | 27 | Jamaica | Aston Villa
+Jaden Philogene | FWD | 23 | England | Aston Villa
+
+### 3. Bournemouth
+Kepa Arrizabalaga | GK | 30 | Spain | Bournemouth
+Mark Travers | GK | 25 | Republic of Ireland | Bournemouth
+Will Dennis | GK | 24 | England | Bournemouth
+Alex Paulsen | GK | 22 | New Zealand | Bournemouth
+Dean Huijsen | DEF | 19 | Spain | Bournemouth
+Milos Kerkez | DEF | 21 | Hungary | Bournemouth
+Marcos Senesi | DEF | 27 | Argentina | Bournemouth
+Illya Zabarnyi | DEF | 22 | Ukraine | Bournemouth
+Adam Smith | DEF | 33 | England | Bournemouth
+Julián Araujo | DEF | 23 | Mexico | Bournemouth
+Max Aarons | DEF | 25 | England | Bournemouth
+James Hill | DEF | 23 | England | Bournemouth
+Lewis Cook | MID | 28 | England | Bournemouth
+Alex Scott | MID | 21 | England | Bournemouth
+Ryan Christie | MID | 29 | Scotland | Bournemouth
+Tyler Adams | MID | 25 | United States | Bournemouth
+Philip Billing | MID | 28 | Denmark | Bournemouth
+Marcus Tavernier | MID | 25 | England | Bournemouth
+David Brooks | FWD | 27 | Wales | Bournemouth
+Justin Kluivert | FWD | 25 | Netherlands | Bournemouth
+Antoine Semenyo | FWD | 25 | Ghana | Bournemouth
+Dango Ouattara | FWD | 23 | Burkina Faso | Bournemouth
+Luis Sinisterra | FWD | 25 | Colombia | Bournemouth
+Evanilson | FWD | 25 | Brazil | Bournemouth
+Enes Ünal | FWD | 27 | Turkey | Bournemouth
+Daniel Jebbison | FWD | 21 | Canada | Bournemouth
+
+### 4. Brentford
+Mark Flekken | GK | 31 | Netherlands | Brentford
+Hákon Valdimarsson | GK | 23 | Iceland | Brentford
+Matthew Cox | GK | 21 | England | Brentford
+Aaron Hickey | DEF | 22 | Scotland | Brentford
+Rico Henry | DEF | 27 | England | Brentford
+Ethan Pinnock | DEF | 31 | Jamaica | Brentford
+Ben Mee | DEF | 35 | England | Brentford
+Kristoffer Ajer | DEF | 26 | Norway | Brentford
+Nathan Collins | DEF | 23 | Republic of Ireland | Brentford
+Mads Roerslev | DEF | 25 | Denmark | Brentford
+Sepp van den Berg | DEF | 23 | Netherlands | Brentford
+Kim Ji-soo | DEF | 20 | South Korea | Brentford
+Jayden Meghoma | DEF | 18 | England | Brentford
+Christian Nørgaard | MID | 30 | Denmark | Brentford
+Mathias Jensen | MID | 29 | Denmark | Brentford
+Josh Dasilva | MID | 26 | England | Brentford
+Fábio Carvalho | MID | 22 | Portugal | Brentford
+Frank Onyeka | MID | 27 | Nigeria | Brentford
+Yehor Yarmoliuk | MID | 20 | Ukraine | Brentford
+Mikkel Damsgaard | MID | 24 | Denmark | Brentford
+Yunus Emre Konak | MID | 19 | Turkey | Brentford
+Vitaly Janelt | MID | 26 | Germany | Brentford
+Ryan Trevitt | MID | 21 | England | Brentford
+Paris Maghoma | MID | 23 | England | Brentford
+Kevin Schade | FWD | 23 | Germany | Brentford
+Igor Thiago | FWD | 23 | Brazil | Brentford
+Yoane Wissa | FWD | 28 | DR Congo | Brentford
+Bryan Mbeumo | FWD | 25 | Cameroon | Brentford
+Keane Lewis-Potter | FWD | 24 | England | Brentford
+Gustavo Nunes | FWD | 19 | Brazil | Brentford
+
+### 5. Brighton & Hove Albion
+Bart Verbruggen | GK | 22 | Netherlands | Brighton & Hove Albion
+Jason Steele | GK | 34 | England | Brighton & Hove Albion
+Killian Cahill | GK | 21 | Republic of Ireland | Brighton & Hove Albion
+Tariq Lamptey | DEF | 24 | Ghana | Brighton & Hove Albion
+Igor Julio | DEF | 27 | Brazil | Brighton & Hove Albion
+Adam Webster | DEF | 30 | England | Brighton & Hove Albion
+Lewis Dunk | DEF | 33 | England | Brighton & Hove Albion
+Ferdi Kadıoğlu | DEF | 25 | Turkey | Brighton & Hove Albion
+Jan Paul van Hecke | DEF | 24 | Netherlands | Brighton & Hove Albion
+Pervis Estupiñán | DEF | 27 | Ecuador | Brighton & Hove Albion
+Joël Veltman | DEF | 33 | Netherlands | Brighton & Hove Albion
+James Milner | MID | 39 | England | Brighton & Hove Albion
+Solly March | MID | 30 | England | Brighton & Hove Albion
+Brajan Gruda | MID | 20 | Germany | Brighton & Hove Albion
+Jakub Moder | MID | 25 | Poland | Brighton & Hove Albion
+Carlos Baleba | MID | 21 | Cameroon | Brighton & Hove Albion
+Yasin Ayari | MID | 21 | Sweden | Brighton & Hove Albion
+Mats Wieffer | MID | 25 | Netherlands | Brighton & Hove Albion
+Matt O'Riley | MID | 24 | Denmark | Brighton & Hove Albion
+Jack Hinshelwood | MID | 19 | England | Brighton & Hove Albion
+João Pedro | FWD | 23 | Brazil | Brighton & Hove Albion
+Julio Enciso | FWD | 21 | Paraguay | Brighton & Hove Albion
+Simon Adingra | FWD | 23 | Ivory Coast | Brighton & Hove Albion
+Georginio Rutter | FWD | 22 | France | Brighton & Hove Albion
+Yankuba Minteh | FWD | 20 | Gambia | Brighton & Hove Albion
+Danny Welbeck | FWD | 34 | England | Brighton & Hove Albion
+Kaoru Mitoma | FWD | 27 | Japan | Brighton & Hove Albion
+Evan Ferguson | FWD | 20 | Republic of Ireland | Brighton & Hove Albion
+
+### 6. Chelsea
+Robert Sánchez | GK | 27 | Spain | Chelsea
+Filip Jørgensen | GK | 22 | Denmark | Chelsea
+Marcus Bettinelli | GK | 32 | England | Chelsea
+Lucas Bergström | GK | 22 | Finland | Chelsea
+Axel Disasi | DEF | 26 | France | Chelsea
+Marc Cucurella | DEF | 26 | Spain | Chelsea
+Tosin Adarabioyo | DEF | 27 | England | Chelsea
+Benoît Badiashile | DEF | 23 | France | Chelsea
+Levi Colwill | DEF | 22 | England | Chelsea
+Ben Chilwell | DEF | 28 | England | Chelsea
+Reece James | DEF | 25 | England | Chelsea
+Malo Gusto | DEF | 21 | France | Chelsea
+Wesley Fofana | DEF | 24 | France | Chelsea
+Renato Veiga | DEF | 21 | Portugal | Chelsea
+Josh Acheampong | DEF | 18 | England | Chelsea
+Enzo Fernández | MID | 24 | Argentina | Chelsea
+Carney Chukwuemeka | MID | 21 | England | Chelsea
+Kiernan Dewsbury-Hall | MID | 26 | England | Chelsea
+Moisés Caicedo | MID | 23 | Ecuador | Chelsea
+Cesare Casadei | MID | 22 | Italy | Chelsea
+Roméo Lavia | MID | 21 | Belgium | Chelsea
+Omari Kellyman | MID | 19 | England | Chelsea
+Pedro Neto | FWD | 24 | Portugal | Chelsea
+Mykhailo Mudryk | FWD | 24 | Ukraine | Chelsea
+Noni Madueke | FWD | 22 | England | Chelsea
+João Félix | FWD | 25 | Portugal | Chelsea
+Nicolas Jackson | FWD | 23 | Senegal | Chelsea
+Christopher Nkunku | FWD | 27 | France | Chelsea
+Jadon Sancho | FWD | 24 | England | Chelsea
+Cole Palmer | FWD | 22 | England | Chelsea
+Marc Guiu | FWD | 19 | Spain | Chelsea
+Tyrique George | FWD | 19 | England | Chelsea
+Deivid Washington | FWD | 19 | Brazil | Chelsea
+
+### 7. Crystal Palace
+Dean Henderson | GK | 27 | England | Crystal Palace
+Matt Turner | GK | 30 | United States | Crystal Palace
+Remi Matthews | GK | 30 | England | Crystal Palace
+Joel Ward | DEF | 35 | England | Crystal Palace
+Tyrick Mitchell | DEF | 25 | England | Crystal Palace
+Rob Holding | DEF | 29 | England | Crystal Palace
+Maxence Lacroix | DEF | 24 | France | Crystal Palace
+Marc Guéhi | DEF | 24 | England | Crystal Palace
+Daniel Muñoz | DEF | 28 | Colombia | Crystal Palace
+Chris Richards | DEF | 24 | United States | Crystal Palace
+Chadi Riad | DEF | 21 | Morocco | Crystal Palace
+Nathaniel Clyne | DEF | 33 | England | Crystal Palace
+Trevoh Chalobah | DEF | 25 | England | Crystal Palace
+Jefferson Lerma | MID | 30 | Colombia | Crystal Palace
+Eberechi Eze | MID | 26 | England | Crystal Palace
+Jeffrey Schlupp | MID | 32 | Ghana | Crystal Palace
+Daichi Kamada | MID | 28 | Japan | Crystal Palace
+Will Hughes | MID | 29 | England | Crystal Palace
+Adam Wharton | MID | 21 | England | Crystal Palace
+Cheick Doucouré | MID | 25 | Mali | Crystal Palace
+Matheus França | MID | 20 | Brazil | Crystal Palace
+Ismaïla Sarr | FWD | 27 | Senegal | Crystal Palace
+Eddie Nketiah | FWD | 25 | England | Crystal Palace
+Jean-Philippe Mateta | FWD | 27 | France | Crystal Palace
+Malcolm Ebiowei | FWD | 21 | England | Crystal Palace
+
+### 8. Everton
+Jordan Pickford | GK | 30 | England | Everton
+João Virgínia | GK | 25 | Portugal | Everton
+Asmir Begović | GK | 37 | Bosnia and Herzegovina | Everton
+Nathan Patterson | DEF | 23 | Scotland | Everton
+Michael Keane | DEF | 32 | England | Everton
+James Tarkowski | DEF | 32 | England | Everton
+Jake O'Brien | DEF | 23 | Republic of Ireland | Everton
+Ashley Young | DEF | 39 | England | Everton
+Vitaliy Mykolenko | DEF | 25 | Ukraine | Everton
+Séamus Coleman | DEF | 36 | Republic of Ireland | Everton
+Jarrad Branthwaite | DEF | 22 | England | Everton
+Roman Dixon | DEF | 20 | England | Everton
+Dwight McNeil | MID | 25 | England | Everton
+Orel Mangala | MID | 26 | Belgium | Everton
+Abdoulaye Doucouré | MID | 32 | Mali | Everton
+Idrissa Gueye | MID | 35 | Senegal | Everton
+Jesper Lindstrøm | MID | 24 | Denmark | Everton
+James Garner | MID | 23 | England | Everton
+Tim Iroegbunam | MID | 21 | England | Everton
+Harrison Armstrong | MID | 18 | England | Everton
+Dominic Calvert-Lewin | FWD | 27 | England | Everton
+Beto | FWD | 27 | Guinea-Bissau | Everton
+Iliman Ndiaye | FWD | 24 | Senegal | Everton
+Jack Harrison | FWD | 28 | England | Everton
+Armando Broja | FWD | 23 | Albania | Everton
+Youssef Chermiti | FWD | 20 | Portugal | Everton
+
+### 9. Fulham
+Bernd Leno | GK | 32 | Germany | Fulham
+Steven Benda | GK | 26 | Germany | Fulham
+Alex Borto | GK | 21 | United States | Fulham
+Kenny Tete | DEF | 29 | Netherlands | Fulham
+Calvin Bassey | DEF | 25 | Nigeria | Fulham
+Joachim Andersen | DEF | 28 | Denmark | Fulham
+Jorge Cuenca | DEF | 25 | Spain | Fulham
+Timothy Castagne | DEF | 29 | Belgium | Fulham
+Ryan Sessegnon | DEF | 24 | England | Fulham
+Antonee Robinson | DEF | 27 | United States | Fulham
+Issa Diop | DEF | 28 | France | Fulham
+Harrison Reed | MID | 30 | England | Fulham
+Harry Wilson | MID | 27 | Wales | Fulham
+Tom Cairney | MID | 34 | Scotland | Fulham
+Sander Berge | MID | 26 | Norway | Fulham
+Alex Iwobi | MID | 28 | Nigeria | Fulham
+Andreas Pereira | MID | 29 | Brazil | Fulham
+Saša Lukić | MID | 28 | Serbia | Fulham
+Emile Smith Rowe | MID | 24 | England | Fulham
+Joshua King | MID | 18 | England | Fulham
+Raúl Jiménez | FWD | 33 | Mexico | Fulham
+Rodrigo Muniz | FWD | 23 | Brazil | Fulham
+Adama Traoré | FWD | 29 | Spain | Fulham
+Reiss Nelson | FWD | 25 | England | Fulham
+Carlos Vinícius | FWD | 29 | Brazil | Fulham
+
+### 10. Ipswich Town
+Arijanet Muric | GK | 26 | Kosovo | Ipswich Town
+Christian Walton | GK | 29 | England | Ipswich Town
+Cieran Slicker | GK | 22 | Scotland | Ipswich Town
+Harry Clarke | DEF | 23 | England | Ipswich Town
+Leif Davis | DEF | 25 | England | Ipswich Town
+Luke Woolfenden | DEF | 26 | England | Ipswich Town
+Cameron Burgess | DEF | 29 | Australia | Ipswich Town
+Ben Johnson | DEF | 25 | England | Ipswich Town
+Conor Townsend | DEF | 31 | England | Ipswich Town
+Jacob Greaves | DEF | 24 | England | Ipswich Town
+Dara O'Shea | DEF | 25 | Republic of Ireland | Ipswich Town
+Axel Tuanzebe | DEF | 27 | DR Congo | Ipswich Town
+Sam Morsy | MID | 33 | Egypt | Ipswich Town
+Kalvin Phillips | MID | 29 | England | Ipswich Town
+Jens Cajuste | MID | 25 | Sweden | Ipswich Town
+Jack Taylor | MID | 26 | Republic of Ireland | Ipswich Town
+Massimo Luongo | MID | 32 | Australia | Ipswich Town
+Omari Hutchinson | MID | 21 | England | Ipswich Town
+Wes Burns | FWD | 30 | Wales | Ipswich Town
+Conor Chaplin | FWD | 27 | England | Ipswich Town
+Sammie Szmodics | FWD | 29 | Republic of Ireland | Ipswich Town
+Chiedozie Ogbene | FWD | 27 | Republic of Ireland | Ipswich Town
+Ali Al-Hamadi | FWD | 22 | Iraq | Ipswich Town
+Liam Delap | FWD | 22 | England | Ipswich Town
+Jack Clarke | FWD | 24 | England | Ipswich Town
+George Hirst | FWD | 25 | England | Ipswich Town
+Nathan Broadhead | FWD | 26 | Wales | Ipswich Town
+
+### 11. Leicester City
+Mads Hermansen | GK | 24 | Denmark | Leicester City
+Danny Ward | GK | 31 | Wales | Leicester City
+Daniel Iversen | GK | 27 | Denmark | Leicester City
+Jakub Stolarczyk | GK | 24 | Poland | Leicester City
+James Justin | DEF | 26 | England | Leicester City
+Wout Faes | DEF | 26 | Belgium | Leicester City
+Conor Coady | DEF | 31 | England | Leicester City
+Caleb Okoli | DEF | 23 | Italy | Leicester City
+Victor Kristiansen | DEF | 22 | Denmark | Leicester City
+Ricardo Pereira | DEF | 31 | Portugal | Leicester City
+Jannik Vestergaard | DEF | 32 | Denmark | Leicester City
+Luke Thomas | DEF | 23 | England | Leicester City
+Ben Nelson | DEF | 20 | England | Leicester City
+Wilfred Ndidi | MID | 27 | Nigeria | Leicester City
+Harry Winks | MID | 28 | England | Leicester City
+Oliver Skipp | MID | 24 | England | Leicester City
+Boubakary Soumaré | MID | 25 | France | Leicester City
+Hamza Choudhury | MID | 27 | England | Leicester City
+Bilal El Khannouss | MID | 20 | Morocco | Leicester City
+Michael Golding | MID | 18 | England | Leicester City
+Will Alves | MID | 19 | England | Leicester City
+Facundo Buonanotte | MID | 19 | Argentina | Leicester City
+Abdul Fatawu | FWD | 20 | Ghana | Leicester City
+Jamie Vardy | FWD | 37 | England | Leicester City
+Stephy Mavididi | FWD | 26 | England | Leicester City
+Bobby De Cordova-Reid | FWD | 31 | Jamaica | Leicester City
+Jordan Ayew | FWD | 33 | Ghana | Leicester City
+Patson Daka | FWD | 26 | Zambia | Leicester City
+Odsonne Édouard | FWD | 26 | France | Leicester City
+Kasey McAteer | FWD | 23 | Republic of Ireland | Leicester City
+
+### 12. Liverpool
+Alisson Becker | GK | 31 | Brazil | Liverpool
+Caoimhín Kelleher | GK | 25 | Republic of Ireland | Liverpool
+Vítězslav Jaroš | GK | 23 | Czech Republic | Liverpool
+Virgil van Dijk | DEF | 33 | Netherlands | Liverpool
+Ibrahima Konaté | DEF | 25 | France | Liverpool
+Joe Gomez | DEF | 27 | England | Liverpool
+Jarell Quansah | DEF | 21 | England | Liverpool
+Trent Alexander-Arnold | DEF | 25 | England | Liverpool
+Conor Bradley | DEF | 21 | Northern Ireland | Liverpool
+Andy Robertson | DEF | 30 | Scotland | Liverpool
+Kostas Tsimikas | DEF | 28 | Greece | Liverpool
+Alexis Mac Allister | MID | 25 | Argentina | Liverpool
+Dominik Szoboszlai | MID | 23 | Hungary | Liverpool
+Ryan Gravenberch | MID | 22 | Netherlands | Liverpool
+Curtis Jones | MID | 23 | England | Liverpool
+Harvey Elliott | MID | 21 | England | Liverpool
+Wataru Endō | MID | 31 | Japan | Liverpool
+Tyler Morton | MID | 21 | England | Liverpool
+Trey Nyoni | MID | 17 | England | Liverpool
+Mohamed Salah | FWD | 32 | Egypt | Liverpool
+Luis Díaz | FWD | 27 | Colombia | Liverpool
+Darwin Núñez | FWD | 25 | Uruguay | Liverpool
+Cody Gakpo | FWD | 25 | Netherlands | Liverpool
+Federico Chiesa | FWD | 26 | Italy | Liverpool
+Jayden Danns | FWD | 18 | England | Liverpool
+
+### 13. Manchester City
+Ederson | GK | 31 | Brazil | Manchester City
+Stefan Ortega | GK | 31 | Germany | Manchester City
+Scott Carson | GK | 38 | England | Manchester City
+Kyle Walker | DEF | 34 | England | Manchester City
+Rúben Dias | DEF | 27 | Portugal | Manchester City
+John Stones | DEF | 30 | England | Manchester City
+Nathan Aké | DEF | 29 | Netherlands | Manchester City
+Joško Gvardiol | DEF | 22 | Croatia | Manchester City
+Manuel Akanji | DEF | 29 | Switzerland | Manchester City
+Rico Lewis | DEF | 19 | England | Manchester City
+Josh Wilson-Esbrand | DEF | 21 | England | Manchester City
+Jahmai Simpson-Pusey | DEF | 19 | England | Manchester City
+Rodri | MID | 28 | Spain | Manchester City
+Mateo Kovačić | MID | 30 | Croatia | Manchester City
+Kevin De Bruyne | MID | 33 | Belgium | Manchester City
+İlkay Gündoğan | MID | 33 | Germany | Manchester City
+Bernardo Silva | MID | 30 | Portugal | Manchester City
+Matheus Nunes | MID | 26 | Portugal | Manchester City
+James McAtee | MID | 21 | England | Manchester City
+Nico O'Reilly | MID | 19 | England | Manchester City
+Phil Foden | FWD | 24 | England | Manchester City
+Jack Grealish | FWD | 28 | England | Manchester City
+Jérémy Doku | FWD | 22 | Belgium | Manchester City
+Savinho | FWD | 20 | Brazil | Manchester City
+Erling Haaland | FWD | 24 | Norway | Manchester City
+Oscar Bobb | FWD | 21 | Norway | Manchester City
+
+### 14. Manchester United
+André Onana | GK | 28 | Cameroon | Manchester United
+Altay Bayındır | GK | 26 | Turkey | Manchester United
+Tom Heaton | GK | 38 | England | Manchester United
+Diogo Dalot | DEF | 25 | Portugal | Manchester United
+Noussair Mazraoui | DEF | 26 | Morocco | Manchester United
+Matthijs de Ligt | DEF | 25 | Netherlands | Manchester United
+Lisandro Martínez | DEF | 26 | Argentina | Manchester United
+Harry Maguire | DEF | 31 | England | Manchester United
+Leny Yoro | DEF | 18 | France | Manchester United
+Victor Lindelöf | DEF | 30 | Sweden | Manchester United
+Jonny Evans | DEF | 36 | Northern Ireland | Manchester United
+Luke Shaw | DEF | 29 | England | Manchester United
+Tyrell Malacia | DEF | 25 | Netherlands | Manchester United
+Casemiro | MID | 32 | Brazil | Manchester United
+Manuel Ugarte | MID | 23 | Uruguay | Manchester United
+Kobbie Mainoo | MID | 19 | England | Manchester United
+Bruno Fernandes | MID | 29 | Portugal | Manchester United
+Mason Mount | MID | 25 | England | Manchester United
+Christian Eriksen | MID | 32 | Denmark | Manchester United
+Toby Collyer | MID | 20 | England | Manchester United
+Daniel Gore | MID | 19 | England | Manchester United
+Marcus Rashford | FWD | 26 | England | Manchester United
+Alejandro Garnacho | FWD | 20 | Argentina | Manchester United
+Rasmus Højlund | FWD | 21 | Denmark | Manchester United
+Joshua Zirkzee | FWD | 23 | Netherlands | Manchester United
+Antony | FWD | 24 | Brazil | Manchester United
+Amad Diallo | FWD | 22 | Ivory Coast | Manchester United
+Ethan Wheatley | FWD | 18 | England | Manchester United
+
+### 15. Newcastle United
+Nick Pope | GK | 32 | England | Newcastle United
+Martin Dúbravka | GK | 35 | Slovakia | Newcastle United
+Odysseas Vlachodimos | GK | 30 | Greece | Newcastle United
+John Ruddy | GK | 37 | England | Newcastle United
+Mark Gillespie | GK | 32 | England | Newcastle United
+Kieran Trippier | DEF | 33 | England | Newcastle United
+Fabian Schär | DEF | 32 | Switzerland | Newcastle United
+Sven Botman | DEF | 24 | Netherlands | Newcastle United
+Dan Burn | DEF | 32 | England | Newcastle United
+Tino Livramento | DEF | 21 | England | Newcastle United
+Lloyd Kelly | DEF | 25 | England | Newcastle United
+Matt Targett | DEF | 28 | England | Newcastle United
+Emil Krafth | DEF | 30 | Sweden | Newcastle United
+Jamaal Lascelles | DEF | 30 | England | Newcastle United
+Lewis Hall | DEF | 19 | England | Newcastle United
+Alex Murphy | DEF | 20 | Republic of Ireland | Newcastle United
+Bruno Guimarães | MID | 26 | Brazil | Newcastle United
+Joelinton | MID | 28 | Brazil | Newcastle United
+Sandro Tonali | MID | 24 | Italy | Newcastle United
+Sean Longstaff | MID | 26 | England | Newcastle United
+Joe Willock | MID | 25 | England | Newcastle United
+Lewis Miley | MID | 18 | England | Newcastle United
+Anthony Gordon | FWD | 23 | England | Newcastle United
+Alexander Isak | FWD | 24 | Sweden | Newcastle United
+Harvey Barnes | FWD | 26 | England | Newcastle United
+Miguel Almirón | FWD | 30 | Paraguay | Newcastle United
+Callum Wilson | FWD | 32 | England | Newcastle United
+Jacob Murphy | FWD | 29 | England | Newcastle United
+William Osula | FWD | 21 | Denmark | Newcastle United
+
+### 16. Nottingham Forest
+Matz Sels | GK | 32 | Belgium | Nottingham Forest
+Carlos Miguel | GK | 25 | Brazil | Nottingham Forest
+Wayne Hennessey | GK | 37 | Wales | Nottingham Forest
+Ola Aina | DEF | 27 | Nigeria | Nottingham Forest
+Neco Williams | DEF | 23 | Wales | Nottingham Forest
+Nikola Milenković | DEF | 26 | Serbia | Nottingham Forest
+Murillo | DEF | 22 | Brazil | Nottingham Forest
+Morato | DEF | 23 | Brazil | Nottingham Forest
+Willy Boly | DEF | 33 | Ivory Coast | Nottingham Forest
+Andrew Omobamidele | DEF | 22 | Republic of Ireland | Nottingham Forest
+Harry Toffolo | DEF | 29 | England | Nottingham Forest
+Àlex Moreno | DEF | 31 | Spain | Nottingham Forest
+Zach Abbott | DEF | 18 | England | Nottingham Forest
+Morgan Gibbs-White | MID | 24 | England | Nottingham Forest
+Elliot Anderson | MID | 21 | England | Nottingham Forest
+Nicolás Domínguez | MID | 26 | Argentina | Nottingham Forest
+Ryan Yates | MID | 26 | England | Nottingham Forest
+Ibrahim Sangaré | MID | 26 | Ivory Coast | Nottingham Forest
+Danilo | MID | 23 | Brazil | Nottingham Forest
+James Ward-Prowse | MID | 29 | England | Nottingham Forest
+Eric da Silva Moreira | MID | 18 | Germany | Nottingham Forest
+Anthony Elanga | FWD | 22 | Sweden | Nottingham Forest
+Callum Hudson-Odoi | FWD | 23 | England | Nottingham Forest
+Ramón Sosa | FWD | 25 | Paraguay | Nottingham Forest
+Jota Silva | FWD | 25 | Portugal | Nottingham Forest
+Chris Wood | FWD | 32 | New Zealand | Nottingham Forest
+Taiwo Awoniyi | FWD | 27 | Nigeria | Nottingham Forest
+Emmanuel Dennis | FWD | 26 | Nigeria | Nottingham Forest
+
+### 17. Southampton
+Aaron Ramsdale | GK | 26 | England | Southampton
+Alex McCarthy | GK | 34 | England | Southampton
+Joe Lumley | GK | 29 | England | Southampton
+Gavin Bazunu | GK | 22 | Republic of Ireland | Southampton
+Taylor Harwood-Bellis | DEF | 22 | England | Southampton
+Jan Bednarek | DEF | 28 | Poland | Southampton
+Jack Stephens | DEF | 30 | England | Southampton
+Kyle Walker-Peters | DEF | 27 | England | Southampton
+Yukinari Sugawara | DEF | 24 | Japan | Southampton
+James Bree | DEF | 26 | England | Southampton
+Ryan Manning | DEF | 28 | Republic of Ireland | Southampton
+Charlie Taylor | DEF | 30 | England | Southampton
+Ronnie Edwards | DEF | 21 | England | Southampton
+Nathan Wood | DEF | 22 | England | Southampton
+Juan Larios | DEF | 20 | Spain | Southampton
+Flynn Downes | MID | 25 | England | Southampton
+Will Smallbone | MID | 24 | Republic of Ireland | Southampton
+Joe Aribo | MID | 28 | Nigeria | Southampton
+Mateus Fernandes | MID | 20 | Portugal | Southampton
+Adam Lallana | MID | 36 | England | Southampton
+Lesley Ugochukwu | MID | 20 | France | Southampton
+Adam Armstrong | FWD | 27 | England | Southampton
+Cameron Archer | FWD | 22 | England | Southampton
+Ben Brereton Díaz | FWD | 25 | Chile | Southampton
+Ross Stewart | FWD | 28 | Scotland | Southampton
+Paul Onuachu | FWD | 30 | Nigeria | Southampton
+Ryan Fraser | FWD | 30 | Scotland | Southampton
+Tyler Dibling | FWD | 18 | England | Southampton
+Kamaldeen Sulemana | FWD | 22 | Ghana | Southampton
+Samuel Amo-Ameyaw | FWD | 18 | England | Southampton
+Maxwel Cornet | FWD | 27 | Ivory Coast | Southampton
+
+### 18. Tottenham Hotspur
+Guglielmo Vicario | GK | 27 | Italy | Tottenham Hotspur
+Fraser Forster | GK | 36 | England | Tottenham Hotspur
+Brandon Austin | GK | 25 | England | Tottenham Hotspur
+Alfie Whiteman | GK | 25 | England | Tottenham Hotspur
+Cristian Romero | DEF | 26 | Argentina | Tottenham Hotspur
+Micky van de Ven | DEF | 23 | Netherlands | Tottenham Hotspur
+Radu Drăgușin | DEF | 22 | Romania | Tottenham Hotspur
+Pedro Porro | DEF | 24 | Spain | Tottenham Hotspur
+Destiny Udogie | DEF | 21 | Italy | Tottenham Hotspur
+Ben Davies | DEF | 31 | Wales | Tottenham Hotspur
+Djed Spence | DEF | 24 | England | Tottenham Hotspur
+Sergio Reguilón | DEF | 27 | Spain | Tottenham Hotspur
+James Maddison | MID | 27 | England | Tottenham Hotspur
+Yves Bissouma | MID | 27 | Mali | Tottenham Hotspur
+Rodrigo Bentancur | MID | 27 | Uruguay | Tottenham Hotspur
+Pape Matar Sarr | MID | 21 | Senegal | Tottenham Hotspur
+Archie Gray | MID | 18 | England | Tottenham Hotspur
+Lucas Bergvall | MID | 18 | Sweden | Tottenham Hotspur
+Son Heung-min | FWD | 32 | South Korea | Tottenham Hotspur
+Dominic Solanke | FWD | 26 | England | Tottenham Hotspur
+Dejan Kulusevski | FWD | 24 | Sweden | Tottenham Hotspur
+Brennan Johnson | FWD | 23 | Wales | Tottenham Hotspur
+Richarlison | FWD | 27 | Brazil | Tottenham Hotspur
+Timo Werner | FWD | 28 | Germany | Tottenham Hotspur
+Wilson Odobert | FWD | 19 | France | Tottenham Hotspur
+Mikey Moore | FWD | 17 | England | Tottenham Hotspur
+Will Lankshear | FWD | 19 | England | Tottenham Hotspur
+
+### 19. West Ham United
+Alphonse Areola | GK | 31 | France | West Ham United
+Łukasz Fabiański | GK | 39 | Poland | West Ham United
+Wes Foderingham | GK | 33 | England | West Ham United
+Aaron Wan-Bissaka | DEF | 26 | England | West Ham United
+Vladimír Coufal | DEF | 32 | Czech Republic | West Ham United
+Jean-Clair Todibo | DEF | 24 | France | West Ham United
+Maximilian Kilman | DEF | 27 | England | West Ham United
+Konstantinos Mavropanos | DEF | 26 | Greece | West Ham United
+Emerson Palmieri | DEF | 30 | Italy | West Ham United
+Aaron Cresswell | DEF | 34 | England | West Ham United
+Kaelan Casey | DEF | 19 | England | West Ham United
+Oliver Scarles | DEF | 18 | England | West Ham United
+Edson Álvarez | MID | 26 | Mexico | West Ham United
+Guido Rodríguez | MID | 30 | Argentina | West Ham United
+Tomáš Souček | MID | 29 | Czech Republic | West Ham United
+Carlos Soler | MID | 27 | Spain | West Ham United
+Lucas Paquetá | MID | 27 | Brazil | West Ham United
+Andy Irving | MID | 24 | Scotland | West Ham United
+Mohammed Kudus | MID | 24 | Ghana | West Ham United
+Jarrod Bowen | FWD | 27 | England | West Ham United
+Crysencio Summerville | FWD | 22 | Netherlands | West Ham United
+Niclas Füllkrug | FWD | 31 | Germany | West Ham United
+Michail Antonio | FWD | 34 | Jamaica | West Ham United
+Danny Ings | FWD | 32 | England | West Ham United
+Luis Guilherme | FWD | 18 | Brazil | West Ham United
+
+### 20. Wolverhampton Wanderers
+José Sá | GK | 31 | Portugal | Wolverhampton Wanderers
+Sam Johnstone | GK | 31 | England | Wolverhampton Wanderers
+Daniel Bentley | GK | 31 | England | Wolverhampton Wanderers
+Tom King | GK | 29 | Wales | Wolverhampton Wanderers
+Nélson Semedo | DEF | 30 | Portugal | Wolverhampton Wanderers
+Matt Doherty | DEF | 32 | Republic of Ireland | Wolverhampton Wanderers
+Rayan Aït-Nouri | DEF | 23 | Algeria | Wolverhampton Wanderers
+Toti Gomes | DEF | 25 | Portugal | Wolverhampton Wanderers
+Santiago Bueno | DEF | 25 | Uruguay | Wolverhampton Wanderers
+Craig Dawson | DEF | 34 | England | Wolverhampton Wanderers
+Yerson Mosquera | DEF | 23 | Colombia | Wolverhampton Wanderers
+Pedro Lima | DEF | 18 | Brazil | Wolverhampton Wanderers
+Bastien Meupiyou | DEF | 18 | France | Wolverhampton Wanderers
+Mario Lemina | MID | 30 | Gabon | Wolverhampton Wanderers
+João Gomes | MID | 23 | Brazil | Wolverhampton Wanderers
+André | MID | 23 | Brazil | Wolverhampton Wanderers
+Tommy Doyle | MID | 22 | England | Wolverhampton Wanderers
+Boubacar Traoré | MID | 23 | Mali | Wolverhampton Wanderers
+Jean-Ricner Bellegarde | MID | 26 | France | Wolverhampton Wanderers
+Luke Cundle | MID | 22 | England | Wolverhampton Wanderers
+Matheus Cunha | FWD | 25 | Brazil | Wolverhampton Wanderers
+Hwang Hee-chan | FWD | 28 | South Korea | Wolverhampton Wanderers
+Jørgen Strand Larsen | FWD | 24 | Norway | Wolverhampton Wanderers
+Pablo Sarabia | FWD | 32 | Spain | Wolverhampton Wanderers
+Gonçalo Guedes | FWD | 27 | Portugal | Wolverhampton Wanderers
+Rodrigo Gomes | FWD | 21 | Portugal | Wolverhampton Wanderers
+Carlos Forbs | FWD | 20 | Portugal | Wolverhampton Wanderers
+Enso González | FWD | 19 | Paraguay | Wolverhampton Wanderers
+Saša Kalajdžić | FWD | 27 | Austria | Wolverhampton Wanderers

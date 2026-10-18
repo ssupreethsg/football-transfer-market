@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@railway/cli": "^5.64.0",
+    "vercel": "^63.1.0"
+  }
+}

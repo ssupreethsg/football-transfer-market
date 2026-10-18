@@ -1,0 +1,21 @@
+football_transfer_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 4
+      host: "{{ env_var('DB_HOST', 'localhost') }}"
+      port: 5432
+      user: "{{ env_var('DB_USER', 'admin') }}"
+      pass: "{{ env_var('DB_PASS', 'password') }}"
+      dbname: transfer_analytics
+      schema: dbt_dev
+    prod:
+      type: postgres
+      threads: 8
+      host: "{{ env_var('DB_HOST') }}"
+      port: 5432
+      user: "{{ env_var('DB_USER') }}"
+      pass: "{{ env_var('DB_PASS') }}"
+      dbname: transfer_analytics
+      schema: public
