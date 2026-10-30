@@ -86,6 +86,8 @@ def trim_team(d):
 
 
 def trim_profile(d):
+    if not isinstance(d, dict):
+        return {}
     keep = ["id", "name", "birthDate", "contractEnd", "primaryTeam", "positionDescription",
             "playerInformation", "mainLeague", "careerHistory", "statSeasons", "marketValues",
             "injuryInformation", "dataProvider"]
@@ -93,6 +95,8 @@ def trim_profile(d):
 
 
 def trim_deep(d):
+    if not isinstance(d, dict):  # FotMob answers "null" when it has no stats for that entry
+        return {"statsSection": None, "topStatCard": None}
     return {"statsSection": d.get("statsSection"), "topStatCard": d.get("topStatCard")}
 
 
