@@ -49,10 +49,11 @@ DEEP_FIELDS = {
     # goalkeeping
     "saves": "saves", "save_percentage": "save_pct", "goals_prevented": "goals_prevented",
     "keeper_high_claim": "high_claims", "keeper_sweeper": "sweeper_actions",
-    "penalties_saved": "penalties_saved", "error_led_to_goal": "errors_led_to_goal",
+    "penalty_saves": "penalties_saved", "penalty_goals_conceded": "penalties_conceded",
+    "penalty_save_percent": "penalty_save_pct", "goals_conceded": "goals_conceded", "error_led_to_goal": "errors_led_to_goal",
 }
 RATE_FIELDS = {"rating", "pass_accuracy", "long_ball_accuracy", "cross_accuracy",
-               "dribble_success_rate", "duels_won_pct", "aerials_won_pct", "save_pct"}
+               "dribble_success_rate", "duels_won_pct", "aerials_won_pct", "save_pct", "penalty_save_pct"}
 FLOAT_FIELDS = RATE_FIELDS | {"xg", "npxg", "xgot", "xa", "xg_against", "goals_prevented"}
 
 CONTINENTAL = re.compile(r"champions league|europa|conference league|uefa super cup|club world cup|"
