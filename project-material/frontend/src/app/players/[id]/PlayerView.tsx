@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
+import Img from "@/lib/Img";
 import type { Basic, CompType, Detailed, PlayerFile, Season } from "@/lib/types";
 import {
   COMP_LOGO, COMP_TYPE_LABEL, COMP_TYPE_ORDER, DETAIL_GROUPS, PLAYER_IMG, TEAM_LOGO, dash, money, n,
@@ -43,13 +44,11 @@ export default function PlayerView({ id }: { id: string }) {
   return (
     <Shell>
       <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={PLAYER_IMG(p.id)} alt="" className="w-24 h-24 rounded-full bg-slate-800 object-cover" />
+        <Img src={PLAYER_IMG(p.id)} className="w-24 h-24 rounded-full bg-slate-800 object-cover" />
         <div className="min-w-0">
           <h1 className="text-3xl font-black">{p.name}</h1>
           <p className="text-slate-300 flex items-center gap-2 mt-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={TEAM_LOGO(p.team_id)} alt="" className="w-5 h-5" />
+            <Img src={TEAM_LOGO(p.team_id)} className="w-5 h-5" />
             {p.team} · {p.league}{p.on_loan ? " (on loan)" : ""}
           </p>
           <p className="text-sm text-slate-400 mt-1">
@@ -82,7 +81,11 @@ export default function PlayerView({ id }: { id: string }) {
         ))}
       </div>
 
-      {tab === "career" ? <Career p={p} /> : <Seasons p={p} />}
+      {p.seasons.length === 0
+        ? <p className="text-slate-400 text-sm border border-slate-800 rounded-2xl p-6">
+            No senior competitive appearances recorded for {p.name} yet.
+          </p>
+        : tab === "career" ? <Career p={p} /> : <Seasons p={p} />}
 
       <p className="text-xs text-slate-500 mt-10">
         Source: <a className="underline" href={p.source.url} target="_blank" rel="noreferrer">{p.source.provider}</a>.
@@ -184,8 +187,7 @@ function StatTable({ rows, total, grouped }: { rows: Row[]; total: Row; grouped?
         <td className="py-2 pr-3 pl-2 sticky left-0 bg-slate-950">
           <div className="flex items-center gap-2 min-w-44">
             {r.competition_id != null && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={COMP_LOGO(r.competition_id)} alt="" loading="lazy" className="w-5 h-5 object-contain" />
+              <Img src={COMP_LOGO(r.competition_id)} className="w-5 h-5 object-contain" />
             )}
             <div>
               <div>{r.label} {r.detailed && <span className="text-slate-500 text-xs">{expanded === r.key ? "▲" : "▼"}</span>}</div>
