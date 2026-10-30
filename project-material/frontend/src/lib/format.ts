@@ -58,7 +58,8 @@ export const DETAIL_GROUPS: { title: string; fields: [DetailKey, string, number?
   {
     title: "Goalkeeping",
     fields: [["saves", "Saves"], ["save_pct", "Save %", 1], ["goals_prevented", "Goals prevented", 2],
-      ["penalties_saved", "Penalties saved"], ["high_claims", "High claims"], ["sweeper_actions", "Sweeper actions"],
+      ["penalties_saved", "Penalties saved"], ["penalties_conceded", "Penalties conceded"],
+      ["penalty_save_pct", "Penalty save %", 1], ["high_claims", "High claims"], ["sweeper_actions", "Sweeper actions"],
       ["errors_led_to_goal", "Errors leading to goal"]],
   },
   {

@@ -15,7 +15,7 @@ export type DetailKey =
   | "penalties_won" | "tackles" | "interceptions" | "clearances" | "blocks" | "recoveries"
   | "dribbled_past" | "defensive_actions" | "possession_won_final_third" | "fouls_committed"
   | "yellow_cards" | "red_cards" | "clean_sheets" | "goals_conceded" | "xg_against" | "saves"
-  | "save_pct" | "goals_prevented" | "high_claims" | "sweeper_actions" | "penalties_saved"
+  | "save_pct" | "penalties_conceded" | "penalty_save_pct" | "goals_prevented" | "high_claims" | "sweeper_actions" | "penalties_saved"
   | "errors_led_to_goal";
 
 export interface Basic {
