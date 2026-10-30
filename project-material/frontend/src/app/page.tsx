@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import Img from "@/lib/Img";
 import type { IndexRow, Meta } from "@/lib/types";
 import { PLAYER_IMG, TEAM_LOGO, money, n } from "@/lib/format";
 
@@ -130,13 +131,11 @@ export default function Home() {
                 <Link key={r.id} href={`/players/${r.id}`}
                   className="block bg-slate-900/70 border border-slate-800 rounded-2xl p-4 hover:border-emerald-500/50 transition-colors">
                   <div className="flex items-center gap-3">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={PLAYER_IMG(r.id)} alt="" loading="lazy" className="w-12 h-12 rounded-full bg-slate-800 object-cover" />
+                    <Img src={PLAYER_IMG(r.id)} className="w-12 h-12 rounded-full bg-slate-800 object-cover" />
                     <div className="min-w-0">
                       <p className="font-bold truncate">{r.name}</p>
                       <p className="text-xs text-slate-400 flex items-center gap-1 truncate">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={TEAM_LOGO(r.team_id)} alt="" loading="lazy" className="w-4 h-4" />
+                        <Img src={TEAM_LOGO(r.team_id)} className="w-4 h-4" />
                         {r.team}
                       </p>
                       <p className="text-[11px] text-slate-500 truncate">{[r.position, r.nationality, r.age && `${r.age} yrs`].filter(Boolean).join(" · ")}</p>
