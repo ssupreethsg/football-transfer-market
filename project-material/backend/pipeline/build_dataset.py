@@ -233,6 +233,48 @@ def build_player(prof, deep, squad_info):
     collect("senior", False)
     collect("national team", True)
 
+    # A player who moved mid-season has one entry per club for the same competition, but the
+    # detailed stats cover the whole season. Merge them into one row so nothing is counted twice,
+    # and keep the per-club split.
+    for s in seasons.values():
+        groups = OrderedDict()
+        for c in s["competitions"]:
+            groups.setdefault((c["competition_id"], c["type"], c["competition"]), []).append(c)
+        merged = []
+        for rows in groups.values():
+            if len(rows) == 1:
+                rows[0]["by_team"] = None
+                merged.append(rows[0])
+                continue
+            tot = {}
+            for r in rows:
+                merge_basic(tot, r)
+            basic_tot = close_basic(tot)
+            rated = [(r["rating"], r["appearances"] or 0) for r in rows if r["rating"] is not None and r["appearances"]]
+            w = sum(a for _, a in rated)
+            m = OrderedDict(rows[0])
+            m.update(
+                team=" / ".join(dict.fromkeys(r["team"] for r in rows)),
+                appearances=basic_tot["appearances"], goals=basic_tot["goals"], assists=basic_tot["assists"],
+                incomplete=basic_tot["incomplete"],
+                rating=round(sum(r * a for r, a in rated) / w, 2) if w else None,
+                detailed=next((r["detailed"] for r in rows if r["detailed"]), None),
+                by_team=[{k: r[k] for k in ("team", "appearances", "goals", "assists", "rating")} for r in rows],
+            )
+            merged.append(m)
+        for c in merged:
+            notes = []
+            d = c["detailed"] or {}
+            if d.get("matches") is not None and c["appearances"] is not None and d["matches"] < c["appearances"]:
+                notes.append(f"Detailed stats cover {d['matches']} of {c['appearances']} matches "
+                             "(qualifying / early rounds have no detailed data)")
+            elif d.get("matches") == c["appearances"] and any(
+                    c[k] is not None and d.get(k) is not None and c[k] != d[k] for k in ("goals", "assists")):
+                notes.append(f"Match data shows {d.get('goals')} goals, {d.get('assists')} assists; "
+                             "the source's season summary differs (usually corrected within days)")
+            c["notes"] = notes
+        s["competitions"] = merged
+
     season_list = []
     career_by_comp = OrderedDict()
     career_total, career_detail = {}, {}

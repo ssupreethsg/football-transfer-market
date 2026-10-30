@@ -11,6 +11,7 @@ type Row = Basic & {
   key: string;
   label: string;
   sub?: string;
+  notes?: string[];
   competition_id?: number;
   type?: CompType;
   rating?: number | null;
@@ -99,12 +100,22 @@ function Career({ p }: { p: PlayerFile }) {
     ...c, key: `${c.competition_id}-${c.type}`, label: c.competition,
     sub: `${c.seasons} season${c.seasons === 1 ? "" : "s"}`,
   }));
+  const since = ct.detailed_seasons.at(-1);
   return (
-    <StatTable
-      rows={rows}
-      total={{ ...ct, key: "total", label: "All competitions", rating: ct.detailed?.rating ?? null, detailed: ct.detailed }}
-      grouped
-    />
+    <>
+      <p className="text-xs text-slate-400 mb-3">
+        Apps, goals and assists: whole career.{" "}
+        {since
+          ? <>Minutes, xG, xA, shots, dribbles, chances, tackles and rating: {since} onwards only.</>
+          : <>No detailed stats are available for this player.</>}
+        {p.position_group === "keepers" && " The source does not publish minutes for goalkeepers."}
+      </p>
+      <StatTable
+        rows={rows}
+        total={{ ...ct, key: "total", label: "All competitions", rating: ct.detailed?.rating ?? null, detailed: ct.detailed }}
+        grouped
+      />
+    </>
   );
 }
 
@@ -135,7 +146,9 @@ function Seasons({ p }: { p: PlayerFile }) {
 function SeasonTable({ s }: { s: Season }) {
   const rows: Row[] = s.competitions.map((c, i) => ({
     ...c, key: `${c.competition_id}-${c.team}-${i}`, label: c.competition,
-    sub: s.teams.length > 1 ? c.team : c.edition !== s.season ? c.edition : undefined,
+    sub: c.by_team
+      ? c.by_team.map((t) => `${t.team}: ${n(t.appearances)} apps, ${n(t.goals)} G, ${n(t.assists)} A`).join(" · ")
+      : s.teams.length > 1 ? c.team : c.edition !== s.season ? c.edition : undefined,
   }));
   return (
     <StatTable rows={rows} total={{
@@ -177,6 +190,7 @@ function StatTable({ rows, total, grouped }: { rows: Row[]; total: Row; grouped?
             <div>
               <div>{r.label} {r.detailed && <span className="text-slate-500 text-xs">{expanded === r.key ? "▲" : "▼"}</span>}</div>
               {r.sub && <div className="text-[11px] text-slate-500 font-normal">{r.sub}</div>}
+              {r.notes?.map((t) => <div key={t} className="text-[11px] text-amber-400/80 font-normal">ⓘ {t}</div>)}
             </div>
           </div>
         </td>

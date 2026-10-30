@@ -34,6 +34,9 @@ export interface CompetitionEntry extends Basic {
   edition: string;
   rating: number | null;
   detailed: Detailed | null;
+  // set when the player played this competition for more than one club in the season
+  notes: string[];
+  by_team: { team: string; appearances: number | null; goals: number | null; assists: number | null; rating: number | null }[] | null;
 }
 
 export interface Season {
