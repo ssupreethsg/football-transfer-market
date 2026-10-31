@@ -41,6 +41,16 @@
   .toc { margin-left: 28px; } .toc li { margin: 3px 0; padding-left: 4px; }
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .small { font-size: 9pt; color: var(--muted); }
+
+  .tool { border: 1px solid #93c5fd; border-left: 5px solid #1d4ed8; background: #eff6ff; border-radius: 6px; padding: 8px 12px 4px; margin: 14px 0 6px; page-break-inside: avoid; }
+  .tool h4 { margin: 0 0 4px; color: #1d4ed8; font-size: 10.5pt; }
+  .tool table { margin: 4px 0 8px; background: #fff; }
+  .tool th { background: #dbeafe; }
+  .eli5 { border: 1px dashed #a78bfa; background: #faf5ff; border-radius: 6px; padding: 8px 12px; margin: 10px 0; page-break-inside: avoid; }
+  .eli5 b.t { color: #6d28d9; display:block; margin-bottom: 2px; }
+  .step { border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+  .step h4 { margin: 0 0 4px; color: var(--accent); }
+  .step .when { float: right; font-size: 8.5pt; color: var(--muted); }
 </style>
 </head>
 <body>
@@ -62,7 +72,8 @@
 <!-- ============================== TOC ============================== -->
 <section class="chapter">
   <h2>Contents</h2>
-  <ol class="toc">
+  <ol class="toc" start="0">
+    <li>Read this first: the basic ideas in plain words</li>
     <li>The project in one page</li>
     <li>The starting plan: requirements, constraints and the framework we chose</li>
     <li>Architecture: the big picture diagram</li>
@@ -81,7 +92,52 @@
     <li>How to run, update and extend it</li>
     <li>Lessons for your next project: a planning template and checklists</li>
     <li>Glossary</li>
+    <li>How and where to learn all this (resources, method, using AI)</li>
+    <li>Roadmap: how to build a project like this from zero</li>
   </ol>
+</section>
+
+
+<section class="chapter">
+  <h2><span class="num">0</span>Read this first: the basic ideas in plain words</h2>
+  <p>This guide assumes you are a complete beginner. Before the technical chapters, here is the whole project explained with
+  an everyday comparison. Come back to this page whenever a later chapter feels confusing.</p>
+
+  <div class="eli5"><b class="t">The restaurant comparison</b>
+  <ul>
+    <li><b>The market where ingredients come from</b> = the <b>data sources</b> on the internet (FotMob, Understat).</li>
+    <li><b>The shopper who buys ingredients and stores them in the pantry</b> = the <b>scraper</b> (<code>scrape_fotmob.py</code>) and its <b>cache</b> folder.</li>
+    <li><b>The kitchen that cooks the ingredients into dishes</b> = the <b>build step</b> (<code>build_dataset.py</code>): it turns raw data into neat, ready-to-serve files.</li>
+    <li><b>The head chef who tastes every dish before it leaves</b> = the <b>verification step</b> (<code>verify_dataset.py</code>).</li>
+    <li><b>The plates arranged on the counter</b> = the <b>JSON files</b> in <code>public/data/</code>.</li>
+    <li><b>The waiter and the dining room</b> = the <b>website (frontend)</b>: it takes what you ask for and presents the right plate nicely.</li>
+    <li><b>The building, its address and its doors</b> = <b>Vercel hosting</b>: it keeps the restaurant open 24/7 at a public address (URL).</li>
+    <li><b>The recipe book with every change written down</b> = <b>Git and GitHub</b>.</li>
+  </ul>
+  In our restaurant, all the cooking happens <i>before</i> the customers arrive. When a visitor opens the site, the dish is already
+  on the counter, so service is instant and nothing can burn while they wait.</div>
+
+  <h3>0.1 The words you will see everywhere</h3>
+  <table>
+    <tr><th>Word</th><th>Plain meaning</th><th>In this project</th></tr>
+    <tr><td><b>Frontend</b></td><td>The part of an app you see and click, which runs in your browser.</td><td>The website: home page with player cards, player pages with tables.</td></tr>
+    <tr><td><b>Backend</b></td><td>The part that runs on a computer somewhere else and prepares or stores data.</td><td>Our "backend" is the offline data pipeline. There is <i>no</i> always-on server.</td></tr>
+    <tr><td><b>Data pipeline</b></td><td>A chain of programs that each do one job on data, in order.</td><td>Collect → transform → verify.</td></tr>
+    <tr><td><b>API</b></td><td>A web address that answers with data instead of a web page.</td><td>FotMob's <code>/api/data/playerData?id=737066</code> answers with Haaland's data.</td></tr>
+    <tr><td><b>JSON</b></td><td>A simple text format for data that every language understands.</td><td>All our data files. Example: <code>{"name": "Haaland", "goals": 27}</code>.</td></tr>
+    <tr><td><b>Database</b></td><td>A program that stores data and answers questions about it.</td><td>The old version used SQLite. We replaced it with plain JSON files because nobody writes data on our site.</td></tr>
+    <tr><td><b>Framework</b></td><td>A ready-made structure so you don't build everything from zero.</td><td>Next.js (for the website).</td></tr>
+    <tr><td><b>Library</b></td><td>A package of ready-made code you call from your program.</td><td><code>requests</code> (Python downloads), React (UI building blocks).</td></tr>
+    <tr><td><b>Repository (repo)</b></td><td>A project folder whose full history is tracked by Git.</td><td><code>football-transfer-market</code> on GitHub.</td></tr>
+    <tr><td><b>Deploy</b></td><td>Put your app on the internet.</td><td>Upload to Vercel, which gives the public URL.</td></tr>
+    <tr><td><b>Terminal / command line</b></td><td>A text window where you type commands instead of clicking.</td><td>Where we ran <code>python build_dataset.py</code>, <code>npm run build</code>, <code>git push</code>.</td></tr>
+  </table>
+
+  <h3>0.2 How to read each chapter</h3>
+  <p>Every chapter that describes part of the build ends with a blue box, <b>🧰 What we used here, how, and why only this</b>.
+  It lists each tool or technique from that chapter: what it is, exactly how we used it, and why we chose it over the alternatives.
+  If you are learning with another AI, copy a row from that box and ask it to "teach me this from scratch with a small exercise".
+  Purple boxes like the one above explain an idea in everyday words.</p>
 </section>
 
 <!-- ============================== 1 ============================== -->
@@ -182,6 +238,7 @@
     <tr><td>8</td><td>Browser-test pages, fix every error found</td><td>Playwright (Node.js)</td><td>0 errors</td></tr>
     <tr><td>9</td><td>Commit, push, deploy preview, test, promote to production</td><td>Git, GitHub, Vercel CLI</td><td>Live site</td></tr>
   </table>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Requirements list</b></td><td>Wrote down your 7 wishes (real data, all players, career + season split by competition…) before coding.</td><td>Without a written target you can't tell when you're done or whether the result is right. A list beats a vague idea in your head.</td></tr><tr><td><b>Constraints table</b></td><td>Listed what limits us (bot blocks, cost, laptop off, time) and what each means for the design.</td><td>Constraints decide the architecture more than wishes do. Ignoring them is how the first version ended up depending on your laptop.</td></tr><tr><td><b>"Static data site" architecture</b></td><td>All data is computed in advance and shipped as files with the website.</td><td>Data changes once per match day and nobody writes to the site, so a live server + database (Option A) adds cost and failure points for no benefit.</td></tr><tr><td><b>One-example-first plan</b></td><td>Built Haaland's page end to end before running for 2,707 players.</td><td>Finding a mistake on 1 player takes minutes; finding it after a 1-hour run on everyone wastes the run.</td></tr></table></div>
 </section>
 
 <!-- ============================== 3 ============================== -->
@@ -282,6 +339,7 @@
   Everything in the middle column runs on a computer (this time, a cloud container) when you want fresh data.
   Its only output is a folder of JSON files. Those files are committed to Git and deployed with the website.
   When a visitor opens the site, no Python runs at all: the browser downloads small JSON files and React draws the tables.</div>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Three-zone design (sources → pipeline → delivery)</b></td><td>Kept collecting, processing and showing data in separate programs and folders.</td><td>Each part can be fixed or replaced alone. If FotMob changes, only the scraper changes; the website doesn't care.</td></tr><tr><td><b>Files as the hand-over point</b></td><td>The pipeline's only output is <code>public/data/*.json</code>; the website's only input is the same folder.</td><td>A simple, inspectable boundary. You can open any file and see exactly what the site will show.</td></tr><tr><td><b>CDN hosting</b></td><td>Vercel copies the files to servers worldwide.</td><td>Fast for every visitor, free tier, nothing to keep running.</td></tr></table></div>
 </section>
 
 <!-- ============================== 4 ============================== -->
@@ -340,6 +398,7 @@
                 ├── types.ts           <span class="c">TypeScript shape of the dataset (the "contract")</span>
                 ├── format.ts          <span class="c">number/money formatting, labels, stat groups</span>
                 └── Img.tsx            <span class="c">image that hides itself if missing</span></pre>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Python for data, TypeScript for the website</b></td><td>Pipeline in <code>.py</code> files; site in <code>.ts/.tsx</code> files.</td><td>Each language is the strongest choice for its job: Python has the best data tools; browsers only run JavaScript, and TypeScript is JavaScript with safety checks.</td></tr><tr><td><b>Next.js instead of plain React or plain HTML</b></td><td>Pages live in <code>src/app/</code>; folders become URLs.</td><td>Gives routing, building and Vercel deployment for free. Plain HTML would need hand-written routing; Django/Flask would need a running server.</td></tr><tr><td><b>Tailwind CSS instead of separate CSS files</b></td><td>Styles written as classes, e.g. <code>rounded-2xl bg-slate-900</code>.</td><td>The old project already used it, it's quick to change, and the look stays consistent.</td></tr><tr><td><b>requests instead of a scraping framework (Scrapy) or a browser robot</b></td><td>Plain HTTP GET to JSON endpoints.</td><td>The data is already JSON, so no HTML parsing or fake browser is needed. Simplest tool that works.</td></tr><tr><td><b>Python standard library (threading, json, difflib)</b></td><td>Parallel downloads, file writing, name matching.</td><td>Built in, so there's nothing extra to install, and they're enough for this size.</td></tr></table></div>
 </section>
 
 <!-- ============================== 5 ============================== -->
@@ -362,6 +421,7 @@
   A system that silently "falls back" or "fills in" values is the most dangerous kind: it never shows an error, so
   you don't notice the data is wrong. Our rebuild follows one rule everywhere: <b>if the source doesn't have a number,
   store <code>null</code> and show "–"; never invent, never default to 0.</b></div>
+<div class="tool"><h4>🧰 What we used to diagnose, and why</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Reading code before collecting new data</b></td><td>Opened the old <code>fetch_api_football.py</code>, <code>live_updater.py</code> and API routes.</td><td>Found the real cause (projected numbers) in minutes. Collecting new data on top of a broken process would have repeated the problem.</td></tr><tr><td><b>Root-cause table</b></td><td>Wrote each problem with its evidence and effect.</td><td>Turns "the data feels wrong" into a concrete fix list.</td></tr><tr><td><b>The null rule</b></td><td>Decided: unknown values are <code>null</code> and shown as "–".</td><td>A visible gap is honest; a fake 0 or estimate is a silent lie that nobody notices.</td></tr></table></div>
 </section>
 
 <!-- ============================== 6 ============================== -->
@@ -395,6 +455,7 @@
   </table>
   <p class="small">How we discovered these: open the public website, look at what JSON the page itself loads, then test the
   URL patterns with curl and inspect the keys with a short Python script. This "inspect before you build" step saved hours.</p>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>curl</b></td><td>Sent one request to each candidate source and read the status code (200 = OK, 403/405 = blocked).</td><td>Fastest possible test, a single command, before writing any code.</td></tr><tr><td><b>Browser developer tools (concept)</b></td><td>How the FotMob endpoints were found: a site's own pages load JSON you can see in the Network tab.</td><td>You discover real, stable data URLs instead of guessing.</td></tr><tr><td><b>Short Python inspection scripts</b></td><td>Loaded one response and printed its keys (<code>careerHistory</code>, <code>statSeasons</code>…).</td><td>You must see the real shape of data before you design anything around it.</td></tr><tr><td><b>FotMob as primary source</b></td><td>Every player, every season, every competition, with detailed stats from Opta.</td><td>Reachable, complete, and consistent. The rejected sources were blocked, too narrow (PL only) or limited (old seasons).</td></tr><tr><td><b>Understat as a second source</b></td><td>Used only to check our numbers.</td><td>Collected independently by different people, so if both agree the number is very likely right.</td></tr></table></div>
 </section>
 
 <!-- ============================== 7 ============================== -->
@@ -469,6 +530,7 @@ python scrape_fotmob.py deep --player 737066          <span class="c"># any stag
   seasons and every competition flagged <code>hasDeepStats</code>, and saves each as
   <code>cache/deep/&lt;player&gt;/&lt;season&gt;_&lt;competitionId&gt;.json</code>. Older seasons are skipped to keep the run to about
   an hour; apps/goals/assists for <i>all</i> seasons already come from the profile.</p>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Python <code>requests.Session</code></b></td><td>One reusable connection per thread for all HTTP calls.</td><td>Reusing connections is faster than opening a new one per request.</td></tr><tr><td><b>Disk cache (JSON files)</b></td><td>Every answer saved under <code>cache/</code>; checked first before any request.</td><td>Crash-proof and polite: re-running costs nothing. A database would be overkill for "save this answer".</td></tr><tr><td><b><code>ThreadPoolExecutor</code> (10 workers)</b></td><td>Ran many downloads at the same time.</td><td>Downloads spend most time waiting for the network, which threads handle well. <code>asyncio</code> would also work but needs more complex code.</td></tr><tr><td><b><code>threading.Lock</code> rate limiter</b></td><td>All threads pass through one gate that enforces a minimum gap between requests.</td><td>Keeps the total speed polite however many threads run. Without it, 10 threads could burst and get blocked.</td></tr><tr><td><b>Retries with back-off</b></td><td>On 429/5xx errors, wait longer each time and try again (max 5).</td><td>Servers have brief hiccups. Giving up immediately loses data; retrying instantly makes it worse.</td></tr><tr><td><b>Atomic write (<code>.tmp</code> + <code>os.replace</code>)</b></td><td>Write to a temporary file, then rename it in one step.</td><td>A crash mid-write can never leave a broken file that later looks like valid cache.</td></tr><tr><td><b><code>argparse</code> command-line options</b></td><td><code>squads</code>/<code>profiles</code>/<code>deep</code> stages, <code>--workers</code>, <code>--seasons</code>, <code>--player</code>.</td><td>Run one stage or one player for testing without editing code.</td></tr></table></div>
 </section>
 
 <!-- ============================== 8 ============================== -->
@@ -553,6 +615,7 @@ def num(v, as_float=False):
     <li><i>"Match data shows 1 goal… the source's season summary differs"</i>: the two FotMob endpoints disagree for the same
     matches (usually the current season, before one side updates). We show both rather than silently picking one.</li>
   </ul>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Python dictionaries and lists</b></td><td>Grouped entries by season and by competition (<code>OrderedDict</code>, <code>defaultdict</code>).</td><td>Grouping and summing is the core job, and dictionaries are Python's built-in tool for it. pandas would work but hides the rules we needed to control precisely.</td></tr><tr><td><b>Regular expressions (<code>re</code>)</b></td><td>Recognised season formats (<code>2024/2026</code>, <code>2026</code>) and competition types ("cup", "pokal", "coppa"…).</td><td>Short patterns that cover many spellings at once.</td></tr><tr><td><b>A lookup table from FotMob's league list</b></td><td>Added the country to ambiguous names (Bundesliga (Austria) vs (Germany)).</td><td>Uses the source's own data instead of a hand-made list that would go out of date.</td></tr><tr><td><b>Merge step for mid-season transfers</b></td><td>Same competition and season at two clubs → one row with a per-club split.</td><td>Prevents double counting, which was proven by Understat agreeing with the combined numbers.</td></tr><tr><td><b>Sum vs weighted average</b></td><td>Counts are summed; ratings and percentages are averaged by minutes played.</td><td>Adding up percentages gives nonsense (70% + 80% ≠ 150%).</td></tr><tr><td><b>Notes on rows</b></td><td>Text caveats stored with the data and shown on the site.</td><td>Explains real gaps (qualifiers) instead of hiding them or guessing.</td></tr></table></div>
 </section>
 
 <!-- ============================== 9 ============================== -->
@@ -627,6 +690,7 @@ def num(v, as_float=False):
     <tr><th>2025/2026 total</th><th></th><th>64</th><th>57</th><th>12</th><th>5,104</th><th>227</th><th>28</th></tr>
   </table>
   <p class="small">Premier League row cross-checked with Understat: 35 games, 27 goals, 8 assists, an exact match.</p>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>JSON files split three ways</b></td><td><code>index.json</code> for lists, one file per player, <code>meta.json</code> for info.</td><td>Each page downloads only what it needs: a 1.2 MB list instead of 57 MB.</td></tr><tr><td><b>TypeScript interfaces as a contract</b></td><td><code>src/lib/types.ts</code> describes every field the site reads.</td><td>If the data shape changes, the build fails loudly instead of the page breaking silently for users.</td></tr><tr><td><b><code>null</code> instead of 0 for missing values</b></td><td>Stored as JSON <code>null</code>, shown as "–".</td><td>Keeps "unknown" and "zero" different, which they are.</td></tr></table></div>
 </section>
 
 <!-- ============================== 10 ============================== -->
@@ -677,6 +741,7 @@ def num(v, as_float=False):
   </ul>
   <div class="box"><b class="t">Lesson</b> Verification can be wrong too. When a check fails, investigate whether the data or the check is at fault.
   Two of our "data errors" were actually bugs in the verifier and in the builder.</div>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Independent source comparison</b></td><td>Compared 4,489 player-seasons with Understat.</td><td>The only strong evidence that numbers are right: two independent collectors agree.</td></tr><tr><td><b>Accent folding (<code>unicodedata</code>)</b></td><td>"Mbappé" → "mbappe" before comparing names.</td><td>Different sources spell names differently. Without this, matches are missed.</td></tr><tr><td><b>Fuzzy matching (<code>difflib</code>) + club check</b></td><td>Name similarity plus "same club" to pair players.</td><td>Name alone matched the wrong Vitinha. The club makes the match reliable.</td></tr><tr><td><b>Invariant checks</b></td><td>Season total = sum of its competitions; no negatives.</td><td>Cheap rules that catch whole classes of bugs automatically.</td></tr><tr><td><b>A JSON report file</b></td><td>All results and every difference saved to <code>verification_report.json</code>.</td><td>You can inspect and compare runs later instead of trusting a printout.</td></tr></table></div>
 </section>
 
 <!-- ============================== 11 ============================== -->
@@ -737,6 +802,7 @@ filtered.slice(0, limit).map(r =&gt; &lt;Link href={`/players/${r.id}`}&gt;…ca
   <p>Tailwind classes directly in the markup, dark theme (<code>bg-slate-950</code> background, emerald accent), responsive
   grids (<code>sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4</code>), and wide tables that scroll sideways on phones with the
   competition column sticky (<code>sticky left-0</code>).</p>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b><code>"use client"</code> components</b></td><td>Home page and player view run in the browser.</td><td>They need clicks, typing and state. Server components can't do that.</td></tr><tr><td><b><code>useState</code></b></td><td>Stores the loaded data, search text, selected filters, open tab, open row.</td><td>When state changes, React redraws the page automatically, with no manual page updates.</td></tr><tr><td><b><code>useEffect</code></b></td><td>Downloads the JSON once, after the page first appears.</td><td>The standard place for "do this when the page loads".</td></tr><tr><td><b><code>useMemo</code></b></td><td>Re-filters and re-sorts 2,707 players only when a filter actually changes.</td><td>Avoids redoing the same work on every tiny redraw.</td></tr><tr><td><b><code>fetch()</code></b></td><td>Gets <code>/data/index.json</code> and <code>/data/players/&lt;id&gt;.json</code>.</td><td>Built into every browser, so no library is needed.</td></tr><tr><td><b><code>next/link</code></b></td><td>Player cards link to <code>/players/&lt;id&gt;</code>.</td><td>Moves between pages without a full reload, so it's faster.</td></tr><tr><td><b>Reusable components (<code>StatTable</code>, <code>DetailGrid</code>, <code>Img</code>, <code>Kpi</code>)</b></td><td>One table component used for both the career and season views.</td><td>Write once, fix once. The old 947-line single file was hard to change.</td></tr><tr><td><b>Tailwind responsive classes</b></td><td><code>sm:</code>, <code>lg:</code>, <code>xl:</code> prefixes change the layout by screen width.</td><td>One page works on phone and desktop without separate designs.</td></tr></table></div>
 </section>
 
 <!-- ============================== 12 ============================== -->
@@ -787,6 +853,7 @@ filtered.slice(0, limit).map(r =&gt; &lt;Link href={`/players/${r.id}`}&gt;…ca
     <tr><td>Browser sweep (home interactions + 150 player pages, clicking tabs and rows)</td><td>Playwright / Chromium</td><td>150/150, 0 JS errors, 0 failed requests (local and live)</td></tr>
     <tr><td>Every player file on the live site</td><td>curl × 2,707 (16 in parallel)</td><td>2,707 × HTTP 200</td></tr>
   </table>
+<div class="tool"><h4>🧰 What we used here, how, and why only this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Git commits and branches</b></td><td>Saved each step as a commit on <code>claude/data-pipeline-v2</code>.</td><td>You can see, undo or compare any change. Working on a branch keeps <code>main</code> safe.</td></tr><tr><td><b><code>.gitignore</code></b></td><td>Excluded <code>node_modules</code>, build output, secrets (<code>.env*</code>), the raw cache.</td><td>Those files are huge, re-creatable or secret. Committing them bloats or leaks the repo.</td></tr><tr><td><b>Vercel CLI (<code>vercel link / deploy / promote</code>)</b></td><td>Linked the folder to your project, deployed a preview, then promoted it.</td><td>Repeatable from the terminal. The dashboard works too but is harder to automate.</td></tr><tr><td><b>Preview before production</b></td><td>Tested the private preview URL first.</td><td>Visitors never see a broken version.</td></tr><tr><td><b>ESLint, TypeScript, <code>next build</code></b></td><td>Ran before every deploy.</td><td>Catch mistakes on your machine, not in front of users.</td></tr><tr><td><b>Playwright</b></td><td>A robot browser opened 150 pages, clicked tabs and rows, and recorded any errors.</td><td>Tests what a real visitor does. Reading code can't prove the page works.</td></tr></table></div>
 </section>
 
 <!-- ============================== 13 ============================== -->
@@ -837,6 +904,7 @@ filtered.slice(0, limit).map(r =&gt; &lt;Link href={`/players/${r.id}`}&gt;…ca
     <li>Committed in <code>public/data/players/737066.json</code>, deployed to Vercel.</li>
     <li>The browser fetches the file and <code>n(27)</code> prints "27" in the Goals column.</li>
   </ol>
+<div class="tool"><h4>🧰 How to study a system like this</h4><table><tr><th style="width:20%">Thing</th><th style="width:38%">How we used it</th><th>Why this, and not something else</th></tr><tr><td><b>Sequence diagram</b></td><td>Drew who talks to whom, in time order, when a page opens.</td><td>The clearest way to understand (and debug) the flow of a request.</td></tr><tr><td><b>Tracing one number end to end</b></td><td>Followed Haaland's 27 goals from match to screen.</td><td>If you can trace one value through every step, you understand the whole system.</td></tr></table></div>
 </section>
 
 <!-- ============================== 14 ============================== -->
@@ -1004,8 +1072,153 @@ vercel promote &lt;preview-url&gt;        <span class="c"># make that build live
     <tr><td>xG / xA</td><td>Expected goals / expected assists: chance quality, from 0 to 1 per shot or pass.</td></tr>
     <tr><td>Null</td><td>"No value / unknown". Different from 0.</td></tr>
   </table>
-  <p class="small" style="margin-top:20px">End of guide. Everything described here is in the repository on branch <code>claude/data-pipeline-v2</code>;
-  the pipeline README (<code>project-material/backend/pipeline/README.md</code>) has the short version of how to run it.</p>
+  </section>
+
+
+<section class="chapter">
+  <h2><span class="num">19</span>How and where to learn all this</h2>
+  <p>You don't need to learn everything at once. Learn in this order, and build something small after each step. All resources
+  below are free unless marked.</p>
+
+  <h3>19.1 What to learn, in order, and where</h3>
+  <table>
+    <tr><th>#</th><th>Topic</th><th>Why you need it (in this project)</th><th>Where to learn (free)</th><th>Time</th></tr>
+    <tr><td>1</td><td>Using a computer like a developer: terminal, folders, VS Code</td><td>Every command in this guide runs in a terminal.</td><td>The Odin Project, "Foundations" (theodinproject.com) · VS Code docs (code.visualstudio.com/docs)</td><td>1 week</td></tr>
+    <tr><td>2</td><td>Git and GitHub</td><td>Saving and sharing your work; deploying from GitHub.</td><td>learngitbranching.js.org (interactive) · GitHub Skills (skills.github.com) · Pro Git book, ch. 1–3 (git-scm.com/book)</td><td>1 week</td></tr>
+    <tr><td>3</td><td>Python basics</td><td>The whole data pipeline.</td><td>CS50's Introduction to Programming with Python (cs50.harvard.edu/python) · Automate the Boring Stuff (automatetheboringstuff.com) · official tutorial (docs.python.org/3/tutorial)</td><td>4–6 weeks</td></tr>
+    <tr><td>4</td><td>HTTP, APIs and JSON</td><td>How the scraper talks to FotMob; how the site loads data.</td><td>MDN "An overview of HTTP" and "Working with JSON" (developer.mozilla.org) · requests quickstart (requests.readthedocs.io)</td><td>1 week</td></tr>
+    <tr><td>5</td><td>Working with data in Python</td><td>Grouping, summing, cleaning, comparing.</td><td>Kaggle Learn: Python + Pandas (kaggle.com/learn) · Python docs for <code>json</code>, <code>collections</code>, <code>re</code></td><td>2–3 weeks</td></tr>
+    <tr><td>6</td><td>HTML, CSS and JavaScript</td><td>What the browser actually runs.</td><td>MDN Learn web development (developer.mozilla.org/en-US/docs/Learn) · javascript.info · freeCodeCamp Responsive Web Design (freecodecamp.org)</td><td>4–6 weeks</td></tr>
+    <tr><td>7</td><td>TypeScript</td><td>Types that catch data-shape mistakes.</td><td>TypeScript Handbook (typescriptlang.org/docs/handbook) · "TypeScript for JavaScript Programmers"</td><td>1–2 weeks</td></tr>
+    <tr><td>8</td><td>React</td><td>Components, <code>useState</code>, <code>useEffect</code>, <code>useMemo</code>.</td><td>react.dev/learn (official, interactive; do "Quick Start" then "Thinking in React")</td><td>2–3 weeks</td></tr>
+    <tr><td>9</td><td>Next.js (App Router)</td><td>Pages, routing, building, deploying.</td><td>nextjs.org/learn (official course) · Next.js docs (nextjs.org/docs)</td><td>2 weeks</td></tr>
+    <tr><td>10</td><td>Tailwind CSS</td><td>Styling.</td><td>tailwindcss.com/docs: start with "Utility-first fundamentals" and "Responsive design"</td><td>3–5 days</td></tr>
+    <tr><td>11</td><td>Deploying with Vercel</td><td>Putting the site online.</td><td>vercel.com/docs: "Getting started" and "Deployments"</td><td>2 days</td></tr>
+    <tr><td>12</td><td>Testing with Playwright</td><td>Proving pages work before release.</td><td>playwright.dev/docs/intro</td><td>3–5 days</td></tr>
+    <tr><td>13</td><td>Web scraping, done responsibly</td><td>Collecting data without being blocked or breaking rules.</td><td>Read each site's Terms and robots.txt · "Web Scraping with Python" (Ryan Mitchell, O'Reilly; paid book) · requests + json docs</td><td>1 week</td></tr>
+  </table>
+  <p class="small">Times assume about 1–2 hours a day. Steps 1–5 and 6–10 can run in parallel if you prefer variety.</p>
+
+  <h3>19.2 How to learn (the method matters more than the resource)</h3>
+  <ol>
+    <li><b>Type, don't copy-paste.</b> Typing code yourself is how syntax sticks.</li>
+    <li><b>Build tiny things right away.</b> After learning <code>fetch</code>, fetch one JSON file and print one field. After learning <code>useState</code>, build a counter.</li>
+    <li><b>Break it on purpose.</b> Change a value, delete a line, see what error appears. Error messages become friends.</li>
+    <li><b>Read real code.</b> This repository is small (about 1,400 lines). Read one file a day with this guide beside you.</li>
+    <li><b>Explain it back.</b> If you can explain a file to a friend (or an AI) in plain words, you understand it.</li>
+    <li><b>Keep a "today I learned" note.</b> One line a day makes a record of your progress.</li>
+  </ol>
+
+  <h3>19.3 How to use AI to learn (not just to get answers)</h3>
+  <div class="box"><b class="t">Good prompts to copy</b>
+  <ul>
+    <li>"Explain <code>useEffect</code> to a complete beginner, then give me a 10-minute exercise and don't show the answer until I try."</li>
+    <li>"Here is <code>scrape_fotmob.py</code>. Walk me through it line by line in simple words. Stop after every 20 lines and quiz me with 2 questions."</li>
+    <li>"I want to build X. Before writing code, ask me questions to define requirements, constraints and data sources, like a planning checklist."</li>
+    <li>"Review my code like a strict teacher. Point out bugs and bad habits, but let me fix them myself."</li>
+    <li>"Why did we choose a static JSON site instead of FastAPI + a database here? When would the other choice be better?"</li>
+    <li>"I got this error: [paste]. Explain what it means and how to find the cause, but don't fix it for me yet."</li>
+  </ul></div>
+  <div class="box warn"><b class="t">Habits to avoid</b>
+  Accepting code you can't explain; asking for a whole app in one prompt; skipping tests because "the AI said it works";
+  pasting secrets (tokens, passwords) into a chat. All four happened or nearly happened in this project; section 14 shows the fixes.</div>
+
+  <h3>19.4 Practice projects that build up to this one</h3>
+  <table>
+    <tr><th>#</th><th>Mini project</th><th>Skills it trains</th></tr>
+    <tr><td>1</td><td>Python script that downloads a public JSON (e.g. a weather or public football API) and prints a summary.</td><td>requests, JSON, loops</td></tr>
+    <tr><td>2</td><td>Add a disk cache to project 1 so a second run makes no requests.</td><td>files, caching</td></tr>
+    <tr><td>3</td><td>Static web page (HTML/CSS/JS) that loads a local JSON file and shows a table.</td><td>fetch, DOM, tables</td></tr>
+    <tr><td>4</td><td>Rebuild project 3 in Next.js + TypeScript with a search box.</td><td>React state, components, types</td></tr>
+    <tr><td>5</td><td>Deploy project 4 to Vercel from GitHub.</td><td>git, deployment</td></tr>
+    <tr><td>6</td><td>A small version of this app: one league, current season only, players + goals.</td><td>the full pipeline-to-website flow</td></tr>
+  </table>
+</section>
+
+<section class="chapter">
+  <h2><span class="num">20</span>Roadmap: how to build a project like this from zero</h2>
+  <p>Follow these steps in order for your next data website. Each step has a clear "done when…" so you know when to move on.
+  This is exactly the order used in this project, cleaned up.</p>
+
+  <div class="step"><span class="when">Day 0</span><h4>Step 1: Set up your tools</h4>
+  Install VS Code, Git, Python 3, Node.js (LTS). Create GitHub and Vercel accounts and connect them.
+  <br><b>Done when:</b> <code>git --version</code>, <code>python --version</code> and <code>node --version</code> all print versions in your terminal.</div>
+
+  <div class="step"><span class="when">Day 1</span><h4>Step 2: Write the requirements (one page)</h4>
+  What will a visitor see and do? What data exactly (which fields, which seasons, which players)? What does "correct" mean?
+  <br><b>Done when:</b> you have a numbered list like section 2.1, and a sketch of each page on paper.</div>
+
+  <div class="step"><span class="when">Day 1–2</span><h4>Step 3: Find and test the data source</h4>
+  List candidate sources. Test each with one request (curl or Python). Check that it has every field you need, and read its terms.
+  Pick a primary source and a second source for checking.
+  <br><b>Done when:</b> you have one saved real response from your primary source and know which keys hold your data.</div>
+
+  <div class="step"><span class="when">Day 2</span><h4>Step 4: Choose the architecture with the planning questions</h4>
+  Use the template in section 17.1: How often does the data change? Does anyone write data? How big is it?
+  Read-only and updated daily or weekly → static data site (this project). Users write data or it changes every second → backend + database.
+  <br><b>Done when:</b> you can draw your version of Figure 2.</div>
+
+  <div class="step"><span class="when">Day 3–4</span><h4>Step 5: Design the data files first</h4>
+  Write the JSON shape the website will read (like section 9) and the matching TypeScript types. Decide the rules: unknown = null, how totals work.
+  <br><b>Done when:</b> you have one hand-written example JSON file for one item (one player).</div>
+
+  <div class="step"><span class="when">Day 4–6</span><h4>Step 6: One example, end to end</h4>
+  Write the smallest scraper for ONE item, the transform that produces your example JSON, and a bare web page that displays it.
+  <br><b>Done when:</b> one real item shows correctly on a local web page. (Our version: Haaland.)</div>
+
+  <div class="step"><span class="when">Week 2</span><h4>Step 7: Make the scraper robust, then scale up</h4>
+  Add disk cache, rate limit, retries, atomic writes and stages. Run on 10 items, then all items.
+  <br><b>Done when:</b> a full run completes and a second run makes zero requests.</div>
+
+  <div class="step"><span class="when">Week 2</span><h4>Step 8: Verify the data</h4>
+  Write invariant checks (totals add up, nothing negative, every file present) and an independent cross-check. Investigate every big difference.
+  <br><b>Done when:</b> 0 hard errors, a high agreement rate, and every remaining difference explained.</div>
+
+  <div class="step"><span class="when">Week 3</span><h4>Step 9: Build the real website</h4>
+  Next.js app: list page (load index, search, filter, sort) and detail page (load one file). Handle loading, error, empty and missing-image states.
+  <br><b>Done when:</b> <code>npm run lint</code> and <code>npm run build</code> pass, and you've clicked through 20 pages by hand.</div>
+
+  <div class="step"><span class="when">Week 3</span><h4>Step 10: Test like a visitor</h4>
+  A Playwright script that opens the home page and many detail pages, clicks the controls, and records errors. Also check that every data file loads.
+  <br><b>Done when:</b> the script reports 0 errors.</div>
+
+  <div class="step"><span class="when">Week 4</span><h4>Step 11: Save, deploy a preview, test, go live</h4>
+  Commit to a branch and push. <code>vercel deploy</code> (preview), test it, then <code>vercel promote</code> (production). Test the live URL again.
+  <br><b>Done when:</b> the public URL works on your phone and on a friend's computer.</div>
+
+  <div class="step"><span class="when">Afterwards</span><h4>Step 12: Keep it fresh and improve</h4>
+  Write a README with run commands. Automate the refresh (e.g. a weekly GitHub Actions job). Add features one at a time, each with steps 6 → 11.
+  <br><b>Done when:</b> someone else could run the project from your README alone.</div>
+
+  <div class="figure">
+  <svg viewBox="0 0 760 120" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="10.5">
+    <defs><marker id="a9" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <g text-anchor="middle">
+      <rect x="5" y="35" width="105" height="50" rx="8" fill="#f1f5f9" stroke="#334155"/><text x="57" y="57" font-weight="600">Plan</text><text x="57" y="73" font-size="9">steps 1–4</text>
+      <rect x="135" y="35" width="105" height="50" rx="8" fill="#ecfdf5" stroke="#047857"/><text x="187" y="57" font-weight="600">Design data</text><text x="187" y="73" font-size="9">step 5</text>
+      <rect x="265" y="35" width="105" height="50" rx="8" fill="#ede9fe" stroke="#6d28d9"/><text x="317" y="57" font-weight="600">One example</text><text x="317" y="73" font-size="9">step 6</text>
+      <rect x="395" y="35" width="105" height="50" rx="8" fill="#ecfdf5" stroke="#047857"/><text x="447" y="57" font-weight="600">Scale + verify</text><text x="447" y="73" font-size="9">steps 7–8</text>
+      <rect x="525" y="35" width="105" height="50" rx="8" fill="#ede9fe" stroke="#6d28d9"/><text x="577" y="57" font-weight="600">Site + tests</text><text x="577" y="73" font-size="9">steps 9–10</text>
+      <rect x="655" y="35" width="100" height="50" rx="8" fill="#fef3c7" stroke="#b45309"/><text x="705" y="57" font-weight="600">Ship + improve</text><text x="705" y="73" font-size="9">steps 11–12</text>
+    </g>
+    <line x1="110" y1="60" x2="133" y2="60" stroke="#334155" marker-end="url(#a9)"/>
+    <line x1="240" y1="60" x2="263" y2="60" stroke="#334155" marker-end="url(#a9)"/>
+    <line x1="370" y1="60" x2="393" y2="60" stroke="#334155" marker-end="url(#a9)"/>
+    <line x1="500" y1="60" x2="523" y2="60" stroke="#334155" marker-end="url(#a9)"/>
+    <line x1="630" y1="60" x2="653" y2="60" stroke="#334155" marker-end="url(#a9)"/>
+    <path d="M705,85 L705,108 L317,108 L317,87" fill="none" stroke="#94a3b8" stroke-dasharray="4 3" marker-end="url(#a9)"/>
+    <text x="510" y="104" font-size="9" fill="#475569" text-anchor="middle">each new feature: back to "one example"</text>
+  </svg>
+  <div class="caption">Figure 9. The roadmap at a glance.</div>
+  </div>
+
+  <div class="box"><b class="t">The three rules to remember if you forget everything else</b>
+  <ol>
+    <li><b>Look at real data before you build.</b> Most bugs in this project came from assumptions about data shape.</li>
+    <li><b>One example end to end, then scale.</b> Small loops are fast to fix.</li>
+    <li><b>Never fake a number, never skip the test.</b> Show "–" for unknown; check against a second source; click through the real site before shipping.</li>
+  </ol></div>
+  <p class="small" style="margin-top:16px">End of guide. Everything described here is in the repository on branch <code>claude/data-pipeline-v2</code>.</p>
 </section>
 
 </body>
