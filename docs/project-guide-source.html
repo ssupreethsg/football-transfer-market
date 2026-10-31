@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Football Transfer Market: How It Was Built</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+  :root { --ink:#0f172a; --muted:#475569; --line:#cbd5e1; --soft:#f1f5f9; --accent:#047857; --accent2:#0e7490; --warn:#b45309; --bad:#b91c1c; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.45; margin: 0; }
+  h1 { font-size: 26pt; margin: 0 0 6px; letter-spacing: -0.5px; }
+  h2 { font-size: 16pt; margin: 0 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--accent); color: var(--ink); }
+  h3 { font-size: 12.5pt; margin: 18px 0 6px; color: var(--accent); }
+  h4 { font-size: 11pt; margin: 12px 0 4px; }
+  p { margin: 6px 0; }
+  .chapter { page-break-before: always; }
+  .num { color: var(--accent); margin-right: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 9.2pt; page-break-inside: auto; }
+  tr { page-break-inside: avoid; }
+  th, td { border: 1px solid var(--line); padding: 4px 6px; vertical-align: top; text-align: left; }
+  th { background: var(--soft); font-weight: 600; }
+  code, pre { font-family: "Cascadia Code", Consolas, "Courier New", monospace; font-size: 8.8pt; }
+  code { background: var(--soft); padding: 1px 4px; border-radius: 3px; }
+  pre { background: #0f172a; color: #e2e8f0; padding: 10px 12px; border-radius: 6px; white-space: pre-wrap; page-break-inside: avoid; margin: 8px 0 12px; }
+  pre .c { color: #94a3b8; }
+  .box { border: 1px solid var(--line); border-left: 4px solid var(--accent); background: #f8fafc; padding: 8px 12px; margin: 10px 0; border-radius: 4px; page-break-inside: avoid; }
+  .box.warn { border-left-color: var(--warn); background: #fffbeb; }
+  .box.bad { border-left-color: var(--bad); background: #fef2f2; }
+  .box b.t { display:block; margin-bottom: 2px; }
+  ul, ol { margin: 4px 0 8px 18px; padding: 0; }
+  li { margin: 2px 0; }
+  .figure { margin: 10px 0 14px; page-break-inside: avoid; text-align: center; }
+  .figure svg { width: 100%; height: auto; }
+  .caption { font-size: 8.8pt; color: var(--muted); margin-top: 3px; }
+  .cover { height: 250mm; display: flex; flex-direction: column; justify-content: center; }
+  .cover .sub { font-size: 13pt; color: var(--muted); }
+  .cover .meta { margin-top: 30px; font-size: 10pt; color: var(--muted); }
+  .pill { display:inline-block; padding: 1px 8px; border-radius: 10px; background: #d1fae5; color: #065f46; font-size: 8.5pt; font-weight: 600; margin-right: 4px; }
+  .pill.grey { background: #e2e8f0; color: #334155; }
+  .pill.red { background: #fee2e2; color: #991b1b; }
+  .toc { margin-left: 28px; } .toc li { margin: 3px 0; padding-left: 4px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .small { font-size: 9pt; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- ============================== COVER ============================== -->
+<section class="cover">
+  <p class="pill">Project guide</p>
+  <h1>Football Transfer Market</h1>
+  <p class="sub">How the project was planned, built, verified and deployed: the full stack explained
+  for learning, with diagrams, algorithms, problems hit and how they were avoided.</p>
+  <div class="meta">
+    <p><b>Live site:</b> https://frontend-theta-three-tj1p5tsbe7.vercel.app</p>
+    <p><b>Repository:</b> github.com/ssupreethsg/football-transfer-market (branch <code>claude/data-pipeline-v2</code>)</p>
+    <p><b>Scope:</b> 2,707 players · 96 clubs · Premier League, La Liga, Serie A, Bundesliga, Ligue 1 · season 2026/27</p>
+    <p><b>Written:</b> 31 October 2026</p>
+  </div>
+</section>
+
+<!-- ============================== TOC ============================== -->
+<section class="chapter">
+  <h2>Contents</h2>
+  <ol class="toc">
+    <li>The project in one page</li>
+    <li>The starting plan: requirements, constraints and the framework we chose</li>
+    <li>Architecture: the big picture diagram</li>
+    <li>Technology stack: every language and tool, and why</li>
+    <li>Where we started: what was wrong with the first version</li>
+    <li>Data sources: what we used, what we rejected and why</li>
+    <li>The data pipeline, stage 1: collecting data (scraper)</li>
+    <li>The data pipeline, stage 2: transforming data (build)</li>
+    <li>The data model: how a player file is structured</li>
+    <li>The data pipeline, stage 3: verification</li>
+    <li>The frontend: how the website works</li>
+    <li>Hosting and deployment: Git, Vercel, preview and production</li>
+    <li>End-to-end workflow: what happens when you open a player page</li>
+    <li>Problems we hit and how we solved them</li>
+    <li>Other folders in the repository (legacy parts)</li>
+    <li>How to run, update and extend it</li>
+    <li>Lessons for your next project: a planning template and checklists</li>
+    <li>Glossary</li>
+  </ol>
+</section>
+
+<!-- ============================== 1 ============================== -->
+<section class="chapter">
+  <h2><span class="num">1</span>The project in one page</h2>
+  <p><b>What it is.</b> A website that lists every player at every club in Europe's top five leagues and shows,
+  for each player, real statistics for his whole career: totals per competition (league, domestic cups,
+  European competitions, national team) and a season-by-season breakdown where every season is split into
+  each competition he played.</p>
+
+  <p><b>How it works, in one sentence.</b> A Python pipeline downloads real match data, turns it into
+  clean JSON files, checks them against an independent source, and a Next.js (TypeScript/React) website
+  hosted on Vercel reads those files and displays them.</p>
+
+  <div class="figure">
+  <svg viewBox="0 0 760 150" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="12">
+    <defs><marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <g>
+      <rect x="5" y="40" width="120" height="70" rx="8" fill="#e0f2fe" stroke="#0e7490"/><text x="65" y="68" text-anchor="middle" font-weight="600">1. Collect</text><text x="65" y="86" text-anchor="middle" font-size="10">Python scraper</text><text x="65" y="100" text-anchor="middle" font-size="10">FotMob API</text>
+      <rect x="160" y="40" width="120" height="70" rx="8" fill="#ecfdf5" stroke="#047857"/><text x="220" y="68" text-anchor="middle" font-weight="600">2. Transform</text><text x="220" y="86" text-anchor="middle" font-size="10">build_dataset.py</text><text x="220" y="100" text-anchor="middle" font-size="10">clean JSON</text>
+      <rect x="315" y="40" width="120" height="70" rx="8" fill="#fef3c7" stroke="#b45309"/><text x="375" y="68" text-anchor="middle" font-weight="600">3. Verify</text><text x="375" y="86" text-anchor="middle" font-size="10">vs Understat +</text><text x="375" y="100" text-anchor="middle" font-size="10">internal checks</text>
+      <rect x="470" y="40" width="120" height="70" rx="8" fill="#f1f5f9" stroke="#334155"/><text x="530" y="68" text-anchor="middle" font-weight="600">4. Store &amp; ship</text><text x="530" y="86" text-anchor="middle" font-size="10">Git → GitHub</text><text x="530" y="100" text-anchor="middle" font-size="10">Vercel deploy</text>
+      <rect x="625" y="40" width="130" height="70" rx="8" fill="#ede9fe" stroke="#6d28d9"/><text x="690" y="68" text-anchor="middle" font-weight="600">5. Display</text><text x="690" y="86" text-anchor="middle" font-size="10">Next.js website</text><text x="690" y="100" text-anchor="middle" font-size="10">in the browser</text>
+      <line x1="125" y1="75" x2="158" y2="75" stroke="#334155" stroke-width="1.5" marker-end="url(#a1)"/>
+      <line x1="280" y1="75" x2="313" y2="75" stroke="#334155" stroke-width="1.5" marker-end="url(#a1)"/>
+      <line x1="435" y1="75" x2="468" y2="75" stroke="#334155" stroke-width="1.5" marker-end="url(#a1)"/>
+      <line x1="590" y1="75" x2="623" y2="75" stroke="#334155" stroke-width="1.5" marker-end="url(#a1)"/>
+      <text x="380" y="25" text-anchor="middle" font-size="11" fill="#475569">Runs once per refresh (offline)  ·  Website only reads the result</text>
+      <text x="380" y="140" text-anchor="middle" font-size="11" fill="#475569">Key idea: heavy work happens BEFORE deployment, so the live site is just fast static files</text>
+    </g>
+  </svg>
+  <div class="caption">Figure 1. The five steps of the system.</div>
+  </div>
+
+  <h3>Key numbers</h3>
+  <table>
+    <tr><th>Item</th><th>Value</th></tr>
+    <tr><td>Clubs / players</td><td>96 clubs, 2,707 players (current 2026/27 squads)</td></tr>
+    <tr><td>Requests made to collect the data</td><td>~28,400 (5 league tables, 96 squads, 2,707 profiles, 25,628 detailed-stat entries, 1 league list)</td></tr>
+    <tr><td>Detailed season-competition entries</td><td>23,693 (minutes, xG, dribbles, tackles… for 2023/24 onwards)</td></tr>
+    <tr><td>Dataset size shipped to the site</td><td>~57 MB in 2,709 JSON files (1 index, 1 meta, 2,707 player files)</td></tr>
+    <tr><td>Independent verification</td><td>League apps/goals/assists agree with Understat for 99.1% / 99.5% / 98.9% of 4,489 player-seasons</td></tr>
+    <tr><td>Live-site test</td><td>2,707/2,707 player files return HTTP 200; 150 pages clicked through in a real browser with 0 errors</td></tr>
+    <tr><td>Code written</td><td>~780 lines Python (pipeline), ~660 lines TypeScript/TSX (website)</td></tr>
+  </table>
+</section>
+
+<!-- ============================== 2 ============================== -->
+<section class="chapter">
+  <h2><span class="num">2</span>The starting plan</h2>
+  <p>Before writing code we answered four questions. This is the framework to reuse for any project:
+  <b>What must it do → What limits us → What shape should the system take → What tools fit that shape.</b></p>
+
+  <h3>2.1 Requirements (what you asked for)</h3>
+  <ol>
+    <li>Real, correct data, collected from the internet, not estimated.</li>
+    <li>Every player at every club in the top 5 leagues.</li>
+    <li>For each player: <b>cumulative career stats</b> split by competition, and <b>yearly stats</b> where each year is split by competition (league, Carabao/EFL Cup, FA Cup, Champions League, Super Cup, national team…).</li>
+    <li>Goal contributions and deeper stats: goals, assists, dribbles, and more.</li>
+    <li>Verify the data again after collecting it.</li>
+    <li>Website must work for anyone at any time, even with your laptop off; no errors.</li>
+    <li>Save everything in the <code>football-transfer-market</code> repository.</li>
+  </ol>
+
+  <h3>2.2 Constraints (what limits us)</h3>
+  <table>
+    <tr><th>Constraint</th><th>Consequence for the design</th></tr>
+    <tr><td>Most football stats sites block bots (Cloudflare "Just a moment…" pages, HTTP 403/405).</td><td>Pick a source that serves JSON to normal requests; don't fight anti-bot systems.</td></tr>
+    <tr><td>No source publishes "official" data for all 5 leagues + all cups + Europe in one place.</td><td>Use one consistent aggregator (Opta data via FotMob) and cross-check it with an independent one (Understat).</td></tr>
+    <tr><td>~2,700 players × many seasons × many competitions = tens of thousands of requests.</td><td>Cache every response on disk, run in parallel with a rate limit, make it resumable.</td></tr>
+    <tr><td>Site must work with your laptop off, free hosting, no server to maintain.</td><td>Pre-compute everything; serve static JSON files from Vercel's CDN. No live backend.</td></tr>
+    <tr><td>Limited tokens / time.</td><td>Build one example player end to end first, then run the same code for everyone.</td></tr>
+  </table>
+
+  <h3>2.3 The design decision: a "static data site"</h3>
+  <p>There are two common shapes for a data website:</p>
+  <div class="two">
+    <div class="box warn"><b class="t">Option A: live backend (what the first version tried)</b>
+      Browser → API server (FastAPI) → database (SQLite/Postgres). Needs a server running 24/7, costs money,
+      breaks when the server/laptop is off; the first version even pointed at <code>127.0.0.1:8000</code> (your laptop).</div>
+    <div class="box"><b class="t">Option B: pre-built static data (what we chose)</b>
+      Pipeline builds JSON files once → files are deployed with the website → browser downloads only the file it needs.
+      No server to crash, free, very fast, works with the laptop off. Trade-off: data updates when you re-run the pipeline.</div>
+  </div>
+  <p>Player stats change at most once per match day, so "rebuild and redeploy" is a perfect fit. This is the single
+  most important architectural choice in the project.</p>
+
+  <h3>2.4 The plan as a checklist</h3>
+  <table>
+    <tr><th>#</th><th>Step</th><th>Tool / language</th><th>Output</th></tr>
+    <tr><td>1</td><td>Find root cause of the wrong data</td><td>Reading old Python code</td><td>Found "projected 2024 → 2026" numbers</td></tr>
+    <tr><td>2</td><td>Test which data sources are reachable and complete</td><td>curl, Python</td><td>FotMob (primary), Understat (verification)</td></tr>
+    <tr><td>3</td><td>Write a cached, resumable scraper</td><td>Python + requests + threads</td><td><code>cache/</code> raw JSON</td></tr>
+    <tr><td>4</td><td>Transform raw data into the shape the site needs</td><td>Python</td><td><code>public/data/*.json</code></td></tr>
+    <tr><td>5</td><td>Build one example (Haaland), inspect, fix issues</td><td>Python + screenshots</td><td>Validated structure</td></tr>
+    <tr><td>6</td><td>Rewrite the website to read the new data</td><td>TypeScript, React, Next.js, Tailwind</td><td>Home + player pages</td></tr>
+    <tr><td>7</td><td>Run for all players, verify against Understat</td><td>Python</td><td><code>verification_report.json</code></td></tr>
+    <tr><td>8</td><td>Browser-test pages, fix every error found</td><td>Playwright (Node.js)</td><td>0 errors</td></tr>
+    <tr><td>9</td><td>Commit, push, deploy preview, test, promote to production</td><td>Git, GitHub, Vercel CLI</td><td>Live site</td></tr>
+  </table>
+</section>
+
+<!-- ============================== 3 ============================== -->
+<section class="chapter">
+  <h2><span class="num">3</span>Architecture: the big picture</h2>
+  <div class="figure">
+  <svg viewBox="0 0 760 560" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11">
+    <defs><marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <!-- zones -->
+    <rect x="5" y="5" width="180" height="545" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 3"/>
+    <text x="95" y="24" text-anchor="middle" font-weight="700" fill="#334155">INTERNET SOURCES</text>
+    <rect x="200" y="5" width="300" height="545" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 3"/>
+    <text x="350" y="24" text-anchor="middle" font-weight="700" fill="#334155">DATA PIPELINE (Python, offline)</text>
+    <rect x="515" y="5" width="240" height="545" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 3"/>
+    <text x="635" y="24" text-anchor="middle" font-weight="700" fill="#334155">DELIVERY (Git, Vercel, browser)</text>
+
+    <!-- sources -->
+    <rect x="20" y="50" width="150" height="150" rx="8" fill="#e0f2fe" stroke="#0e7490"/>
+    <text x="95" y="70" text-anchor="middle" font-weight="700">FotMob data API</text>
+    <text x="95" y="86" text-anchor="middle" font-size="9.5">(match data by Opta)</text>
+    <text x="30" y="106" font-size="9.5">• /leagues  (tables)</text>
+    <text x="30" y="121" font-size="9.5">• /teams  (squads)</text>
+    <text x="30" y="136" font-size="9.5">• /playerData  (career)</text>
+    <text x="30" y="151" font-size="9.5">• /playerStats  (detailed)</text>
+    <text x="30" y="166" font-size="9.5">• /allLeagues  (countries)</text>
+    <text x="30" y="186" font-size="9.5" fill="#475569">images.fotmob.com (photos)</text>
+
+    <rect x="20" y="380" width="150" height="70" rx="8" fill="#fef3c7" stroke="#b45309"/>
+    <text x="95" y="405" text-anchor="middle" font-weight="700">Understat</text>
+    <text x="95" y="421" text-anchor="middle" font-size="9.5">league goals/assists/apps</text>
+    <text x="95" y="435" text-anchor="middle" font-size="9.5">independent check</text>
+
+    <!-- pipeline -->
+    <rect x="220" y="50" width="260" height="70" rx="8" fill="#ecfdf5" stroke="#047857"/>
+    <text x="350" y="72" text-anchor="middle" font-weight="700">scrape_fotmob.py</text>
+    <text x="350" y="89" text-anchor="middle" font-size="9.5">stages: squads → profiles → deep</text>
+    <text x="350" y="104" text-anchor="middle" font-size="9.5">threads + rate limit + retries + cache</text>
+
+    <rect x="220" y="150" width="260" height="60" rx="8" fill="#fff" stroke="#047857"/>
+    <text x="350" y="172" text-anchor="middle" font-weight="700">cache/  (raw JSON on disk)</text>
+    <text x="350" y="190" text-anchor="middle" font-size="9.5">squads.json · players/&lt;id&gt; · deep/&lt;id&gt;/&lt;season&gt;_&lt;comp&gt;</text>
+
+    <rect x="220" y="240" width="260" height="90" rx="8" fill="#ecfdf5" stroke="#047857"/>
+    <text x="350" y="262" text-anchor="middle" font-weight="700">build_dataset.py</text>
+    <text x="350" y="279" text-anchor="middle" font-size="9.5">season bucketing · competition typing</text>
+    <text x="350" y="294" text-anchor="middle" font-size="9.5">merge mid-season transfers · totals</text>
+    <text x="350" y="309" text-anchor="middle" font-size="9.5">nulls stay null · notes on gaps</text>
+
+    <rect x="220" y="360" width="260" height="60" rx="8" fill="#fff" stroke="#047857"/>
+    <text x="350" y="382" text-anchor="middle" font-weight="700">frontend/public/data/</text>
+    <text x="350" y="400" text-anchor="middle" font-size="9.5">index.json · meta.json · players/&lt;id&gt;.json</text>
+
+    <rect x="220" y="450" width="260" height="70" rx="8" fill="#fef3c7" stroke="#b45309"/>
+    <text x="350" y="472" text-anchor="middle" font-weight="700">verify_dataset.py</text>
+    <text x="350" y="489" text-anchor="middle" font-size="9.5">internal consistency + Understat cross-check</text>
+    <text x="350" y="504" text-anchor="middle" font-size="9.5">→ verification_report.json</text>
+
+    <!-- delivery -->
+    <rect x="530" y="50" width="210" height="60" rx="8" fill="#f1f5f9" stroke="#334155"/>
+    <text x="635" y="72" text-anchor="middle" font-weight="700">Git → GitHub repo</text>
+    <text x="635" y="90" text-anchor="middle" font-size="9.5">code + dataset versioned</text>
+
+    <rect x="530" y="140" width="210" height="90" rx="8" fill="#f1f5f9" stroke="#334155"/>
+    <text x="635" y="162" text-anchor="middle" font-weight="700">Vercel</text>
+    <text x="635" y="179" text-anchor="middle" font-size="9.5">next build → static pages + files</text>
+    <text x="635" y="194" text-anchor="middle" font-size="9.5">preview URL → promote → production</text>
+    <text x="635" y="209" text-anchor="middle" font-size="9.5">served from global CDN</text>
+
+    <rect x="530" y="270" width="210" height="140" rx="8" fill="#ede9fe" stroke="#6d28d9"/>
+    <text x="635" y="292" text-anchor="middle" font-weight="700">Browser (Next.js app)</text>
+    <text x="545" y="314" font-size="9.5">/            → fetch index.json + meta.json</text>
+    <text x="545" y="330" font-size="9.5">                 search · filter · sort (in memory)</text>
+    <text x="545" y="350" font-size="9.5">/players/[id] → fetch players/&lt;id&gt;.json</text>
+    <text x="545" y="366" font-size="9.5">                 career tab · season tab</text>
+    <text x="545" y="382" font-size="9.5">                 tables + detail grids</text>
+    <text x="545" y="400" font-size="9.5" fill="#475569">photos/logos from images.fotmob.com</text>
+
+    <rect x="530" y="440" width="210" height="60" rx="8" fill="#fff" stroke="#6d28d9"/>
+    <text x="635" y="462" text-anchor="middle" font-weight="700">You / any visitor</text>
+    <text x="635" y="480" text-anchor="middle" font-size="9.5">works 24/7, laptop not needed</text>
+
+    <!-- arrows -->
+    <line x1="170" y1="110" x2="218" y2="85" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="350" y1="120" x2="350" y2="148" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="350" y1="210" x2="350" y2="238" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="350" y1="330" x2="350" y2="358" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="350" y1="420" x2="350" y2="448" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="170" y1="415" x2="218" y2="480" stroke="#b45309" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="480" y1="390" x2="528" y2="85" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="635" y1="110" x2="635" y2="138" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="635" y1="230" x2="635" y2="268" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="635" y1="410" x2="635" y2="438" stroke="#334155" stroke-width="1.4" marker-end="url(#a2)"/>
+    <line x1="170" y1="186" x2="528" y2="398" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#a2)"/>
+  </svg>
+  <div class="caption">Figure 2. System architecture. Left: where data comes from. Middle: the offline pipeline. Right: how it reaches visitors.</div>
+  </div>
+  <div class="box"><b class="t">Read the diagram like this</b>
+  Everything in the middle column runs on a computer (this time, a cloud container) when you want fresh data.
+  Its only output is a folder of JSON files. Those files are committed to Git and deployed with the website.
+  When a visitor opens the site, no Python runs at all: the browser downloads small JSON files and React draws the tables.</div>
+</section>
+
+<!-- ============================== 4 ============================== -->
+<section class="chapter">
+  <h2><span class="num">4</span>Technology stack</h2>
+  <h3>4.1 Languages</h3>
+  <table>
+    <tr><th>Language</th><th>Where</th><th>Why this language</th></tr>
+    <tr><td><b>Python 3.13</b></td><td>Data pipeline: <code>scrape_fotmob.py</code>, <code>build_dataset.py</code>, <code>verify_dataset.py</code></td><td>Best ecosystem for data work; simple HTTP + JSON; readable scripts.</td></tr>
+    <tr><td><b>TypeScript 5</b></td><td>Website logic: <code>src/lib/*.ts</code>, pages</td><td>JavaScript with types: catches mistakes like a misspelled field before the site runs.</td></tr>
+    <tr><td><b>TSX (React JSX)</b></td><td>Website UI: <code>page.tsx</code>, <code>PlayerView.tsx</code>, <code>Img.tsx</code></td><td>Write HTML-like markup inside TypeScript; React turns it into the page.</td></tr>
+    <tr><td><b>CSS via Tailwind 4</b></td><td>Styling through class names like <code>bg-slate-900 rounded-2xl</code></td><td>Style directly in markup; consistent spacing/colours; no separate CSS files to maintain.</td></tr>
+    <tr><td><b>JSON</b></td><td>The dataset and all configs</td><td>The common format both Python and the browser read natively.</td></tr>
+    <tr><td><b>Bash / shell</b></td><td>Running stages, git, Vercel CLI</td><td>Glue between tools.</td></tr>
+    <tr><td><b>JavaScript (Node.js)</b></td><td>Playwright browser tests (testing only)</td><td>Playwright's primary API.</td></tr>
+  </table>
+
+  <h3>4.2 Libraries, frameworks and services</h3>
+  <table>
+    <tr><th>Tool</th><th>Version</th><th>Role</th></tr>
+    <tr><td>requests (Python)</td><td>2.34</td><td>HTTP client for the scraper and verifier.</td></tr>
+    <tr><td>concurrent.futures / threading (Python stdlib)</td><td>built-in</td><td>Run up to 10 downloads at once; lock-based global rate limiter.</td></tr>
+    <tr><td>difflib, unicodedata (Python stdlib)</td><td>built-in</td><td>Fuzzy name matching and accent folding ("Mbappé" = "mbappe") in verification.</td></tr>
+    <tr><td>Next.js</td><td>16.3.3</td><td>React framework: routing (<code>/</code>, <code>/players/[id]</code>), building, optimisation.</td></tr>
+    <tr><td>React</td><td>19.2.8</td><td>UI library: components, state (<code>useState</code>), effects (<code>useEffect</code>), memoisation (<code>useMemo</code>).</td></tr>
+    <tr><td>Tailwind CSS</td><td>4</td><td>Utility-class styling.</td></tr>
+    <tr><td>ESLint + eslint-config-next</td><td>9 / 16.3.3</td><td>Code-quality rules (caught a React anti-pattern, see §14).</td></tr>
+    <tr><td>Geist font (next/font)</td><td>-</td><td>Self-hosted web font, no layout shift.</td></tr>
+    <tr><td>Playwright</td><td>1.56</td><td>Headless Chromium to screenshot and click through pages, record JS errors.</td></tr>
+    <tr><td>Git + GitHub</td><td>-</td><td>Version control and remote storage of code + data.</td></tr>
+    <tr><td>Vercel (+ Vercel CLI 64.5)</td><td>-</td><td>Build and host the site; preview and production deployments; global CDN.</td></tr>
+  </table>
+
+  <h3>4.3 Project file map (the parts that run the live site)</h3>
+<pre>football-transfer-market/
+└── project-material/
+    ├── backend/pipeline/              <span class="c">← DATA PIPELINE (Python)</span>
+    │   ├── scrape_fotmob.py           <span class="c">collect: squads → profiles → deep stats (cached)</span>
+    │   ├── build_dataset.py           <span class="c">transform: raw cache → website JSON</span>
+    │   ├── verify_dataset.py          <span class="c">verify: internal checks + Understat cross-check</span>
+    │   ├── verification_report.json   <span class="c">latest verification results</span>
+    │   ├── README.md                  <span class="c">how to run the pipeline</span>
+    │   └── cache/                     <span class="c">raw downloads (git-ignored, ~110 MB)</span>
+    └── frontend/                      <span class="c">← WEBSITE (TypeScript / Next.js)</span>
+        ├── public/data/               <span class="c">the dataset the site reads</span>
+        │   ├── index.json             <span class="c">one row per player (1.2 MB)</span>
+        │   ├── meta.json              <span class="c">build time, season, counts</span>
+        │   └── players/&lt;id&gt;.json      <span class="c">2,707 full player files</span>
+        └── src/
+            ├── app/layout.tsx         <span class="c">HTML shell, font, page title</span>
+            ├── app/globals.css        <span class="c">Tailwind import + dark theme colours</span>
+            ├── app/page.tsx           <span class="c">home: search, filters, player cards</span>
+            ├── app/players/[id]/page.tsx       <span class="c">route wrapper (server component)</span>
+            ├── app/players/[id]/PlayerView.tsx <span class="c">player page (client component)</span>
+            └── lib/
+                ├── types.ts           <span class="c">TypeScript shape of the dataset (the "contract")</span>
+                ├── format.ts          <span class="c">number/money formatting, labels, stat groups</span>
+                └── Img.tsx            <span class="c">image that hides itself if missing</span></pre>
+</section>
+
+<!-- ============================== 5 ============================== -->
+<section class="chapter">
+  <h2><span class="num">5</span>Where we started: what was wrong</h2>
+  <p>The first version (built with another agent) looked complete but the numbers were unreliable. Reading the code
+  found the root causes. <b>Lesson: when data "looks wrong", read the code that produced it before collecting new data.</b></p>
+  <table>
+    <tr><th>Problem found</th><th>Evidence</th><th>Effect on the site</th></tr>
+    <tr><td><b>Projected, not real, stats</b></td><td><code>fetch_api_football.py</code>: "free tier only allows up to 2024. We will fetch 2024 and mathematically project it to 2026", ages +2</td><td>Every 2026 number was an estimate.</td></tr>
+    <tr><td><b>Invented contract data</b></td><td>Release clauses, wages (default €35,000/week), buy-back clauses had no source</td><td>Financial figures were fiction.</td></tr>
+    <tr><td><b>Stale squads</b></td><td>Club list hard-coded for 2024/25 (Ipswich, Leicester, Southampton…)</td><td>Wrong clubs/leagues for many players.</td></tr>
+    <tr><td><b>Fake "sync" button</b></td><td><code>/api/sync</code> returned "success … synchronized" whenever the backend was unreachable</td><td>Claimed updates that never happened.</td></tr>
+    <tr><td><b>Backend on your laptop</b></td><td><code>BACKEND_URL</code> default <code>http://127.0.0.1:8000</code></td><td>On Vercel this always failed silently and fell back to bundled data.</td></tr>
+    <tr><td><b>Unknowns turned into zeros</b></td><td>Schema defaults like <code>assists = Column(Integer, default=0)</code></td><td>"0 assists" displayed where the truth was "unknown".</td></tr>
+    <tr><td><b>Only top scorers/assisters fetched</b></td><td>Endpoints <code>topscorers</code>, <code>topassists</code></td><td>Most players had no real stats at all.</td></tr>
+    <tr><td><b>One 14 MB file loaded by every API call</b></td><td><code>import rawPlayers from "@/data/players.json"</code></td><td>Slow functions, hard to scale.</td></tr>
+  </table>
+  <div class="box bad"><b class="t">The general lesson</b>
+  A system that silently "falls back" or "fills in" values is the most dangerous kind: it never shows an error, so
+  you don't notice the data is wrong. Our rebuild follows one rule everywhere: <b>if the source doesn't have a number,
+  store <code>null</code> and show "–"; never invent, never default to 0.</b></div>
+</section>
+
+<!-- ============================== 6 ============================== -->
+<section class="chapter">
+  <h2><span class="num">6</span>Data sources</h2>
+  <h3>6.1 How we chose: a reachability test</h3>
+  <p>We sent one test request to every candidate source from the build machine and looked at the response code.</p>
+  <table>
+    <tr><th>Source</th><th>Result</th><th>Decision</th></tr>
+    <tr><td>FBref</td><td>403, Cloudflare "Just a moment…" challenge</td><td><span class="pill red">rejected</span> anti-bot wall</td></tr>
+    <tr><td>Transfermarkt</td><td>405 (bot blocked)</td><td><span class="pill red">rejected</span></td></tr>
+    <tr><td>Sofascore API</td><td>403</td><td><span class="pill red">rejected</span></td></tr>
+    <tr><td>API-Football</td><td>403 without key; free tier limited to old seasons</td><td><span class="pill red">rejected</span> (root of the old problem)</td></tr>
+    <tr><td>Premier League official API</td><td>Requires pretending to be premierleague.com (fake Origin/Referer headers)</td><td><span class="pill red">rejected</span> blocked as bot-check circumvention; also PL-only</td></tr>
+    <tr><td><b>FotMob data API</b></td><td>200 JSON; full careers; every competition; detailed stats; Opta data</td><td><span class="pill">primary source</span></td></tr>
+    <tr><td><b>Understat</b></td><td>200 JSON; all players per league season</td><td><span class="pill">verification source</span></td></tr>
+  </table>
+  <div class="box warn"><b class="t">Ethics and terms of use</b>
+  We only used sources that answer normal requests, sent requests at a polite rate, cached everything so each URL is
+  fetched once, and never bypassed bot protection. FotMob's and Understat's terms may still restrict re-publishing
+  their data on a public site; for a commercial product you would license data (e.g. from Opta/Stats Perform).</div>
+
+  <h3>6.2 The FotMob endpoints we use</h3>
+  <table>
+    <tr><th>Endpoint</th><th>Calls</th><th>What we take from it</th></tr>
+    <tr><td><code>/api/data/leagues?id=47</code> (PL), 87, 55, 54, 53</td><td>5</td><td>League table → the 20/18 club ids in each league; current season name.</td></tr>
+    <tr><td><code>/api/data/teams?id=&lt;club&gt;</code></td><td>96</td><td>Squad: every player id, name, position group.</td></tr>
+    <tr><td><code>/api/data/playerData?id=&lt;player&gt;</code></td><td>2,707</td><td>Bio (age, height, foot, nationality, contract), market value, <b>careerHistory</b>: every season × every competition with apps/goals/assists/rating, for club, national team and youth; <b>statSeasons</b>: list of season/competition pairs that have detailed stats.</td></tr>
+    <tr><td><code>/api/data/playerStats?playerId=&amp;seasonId=&lt;entry&gt;</code></td><td>25,628</td><td>~50 detailed stats for one season-competition: minutes, xG, xA, shots, dribbles, chances, passes, duels, tackles, cards, goalkeeping…</td></tr>
+    <tr><td><code>/api/data/allLeagues</code></td><td>1</td><td>League → country, used to label "Bundesliga (Austria)" vs "Bundesliga (Germany)".</td></tr>
+  </table>
+  <p class="small">How we discovered these: open the public website, look at what JSON the page itself loads, then test the
+  URL patterns with curl and inspect the keys with a short Python script. This "inspect before you build" step saved hours.</p>
+</section>
+
+<!-- ============================== 7 ============================== -->
+<section class="chapter">
+  <h2><span class="num">7</span>Pipeline stage 1: collecting the data</h2>
+  <p>File: <code>backend/pipeline/scrape_fotmob.py</code> (Python). It has three stages you run in order:</p>
+<pre>python scrape_fotmob.py squads                       <span class="c"># 5 leagues → 96 clubs → 2,707 player ids</span>
+python scrape_fotmob.py profiles --workers 10        <span class="c"># 2,707 career profiles</span>
+python scrape_fotmob.py deep --workers 10 --seasons 4 <span class="c"># 25,628 detailed-stat entries</span>
+python scrape_fotmob.py deep --player 737066          <span class="c"># any stage, one player only (the Haaland example)</span></pre>
+
+  <h3>7.1 The core algorithm: a cached, rate-limited, retrying fetch</h3>
+  <div class="figure">
+  <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11">
+    <defs><marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <rect x="300" y="5" width="160" height="34" rx="17" fill="#ede9fe" stroke="#6d28d9"/><text x="380" y="27" text-anchor="middle" font-weight="600">fetch(url, cache_file)</text>
+    <polygon points="380,55 470,85 380,115 290,85" fill="#fff" stroke="#334155"/><text x="380" y="89" text-anchor="middle">cache file exists?</text>
+    <rect x="560" y="68" width="170" height="34" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="645" y="89" text-anchor="middle">return cached JSON (no request)</text>
+    <rect x="290" y="135" width="180" height="40" rx="6" fill="#fff" stroke="#334155"/><text x="380" y="152" text-anchor="middle">wait for global rate lock</text><text x="380" y="167" text-anchor="middle" font-size="9.5">≥ 0.12 s since last request</text>
+    <rect x="290" y="195" width="180" height="30" rx="6" fill="#fff" stroke="#334155"/><text x="380" y="214" text-anchor="middle">HTTP GET (30 s timeout)</text>
+    <polygon points="380,240 470,268 380,296 290,268" fill="#fff" stroke="#334155"/><text x="380" y="272" text-anchor="middle">status?</text>
+    <rect x="560" y="200" width="170" height="44" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="645" y="218" text-anchor="middle">200: trim to needed keys,</text><text x="645" y="233" text-anchor="middle">write .tmp → rename, return</text>
+    <rect x="20" y="245" width="200" height="44" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="120" y="263" text-anchor="middle">429 / 5xx / network error:</text><text x="120" y="278" text-anchor="middle">sleep (back-off), retry ≤ 5×</text>
+    <rect x="560" y="280" width="170" height="34" rx="6" fill="#fee2e2" stroke="#b91c1c"/><text x="645" y="301" text-anchor="middle">404 etc.: return None</text>
+    <line x1="380" y1="39" x2="380" y2="53" stroke="#334155" marker-end="url(#a3)"/>
+    <line x1="470" y1="85" x2="558" y2="85" stroke="#334155" marker-end="url(#a3)"/><text x="512" y="79" font-size="10">yes</text>
+    <line x1="380" y1="115" x2="380" y2="133" stroke="#334155" marker-end="url(#a3)"/><text x="388" y="128" font-size="10">no</text>
+    <line x1="380" y1="175" x2="380" y2="193" stroke="#334155" marker-end="url(#a3)"/>
+    <line x1="380" y1="225" x2="380" y2="238" stroke="#334155" marker-end="url(#a3)"/>
+    <line x1="470" y1="262" x2="558" y2="225" stroke="#334155" marker-end="url(#a3)"/>
+    <line x1="470" y1="275" x2="558" y2="296" stroke="#334155" marker-end="url(#a3)"/>
+    <line x1="290" y1="268" x2="222" y2="268" stroke="#334155" marker-end="url(#a3)"/>
+    <path d="M120,245 L120,155 L288,155" fill="none" stroke="#b45309" marker-end="url(#a3)"/>
+  </svg>
+  <div class="caption">Figure 3. The fetch() function, the heart of the scraper. Every one of the ~28,400 requests goes through it.</div>
+  </div>
+
+  <h3>7.2 Why each piece exists</h3>
+  <table>
+    <tr><th>Technique</th><th>Problem it prevents</th></tr>
+    <tr><td><b>Disk cache</b> (one JSON file per request)</td><td>Re-downloading after a crash; hammering the source. A stopped run simply continues; a second run is instant.</td></tr>
+    <tr><td><b>Atomic write</b> (write <code>.tmp</code>, then <code>os.replace</code>)</td><td>A half-written file if the process dies mid-write, which would otherwise be treated as valid cache.</td></tr>
+    <tr><td><b>Thread pool</b> (10 workers)</td><td>Waiting on network latency one request at a time. First run did 0.7 profiles/s; with 10 workers ~8 requests/s (25,628 entries in ~50 min).</td></tr>
+    <tr><td><b>Global rate lock</b></td><td>Workers bursting together; keeps total rate polite no matter how many threads.</td></tr>
+    <tr><td><b>Retry with back-off</b> on 429/5xx</td><td>Losing data to temporary server hiccups.</td></tr>
+    <tr><td><b>Trimming</b> responses to needed keys</td><td>Disk usage: raw profile ~140 KB, deep stats ~130 KB (shot maps, heat maps). Trimmed cache is ~110 MB instead of ~4 GB.</td></tr>
+    <tr><td><b>Null-safe trimming</b></td><td>The run crashed at 25,603/25,628 because FotMob answered <code>null</code> for a few entries. Now an empty answer is stored as "no stats".</td></tr>
+    <tr><td><b><code>--player</code> option</b></td><td>Testing on one player (Haaland) before spending ~1 hour on everyone.</td></tr>
+  </table>
+
+  <h3>7.3 The real code (simplified)</h3>
+<pre>def fetch(path, params, cache_file, trim=None):
+    if os.path.exists(cache_file):                 <span class="c"># 1. cached? done</span>
+        return json.load(open(cache_file))
+    for attempt in range(5):
+        with _rate_lock:                           <span class="c"># 2. one request at a time leaves the gate</span>
+            wait = _last_call[0] + MIN_INTERVAL - time.time()
+            if wait &gt; 0: time.sleep(wait)
+            _last_call[0] = time.time()
+        r = session.get(f"{BASE}/{path}", params=params, timeout=30)
+        if r.status_code == 200:
+            data = trim(r.json()) if trim else r.json()
+            write_atomically(cache_file, data)     <span class="c"># 3. .tmp then os.replace</span>
+            return data
+        if r.status_code in (429, 500, 502, 503, 504):
+            time.sleep(5 * (attempt + 1)); continue  <span class="c"># 4. back off and retry</span>
+        return None                                <span class="c"># 5. 404: nothing there</span></pre>
+
+  <h3>7.4 Which detailed stats are fetched</h3>
+  <p>The profile's <code>statSeasons</code> lists, for each season, the competitions with detailed data and an
+  <code>entryId</code> like <code>"1-3"</code> (season #1, competition #3). The <code>deep</code> stage takes the 4 most recent
+  seasons and every competition flagged <code>hasDeepStats</code>, and saves each as
+  <code>cache/deep/&lt;player&gt;/&lt;season&gt;_&lt;competitionId&gt;.json</code>. Older seasons are skipped to keep the run to about
+  an hour; apps/goals/assists for <i>all</i> seasons already come from the profile.</p>
+</section>
+
+<!-- ============================== 8 ============================== -->
+<section class="chapter">
+  <h2><span class="num">8</span>Pipeline stage 2: transforming the data</h2>
+  <p>File: <code>backend/pipeline/build_dataset.py</code>. Input: the cache. Output: <code>frontend/public/data/</code>.
+  This is where most of the "thinking" lives, because raw data is messy in ways you only discover by looking at it.</p>
+
+  <div class="figure">
+  <svg viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11">
+    <defs><marker id="a4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <g font-size="10.5">
+    <rect x="250" y="5" width="260" height="30" rx="15" fill="#ede9fe" stroke="#6d28d9"/><text x="380" y="25" text-anchor="middle" font-weight="600">for each player in squads.json</text>
+    <rect x="250" y="50" width="260" height="34" rx="6" fill="#fff" stroke="#334155"/><text x="380" y="64" text-anchor="middle">load profile + all deep files for the player</text><text x="380" y="78" text-anchor="middle" font-size="9.5">deep keyed by (season, competitionId)</text>
+    <rect x="250" y="100" width="260" height="48" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="380" y="117" text-anchor="middle" font-weight="600">A. walk career entries</text><text x="380" y="132" text-anchor="middle" font-size="9.5">senior club + national team sections</text><text x="380" y="144" text-anchor="middle" font-size="9.5">skip friendlies</text>
+    <rect x="250" y="164" width="260" height="58" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="380" y="181" text-anchor="middle" font-weight="600">B. decide the season bucket</text><text x="380" y="196" text-anchor="middle" font-size="9.5">"2024/2026" Nations League → 2024/2025</text><text x="380" y="210" text-anchor="middle" font-size="9.5">"2026" World Cup → follow FotMob grouping</text>
+    <rect x="250" y="238" width="260" height="48" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="380" y="255" text-anchor="middle" font-weight="600">C. label the competition</text><text x="380" y="270" text-anchor="middle" font-size="9.5">type: league / cup / continental / national</text><text x="380" y="282" text-anchor="middle" font-size="9.5">name + country when ambiguous</text>
+    <rect x="250" y="302" width="260" height="48" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="380" y="319" text-anchor="middle" font-weight="600">D. attach detailed stats</text><text x="380" y="334" text-anchor="middle" font-size="9.5">match (season, competitionId); parse values;</text><text x="380" y="346" text-anchor="middle" font-size="9.5">"undefined"/missing → null</text>
+    <rect x="250" y="366" width="260" height="48" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="380" y="383" text-anchor="middle" font-weight="600">E. merge mid-season transfers</text><text x="380" y="398" text-anchor="middle" font-size="9.5">same competition, 2 clubs → 1 row + split</text><text x="380" y="410" text-anchor="middle" font-size="9.5">add notes for coverage gaps</text>
+    <rect x="250" y="430" width="260" height="34" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="380" y="451" text-anchor="middle" font-weight="600">F. aggregate: season, career, per-competition</text>
+    <rect x="250" y="480" width="260" height="32" rx="6" fill="#f1f5f9" stroke="#334155"/><text x="380" y="500" text-anchor="middle">write players/&lt;id&gt;.json + index row</text>
+    <line x1="380" y1="35" x2="380" y2="48" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="84" x2="380" y2="98" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="148" x2="380" y2="162" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="222" x2="380" y2="236" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="286" x2="380" y2="300" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="350" x2="380" y2="364" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="414" x2="380" y2="428" stroke="#334155" marker-end="url(#a4)"/>
+    <line x1="380" y1="464" x2="380" y2="478" stroke="#334155" marker-end="url(#a4)"/>
+    <rect x="540" y="40" width="210" height="80" rx="6" fill="#f8fafc" stroke="#94a3b8"/><text x="550" y="58" font-weight="600">After the loop</text><text x="550" y="75" font-size="9.5">sort index by market value</text><text x="550" y="90" font-size="9.5">write index.json (2,707 rows)</text><text x="550" y="105" font-size="9.5">write meta.json (time, counts)</text>
+    <rect x="10" y="100" width="220" height="110" rx="6" fill="#f8fafc" stroke="#94a3b8"/><text x="20" y="118" font-weight="600">Golden rules</text><text x="20" y="136" font-size="9.5">1. Copy numbers; never estimate.</text><text x="20" y="152" font-size="9.5">2. Unknown → null, not 0.</text><text x="20" y="168" font-size="9.5">3. Totals = sum of known values,</text><text x="20" y="182" font-size="9.5">    flagged "incomplete" if any unknown.</text><text x="20" y="198" font-size="9.5">4. Never count anything twice.</text>
+    </g>
+  </svg>
+  <div class="caption">Figure 4. build_dataset.py, per player.</div>
+  </div>
+
+  <h3>8.1 Step B: season bucketing (the trickiest rule)</h3>
+  <p>Club seasons are named <code>2025/2026</code>, but other entries are named differently:</p>
+  <table>
+    <tr><th>Raw season name</th><th>Example</th><th>Bucket we use</th><th>Why</th></tr>
+    <tr><td><code>2025/2026</code></td><td>Premier League</td><td>2025/2026</td><td>Normal club season.</td></tr>
+    <tr><td><code>2025</code> inside a club entry</td><td>FIFA Club World Cup 2025</td><td>2025/2026 (the club entry's season)</td><td>FotMob already files it under the club season.</td></tr>
+    <tr><td><code>2026</code> (national team)</td><td>World Cup 2026</td><td>2026/2027</td><td>Follow the season in which FotMob lists that tournament's detailed stats, so basic and detailed numbers land together.</td></tr>
+    <tr><td><code>2024/2026</code> (national team)</td><td>Nations League 2024/25</td><td>2024/2025</td><td>FotMob labels some editions over two years; they are played in the first club season. Without this rule we showed fake seasons like "2020/2022".</td></tr>
+    <tr><td><code>2018</code> (club)</td><td>Norwegian league (Molde)</td><td>2018</td><td>Calendar-year leagues stay as they are.</td></tr>
+  </table>
+
+  <h3>8.2 Step C: labelling competitions</h3>
+  <ul>
+    <li><b>Type</b> by name patterns: continental (<i>Champions League, Europa, Conference, UEFA Super Cup, Club World Cup…</i>),
+    domestic cup (<i>Cup, Copa, Coppa, Pokal, Coupe, Shield, Supercopa, …mesterskap…</i>), national team (by section),
+    otherwise league.</li>
+    <li><b>Name</b> from FotMob's league list. If the same name exists in several countries ("Bundesliga", "Premier League",
+    "Super Cup", "Cup") the country is appended: <i>Bundesliga (Austria)</i> vs <i>Bundesliga (Germany)</i>.</li>
+  </ul>
+
+  <h3>8.3 Step E: merging mid-season transfers</h3>
+  <p>Dean Huijsen, 2023/24: FotMob's career lists <i>Juventus, Serie A, 1 app</i> and <i>Roma, Serie A, 13 apps</i>, but the
+  detailed Serie A stats cover the whole season (14 apps). Attaching those detailed stats to both rows counted them
+  twice. Fix: rows with the same competition in the same season merge into one row,
+  <i>"Roma / Juventus: 14 apps, 2 goals"</i>, with a per-club split kept underneath. This halved the
+  career-vs-detailed disagreements and matches Understat (which reports the combined 14 apps, 2 goals).</p>
+
+  <h3>8.4 Step F: how totals are calculated</h3>
+  <table>
+    <tr><th>Kind of stat</th><th>Examples</th><th>How it is combined</th></tr>
+    <tr><td>Counts</td><td>goals, assists, minutes, shots, dribbles, tackles</td><td>Sum of known values.</td></tr>
+    <tr><td>Rates and percentages</td><td>rating, pass accuracy %, dribble success %, save %</td><td>Minutes-weighted average (a 90-minute game counts more than a 5-minute cameo). Never summed.</td></tr>
+    <tr><td>Unknown parts</td><td>Old seasons where assists = "undefined"</td><td>Total = sum of known values, field listed in <code>incomplete</code>; the site shows a * next to it.</td></tr>
+  </table>
+<pre><span class="c"># the "unknown is not zero" rule, from build_dataset.py</span>
+def num(v, as_float=False):
+    if v is None or v == "" or v == "undefined":
+        return None                       <span class="c"># unknown stays unknown</span>
+    f = float(str(v).replace(",", "").replace("%", ""))
+    return f if as_float else int(round(f))</pre>
+
+  <h3>8.5 Notes added to rows</h3>
+  <ul>
+    <li><i>"Detailed stats cover 11 of 16 matches (qualifying / early rounds have no detailed data)"</i>: e.g. Europa League
+    including qualifiers. The headline apps/goals/assists still include qualifiers.</li>
+    <li><i>"Match data shows 1 goal… the source's season summary differs"</i>: the two FotMob endpoints disagree for the same
+    matches (usually the current season, before one side updates). We show both rather than silently picking one.</li>
+  </ul>
+</section>
+
+<!-- ============================== 9 ============================== -->
+<section class="chapter">
+  <h2><span class="num">9</span>The data model</h2>
+  <p>The website reads three kinds of files. The same shape is written down twice: produced by Python
+  (<code>build_dataset.py</code>) and described in TypeScript (<code>src/lib/types.ts</code>). That TypeScript file is the
+  <b>contract</b> between pipeline and site: if they disagree, TypeScript reports an error at build time.</p>
+
+  <div class="figure">
+  <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" font-family="Consolas, monospace" font-size="10.5">
+    <rect x="5" y="5" width="350" height="410" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+    <text x="15" y="25" font-family="Segoe UI, Arial" font-weight="700" font-size="12">players/737066.json (one player)</text>
+    <text x="15" y="48">{ id, name, team, team_id, league,</text>
+    <text x="15" y="63">  position, nationality, age, height_cm,</text>
+    <text x="15" y="78">  preferred_foot, contract_end,</text>
+    <text x="15" y="93">  market_value: {value_eur, date, source},</text>
+    <text x="15" y="113" fill="#047857">  career_totals: {</text>
+    <text x="15" y="128">    appearances, goals, assists, incomplete[],</text>
+    <text x="15" y="143">    detailed: {minutes, xg, dribbles, …},</text>
+    <text x="15" y="158">    detailed_seasons: ["2026/2027", …] },</text>
+    <text x="15" y="178" fill="#047857">  career_by_competition: [</text>
+    <text x="15" y="193">    { competition, type, seasons,</text>
+    <text x="15" y="208">      appearances, goals, assists,</text>
+    <text x="15" y="223">      detailed:{…} }, … ],</text>
+    <text x="15" y="243" fill="#047857">  seasons: [</text>
+    <text x="15" y="258">    { season: "2025/2026", teams: [..],</text>
+    <text x="15" y="273">      totals: {apps, goals, assists},</text>
+    <text x="15" y="288">      totals_detailed: {…},</text>
+    <text x="15" y="303" fill="#0e7490">      competitions: [</text>
+    <text x="15" y="318">        { competition, type, team, edition,</text>
+    <text x="15" y="333">          appearances, goals, assists, rating,</text>
+    <text x="15" y="348">          detailed: {~50 stats} | null,</text>
+    <text x="15" y="363">          by_team: [...] | null, notes: [] }</text>
+    <text x="15" y="378">      ] }, … ],</text>
+    <text x="15" y="398">  source: {provider, url} }</text>
+
+    <rect x="380" y="5" width="375" height="190" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+    <text x="390" y="25" font-family="Segoe UI, Arial" font-weight="700" font-size="12">index.json (all players, small rows)</text>
+    <text x="390" y="48">[ { id, name, team, team_id, league,</text>
+    <text x="390" y="63">    position, position_group, nationality,</text>
+    <text x="390" y="78">    age, market_value_eur,</text>
+    <text x="390" y="93">    current_season: {apps, goals, assists, minutes},</text>
+    <text x="390" y="108">    last_season: {…}, last_season_name,</text>
+    <text x="390" y="123">    career: {apps, goals, assists} }, … ]</text>
+    <text x="390" y="150" font-family="Segoe UI, Arial" font-size="10" fill="#475569">Enough for the home page cards, search, filters</text>
+    <text x="390" y="165" font-family="Segoe UI, Arial" font-size="10" fill="#475569">and sorting; 1.2 MB for 2,707 players.</text>
+
+    <rect x="380" y="215" width="375" height="90" rx="8" fill="#f8fafc" stroke="#94a3b8"/>
+    <text x="390" y="235" font-family="Segoe UI, Arial" font-weight="700" font-size="12">meta.json</text>
+    <text x="390" y="258">{ built_at, current_season, players,</text>
+    <text x="390" y="273">  clubs, leagues: {…}, source }</text>
+
+    <rect x="380" y="325" width="375" height="90" rx="8" fill="#ecfdf5" stroke="#047857"/>
+    <text x="390" y="345" font-family="Segoe UI, Arial" font-weight="700" font-size="12">Why split into files?</text>
+    <text x="390" y="365" font-family="Segoe UI, Arial" font-size="10">Home page downloads 1 small file, not 57 MB.</text>
+    <text x="390" y="381" font-family="Segoe UI, Arial" font-size="10">A player page downloads only that player (~10–50 KB).</text>
+    <text x="390" y="397" font-family="Segoe UI, Arial" font-size="10">The CDN caches each file close to the visitor.</text>
+  </svg>
+  <div class="caption">Figure 5. Shape of the dataset. Green = career level, blue = per season per competition.</div>
+  </div>
+
+  <h3>9.1 Example: Haaland, 2025/26, as stored</h3>
+  <table>
+    <tr><th>Competition</th><th>Type</th><th>Apps</th><th>Goals</th><th>Assists</th><th>Minutes</th><th>Shots</th><th>Dribbles</th></tr>
+    <tr><td>Premier League (England)</td><td>league</td><td>35</td><td>27</td><td>8</td><td>2,958</td><td>126</td><td>17</td></tr>
+    <tr><td>FA Cup (England)</td><td>domestic_cup</td><td>4</td><td>3</td><td>1</td><td>231</td><td>6</td><td>1</td></tr>
+    <tr><td>EFL Cup</td><td>domestic_cup</td><td>3</td><td>0</td><td>0</td><td>199</td><td>4</td><td>2</td></tr>
+    <tr><td>Champions League</td><td>continental</td><td>10</td><td>8</td><td>0</td><td>755</td><td>35</td><td>1</td></tr>
+    <tr><td>FIFA Club World Cup</td><td>continental</td><td>4</td><td>3</td><td>1</td><td>255</td><td>15</td><td>2</td></tr>
+    <tr><td>World Cup Qualification UEFA</td><td>international</td><td>8</td><td>16</td><td>2</td><td>706</td><td>41</td><td>5</td></tr>
+    <tr><th>2025/2026 total</th><th></th><th>64</th><th>57</th><th>12</th><th>5,104</th><th>227</th><th>28</th></tr>
+  </table>
+  <p class="small">Premier League row cross-checked with Understat: 35 games, 27 goals, 8 assists, an exact match.</p>
+</section>
+
+<!-- ============================== 10 ============================== -->
+<section class="chapter">
+  <h2><span class="num">10</span>Pipeline stage 3: verification</h2>
+  <p>File: <code>backend/pipeline/verify_dataset.py</code>. "It looks right" is not verification. We check the data two ways
+  and write the results to <code>verification_report.json</code>.</p>
+
+  <h3>10.1 Internal checks (hard errors fail the run)</h3>
+  <ul>
+    <li>Every season's totals equal the sum of its competitions.</li>
+    <li>No negative appearances, goals or assists.</li>
+    <li>Every player in the index has a file. (Separate check: all 2,707 files have every field the website needs.)</li>
+    <li>Counted, not failed: where FotMob's two endpoints disagree on goals/assists (now explained by row notes).</li>
+  </ul>
+  <p><b>Result: 0 hard errors.</b></p>
+
+  <h3>10.2 Independent cross-check with Understat</h3>
+  <div class="figure">
+  <svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11">
+    <defs><marker id="a5" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <rect x="5" y="20" width="150" height="60" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="80" y="45" text-anchor="middle" font-weight="600">Understat</text><text x="80" y="62" text-anchor="middle" font-size="9.5">5 leagues × 3 seasons</text>
+    <rect x="5" y="120" width="150" height="60" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="80" y="145" text-anchor="middle" font-weight="600">Our dataset</text><text x="80" y="162" text-anchor="middle" font-size="9.5">league rows per season</text>
+    <rect x="200" y="65" width="200" height="70" rx="6" fill="#fff" stroke="#334155"/><text x="300" y="88" text-anchor="middle" font-weight="600">Match the player</text><text x="300" y="104" text-anchor="middle" font-size="9.5">accent-folded name tokens</text><text x="300" y="119" text-anchor="middle" font-size="9.5">AND same club (fuzzy ≥ 0.6)</text>
+    <rect x="440" y="65" width="150" height="70" rx="6" fill="#fff" stroke="#334155"/><text x="515" y="88" text-anchor="middle" font-weight="600">Compare</text><text x="515" y="104" text-anchor="middle" font-size="9.5">apps · goals · assists</text><text x="515" y="119" text-anchor="middle" font-size="9.5">(summed across clubs)</text>
+    <rect x="625" y="65" width="130" height="70" rx="6" fill="#f1f5f9" stroke="#334155"/><text x="690" y="92" text-anchor="middle" font-weight="600">Report</text><text x="690" y="110" text-anchor="middle" font-size="9.5">agreement %</text><text x="690" y="124" text-anchor="middle" font-size="9.5">+ every difference</text>
+    <line x1="155" y1="50" x2="198" y2="88" stroke="#334155" marker-end="url(#a5)"/>
+    <line x1="155" y1="150" x2="198" y2="112" stroke="#334155" marker-end="url(#a5)"/>
+    <line x1="400" y1="100" x2="438" y2="100" stroke="#334155" marker-end="url(#a5)"/>
+    <line x1="590" y1="100" x2="623" y2="100" stroke="#334155" marker-end="url(#a5)"/>
+  </svg>
+  <div class="caption">Figure 6. Cross-check algorithm.</div>
+  </div>
+  <table>
+    <tr><th>Measure</th><th>Result</th></tr>
+    <tr><td>Player-league-seasons compared (2023/24, 2024/25, 2025/26)</td><td>4,734, of which 4,489 matched by name + club</td></tr>
+    <tr><td>Appearances agree</td><td>4,449 / 4,489 = <b>99.1%</b></td></tr>
+    <tr><td>Goals agree</td><td>4,467 / 4,489 = <b>99.5%</b></td></tr>
+    <tr><td>Assists agree</td><td>4,440 / 4,489 = <b>98.9%</b></td></tr>
+  </table>
+  <h3>10.3 What the differences turned out to be</h3>
+  <ul>
+    <li><b>±1 assist</b> (Saka 9 vs 8, Damsgaard 10 vs 9): the two sources define assists differently. Opta's definition
+    (FotMob) is the one leagues publish.</li>
+    <li><b>Big gaps at first</b> (Vitinha PSG vs Vitinha Marseille, two "Toni Martínez"): our matcher paired different people
+    with the same name. Fix: require the same club as well. Big gaps went from 7 to 1.</li>
+    <li><b>The last one</b> (Amad Diallo 2023/24: 9 apps vs 1): Understat's record is incomplete; 9 is correct.</li>
+  </ul>
+  <div class="box"><b class="t">Lesson</b> Verification can be wrong too. When a check fails, investigate whether the data or the check is at fault.
+  Two of our "data errors" were actually bugs in the verifier and in the builder.</div>
+</section>
+
+<!-- ============================== 11 ============================== -->
+<section class="chapter">
+  <h2><span class="num">11</span>The frontend: how the website works</h2>
+  <h3>11.1 Next.js App Router in 60 seconds</h3>
+  <p>In Next.js, <b>folders are URLs</b>. <code>src/app/page.tsx</code> is <code>/</code>; <code>src/app/players/[id]/page.tsx</code> is
+  <code>/players/anything</code>, with the square brackets meaning "a variable part of the URL". Files in
+  <code>public/</code> are served as they are, so <code>public/data/index.json</code> is available at <code>/data/index.json</code>.</p>
+  <p>Components are <b>server components</b> by default (rendered on the server/at build time). A file starting with
+  <code>"use client"</code> runs in the browser and can use state, clicks and effects. We use:</p>
+  <table>
+    <tr><th>File</th><th>Kind</th><th>Job</th></tr>
+    <tr><td><code>app/layout.tsx</code></td><td>server</td><td>HTML skeleton, Geist font, page title "Football Transfer Market".</td></tr>
+    <tr><td><code>app/page.tsx</code></td><td>client</td><td>Home: loads index + meta, search box, league/position/club filters, sort, cards, "Show more".</td></tr>
+    <tr><td><code>app/players/[id]/page.tsx</code></td><td>server</td><td>Reads the <code>id</code> from the URL (in Next.js 16 <code>params</code> is a Promise: <code>await params</code>) and renders PlayerView.</td></tr>
+    <tr><td><code>app/players/[id]/PlayerView.tsx</code></td><td>client</td><td>Fetches the player file; header, KPI cards, two tabs, tables, expandable detail grids.</td></tr>
+    <tr><td><code>lib/types.ts</code></td><td>types</td><td>Shape of every JSON file (the contract).</td></tr>
+    <tr><td><code>lib/format.ts</code></td><td>helpers</td><td><code>n()</code> number formatting with "–" for null, <code>money()</code>, image URLs, labels, detailed-stat groups.</td></tr>
+    <tr><td><code>lib/Img.tsx</code></td><td>client</td><td>Image that hides itself when the photo/logo doesn't exist (no broken-image icons).</td></tr>
+  </table>
+
+  <h3>11.2 Home page logic</h3>
+<pre>const [rows, setRows]   = useState&lt;IndexRow[] | null&gt;(null);   <span class="c">// data</span>
+const [query, setQuery] = useState("");                         <span class="c">// UI state</span>
+const [league, setLeague] = useState("All");  <span class="c">// … position, club, sort, limit</span>
+
+useEffect(() =&gt; {                        <span class="c">// runs once after first render</span>
+  fetch("/data/index.json").then(r =&gt; r.json()).then(setRows);
+}, []);
+
+const filtered = useMemo(() =&gt; {         <span class="c">// recomputed only when inputs change</span>
+  return rows.filter(r =&gt; matchesLeague &amp;&amp; matchesPosition &amp;&amp; matchesClub &amp;&amp; matchesSearch)
+             .sort(bySelectedKey);
+}, [rows, query, league, position, club, sort]);
+
+filtered.slice(0, limit).map(r =&gt; &lt;Link href={`/players/${r.id}`}&gt;…card…&lt;/Link&gt;)</pre>
+  <ul>
+    <li><b>Why filter in the browser?</b> 2,707 rows is small; filtering in memory is instant and needs no server.</li>
+    <li><b>Accent-insensitive search:</b> <code>s.normalize("NFD").replace(/[̀-ͯ]/g, "")</code> makes "mbappe" find "Mbappé".</li>
+    <li><b>"Show more" (60 at a time):</b> rendering 2,707 cards with photos at once would be slow.</li>
+  </ul>
+
+  <h3>11.3 Player page logic</h3>
+  <ul>
+    <li><b>Career tab:</b> <code>career_by_competition</code> grouped by type (League → Domestic cup → Continental → National team), plus an "All competitions" total row.</li>
+    <li><b>Season tab:</b> one collapsible card per season (summary line: apps, goals, assists, minutes); opening it shows a
+    table with a row per competition, the per-club split for transfers, and amber notes for coverage gaps.</li>
+    <li><b>One table component for both</b> (<code>StatTable</code>): columns Apps, Min, Goals, Assists, xG, xA, Shots, Dribbles,
+    Chances, Tackles, Rating. Clicking a row with ▼ opens <code>DetailGrid</code>: all ~50 stats grouped into Playing time,
+    Attacking, Creating, Carrying &amp; duels, Defending, Goalkeeping, Team while on pitch, Discipline.</li>
+    <li><b>Honest display:</b> null → "–"; incomplete totals → "*"; footnote explaining which seasons have detailed stats;
+    a caption on the career tab saying the detailed columns start in 2023/24; goalkeepers told minutes aren't published.</li>
+    <li><b>Edge cases handled:</b> invalid id → "Player not found"; 45 players with no senior games → a clear message instead of an empty table.</li>
+  </ul>
+
+  <h3>11.4 Styling</h3>
+  <p>Tailwind classes directly in the markup, dark theme (<code>bg-slate-950</code> background, emerald accent), responsive
+  grids (<code>sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4</code>), and wide tables that scroll sideways on phones with the
+  competition column sticky (<code>sticky left-0</code>).</p>
+</section>
+
+<!-- ============================== 12 ============================== -->
+<section class="chapter">
+  <h2><span class="num">12</span>Hosting and deployment</h2>
+  <h3>12.1 Git and GitHub</h3>
+  <table>
+    <tr><th>Branch</th><th>What it holds</th></tr>
+    <tr><td><code>main</code></td><td>README + LICENSE (initial commit).</td></tr>
+    <tr><td><code>claude/import-deployed-app</code></td><td>The first site, downloaded from the old Vercel deployment.</td></tr>
+    <tr><td><code>project-material</code></td><td>Everything your other agent pushed (old backend, data, handoff docs).</td></tr>
+    <tr><td><code>claude/data-pipeline-rebuild</code></td><td>The rebuild (same content as v2; older commits show "Unverified").</td></tr>
+    <tr><td><b><code>claude/data-pipeline-v2</code></b></td><td><b>Current version</b>: pipeline + dataset + new site, all commits verified.</td></tr>
+  </table>
+  <p>What is <i>not</i> committed (<code>.gitignore</code>): <code>node_modules/</code>, <code>.next/</code>, <code>.vercel/</code>,
+  <code>.env*</code> (secrets), the raw <code>cache/</code> (110 MB, re-creatable) and logs.</p>
+
+  <h3>12.2 Vercel: preview → production</h3>
+  <div class="figure">
+  <svg viewBox="0 0 760 140" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11">
+    <defs><marker id="a6" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <rect x="5" y="40" width="130" height="60" rx="6" fill="#f1f5f9" stroke="#334155"/><text x="70" y="65" text-anchor="middle" font-weight="600">vercel link</text><text x="70" y="82" text-anchor="middle" font-size="9.5">folder ↔ project "frontend"</text>
+    <rect x="165" y="40" width="140" height="60" rx="6" fill="#f1f5f9" stroke="#334155"/><text x="235" y="65" text-anchor="middle" font-weight="600">vercel deploy</text><text x="235" y="82" text-anchor="middle" font-size="9.5">upload + next build</text>
+    <rect x="335" y="40" width="140" height="60" rx="6" fill="#fef3c7" stroke="#b45309"/><text x="405" y="65" text-anchor="middle" font-weight="600">Preview URL</text><text x="405" y="82" text-anchor="middle" font-size="9.5">login-protected; test it</text>
+    <rect x="505" y="40" width="120" height="60" rx="6" fill="#f1f5f9" stroke="#334155"/><text x="565" y="65" text-anchor="middle" font-weight="600">vercel promote</text><text x="565" y="82" text-anchor="middle" font-size="9.5">(after tests pass)</text>
+    <rect x="655" y="40" width="100" height="60" rx="6" fill="#ecfdf5" stroke="#047857"/><text x="705" y="65" text-anchor="middle" font-weight="600">Production</text><text x="705" y="82" text-anchor="middle" font-size="9.5">public URL</text>
+    <line x1="135" y1="70" x2="163" y2="70" stroke="#334155" marker-end="url(#a6)"/>
+    <line x1="305" y1="70" x2="333" y2="70" stroke="#334155" marker-end="url(#a6)"/>
+    <line x1="475" y1="70" x2="503" y2="70" stroke="#334155" marker-end="url(#a6)"/>
+    <line x1="625" y1="70" x2="653" y2="70" stroke="#334155" marker-end="url(#a6)"/>
+    <text x="380" y="125" text-anchor="middle" font-size="10" fill="#475569">Never test on production. Deploy a preview, test it, then promote that exact build.</text>
+  </svg>
+  <div class="caption">Figure 7. Deployment flow used for the live site.</div>
+  </div>
+  <ul>
+    <li><b>Build output:</b> <code>/</code> is pre-rendered static HTML; <code>/players/[id]</code> is rendered on demand; all JSON files are static assets on the CDN.</li>
+    <li><b>Preview protection:</b> preview URLs redirect (302) to a Vercel login, so we tested them with <code>vercel curl</code>, which authenticates as you.</li>
+    <li><b>Why it works with your laptop off:</b> nothing points to your machine anymore; everything lives on Vercel.</li>
+    <li><b>History:</b> three deploy attempts from your machine six days earlier had failed (status Error); production had stayed on a 12-day-old build until our promotion.</li>
+  </ul>
+
+  <h3>12.3 Testing before handing over</h3>
+  <table>
+    <tr><th>Test</th><th>Tool</th><th>Result</th></tr>
+    <tr><td>Lint (code-quality rules)</td><td>ESLint</td><td>0 problems</td></tr>
+    <tr><td>Type check + production build</td><td>TypeScript, <code>next build</code></td><td>Compiled successfully</td></tr>
+    <tr><td>Shape of all 2,707 player files</td><td>Python script</td><td>All fields present; found 45 players with no seasons → fixed UI</td></tr>
+    <tr><td>Browser sweep (home interactions + 150 player pages, clicking tabs and rows)</td><td>Playwright / Chromium</td><td>150/150, 0 JS errors, 0 failed requests (local and live)</td></tr>
+    <tr><td>Every player file on the live site</td><td>curl × 2,707 (16 in parallel)</td><td>2,707 × HTTP 200</td></tr>
+  </table>
+</section>
+
+<!-- ============================== 13 ============================== -->
+<section class="chapter">
+  <h2><span class="num">13</span>End-to-end: opening a player page</h2>
+  <div class="figure">
+  <svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="10.5">
+    <defs><marker id="a7" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#334155"/></marker></defs>
+    <g font-weight="700" text-anchor="middle">
+      <rect x="20" y="5" width="120" height="30" rx="6" fill="#ede9fe" stroke="#6d28d9"/><text x="80" y="25">Visitor</text>
+      <rect x="230" y="5" width="140" height="30" rx="6" fill="#ede9fe" stroke="#6d28d9"/><text x="300" y="25">Browser (React)</text>
+      <rect x="450" y="5" width="140" height="30" rx="6" fill="#f1f5f9" stroke="#334155"/><text x="520" y="25">Vercel CDN</text>
+      <rect x="640" y="5" width="110" height="30" rx="6" fill="#e0f2fe" stroke="#0e7490"/><text x="695" y="25">images.fotmob</text>
+    </g>
+    <line x1="80" y1="35" x2="80" y2="395" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+    <line x1="300" y1="35" x2="300" y2="395" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+    <line x1="520" y1="35" x2="520" y2="395" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+    <line x1="695" y1="35" x2="695" y2="395" stroke="#cbd5e1" stroke-dasharray="4 3"/>
+    <line x1="80" y1="60" x2="298" y2="60" stroke="#334155" marker-end="url(#a7)"/><text x="190" y="54" text-anchor="middle">clicks Haaland's card</text>
+    <line x1="300" y1="85" x2="518" y2="85" stroke="#334155" marker-end="url(#a7)"/><text x="410" y="79" text-anchor="middle">GET /players/737066</text>
+    <line x1="520" y1="110" x2="302" y2="110" stroke="#334155" marker-end="url(#a7)"/><text x="410" y="104" text-anchor="middle">HTML + JS (page shell)</text>
+    <text x="310" y="132">shows "Loading…"; useEffect runs</text>
+    <line x1="300" y1="150" x2="518" y2="150" stroke="#334155" marker-end="url(#a7)"/><text x="410" y="144" text-anchor="middle">GET /data/players/737066.json</text>
+    <line x1="520" y1="175" x2="302" y2="175" stroke="#334155" marker-end="url(#a7)"/><text x="410" y="169" text-anchor="middle">player JSON (~40 KB, cached)</text>
+    <text x="310" y="198">setP(json) → React renders header, KPIs,</text>
+    <text x="310" y="212">career table grouped by competition type</text>
+    <line x1="300" y1="232" x2="693" y2="232" stroke="#334155" marker-end="url(#a7)"/><text x="500" y="226" text-anchor="middle">photo + club + competition logos</text>
+    <line x1="695" y1="255" x2="302" y2="255" stroke="#94a3b8" stroke-dasharray="4 3" marker-end="url(#a7)"/><text x="500" y="250" text-anchor="middle" fill="#475569">images (missing ones hidden by Img)</text>
+    <line x1="80" y1="290" x2="298" y2="290" stroke="#334155" marker-end="url(#a7)"/><text x="190" y="284" text-anchor="middle">clicks "Season by season"</text>
+    <text x="310" y="312">setTab("seasons") → re-render; no new request</text>
+    <line x1="80" y1="340" x2="298" y2="340" stroke="#334155" marker-end="url(#a7)"/><text x="190" y="334" text-anchor="middle">clicks a row ▼</text>
+    <text x="310" y="362">setExpanded(row) → DetailGrid with ~50 stats</text>
+    <text x="310" y="380" fill="#047857">all data already in memory: instant</text>
+  </svg>
+  <div class="caption">Figure 8. Sequence of events when a visitor opens a player and explores it.</div>
+  </div>
+  <p>Note what is <b>absent</b>: no database query, no API server, no Python. The heavy lifting was done by the
+  pipeline hours earlier. That's why the page is fast and can't "go down" when a server or laptop is off.</p>
+
+  <h3>13.1 The full data journey of one number</h3>
+  <p>Haaland's 27 Premier League goals in 2025/26:</p>
+  <ol>
+    <li>Opta records each goal at the match. FotMob shows Opta data.</li>
+    <li><code>scrape_fotmob.py profiles</code> saves his profile: <code>careerHistory → senior → seasonEntries["2025/2026"] → tournamentStats[leagueId 47].goals = "27"</code>.</li>
+    <li><code>scrape_fotmob.py deep</code> saves <code>cache/deep/737066/2025-2026_47.json</code> with goals 27, xG 25.81, shots 126, minutes 2,958….</li>
+    <li><code>build_dataset.py</code> parses "27" → 27, buckets it into 2025/2026, labels it "Premier League (England)", type league, attaches the detailed stats, adds it to the season total (57) and to his career Premier League total (121).</li>
+    <li><code>verify_dataset.py</code> fetches Understat EPL 2025: Erling Haaland, Manchester City, 27 goals. Match.</li>
+    <li>Committed in <code>public/data/players/737066.json</code>, deployed to Vercel.</li>
+    <li>The browser fetches the file and <code>n(27)</code> prints "27" in the Goals column.</li>
+  </ol>
+</section>
+
+<!-- ============================== 14 ============================== -->
+<section class="chapter">
+  <h2><span class="num">14</span>Problems we hit and how we solved them</h2>
+  <p>These are the real problems from this project, in the order they happened. Reading this table is probably the
+  fastest way to learn what goes wrong in data projects.</p>
+  <table>
+    <tr><th>#</th><th>Problem</th><th>How we noticed</th><th>Fix / how it's avoided</th></tr>
+    <tr><td>1</td><td>Old stats were projections</td><td>Read the scraper code</td><td>Rebuilt from a source with real current data; rule "never estimate".</td></tr>
+    <tr><td>2</td><td>Main stats sites block bots</td><td>403/405 reachability test</td><td>Chose sources that serve normal requests; no bypassing.</td></tr>
+    <tr><td>3</td><td>Network policy blocked vercel.com at first</td><td>Fetch failed (ENOTFOUND / 403)</td><td>Allowed the domain in environment settings.</td></tr>
+    <tr><td>4</td><td>Scraping too slow (0.7/s)</td><td>Progress log</td><td>10 threads + shared rate lock; resumed thanks to cache.</td></tr>
+    <tr><td>5</td><td>Same league name in different countries</td><td>Haaland showed "Bundesliga" twice</td><td>Country from FotMob league list appended when ambiguous.</td></tr>
+    <tr><td>6</td><td>One unknown value wiped whole totals</td><td>Career assists showed "unknown"</td><td>Sum of known values + "incomplete" flag + "*".</td></tr>
+    <tr><td>7</td><td>Norwegian cup classified as league</td><td>Example output</td><td>Extended cup name patterns.</td></tr>
+    <tr><td>8</td><td>Fake seasons "2024/2026", "2020/2022"</td><td>Screenshot</td><td>Multi-year national labels bucketed into their first season.</td></tr>
+    <tr><td>9</td><td>Team stats shown as goalkeeping stats for a striker</td><td>Screenshot</td><td>New group "Team while on pitch".</td></tr>
+    <tr><td>10</td><td>Goalkeeper field names guessed wrong</td><td>Inspected a keeper file</td><td>Mapped real ids (penalty_saves, …). Lesson: inspect real data, don't guess.</td></tr>
+    <tr><td>11</td><td>React lint error: setState directly in useEffect</td><td>ESLint</td><td>Computed "invalid id" during render instead.</td></tr>
+    <tr><td>12</td><td><code>PageProps</code> type "not found"</td><td>tsc</td><td>Next.js generates these types during build; ran <code>next build</code>.</td></tr>
+    <tr><td>13</td><td>Verifier matched wrong people with same name</td><td>Huge differences (Vitinha)</td><td>Match on name AND club.</td></tr>
+    <tr><td>14</td><td>Scraper crashed at 99.9% on <code>null</code> responses</td><td>Traceback in log</td><td>Null-safe trimming; rerun fetched only the 25 missing.</td></tr>
+    <tr><td>15</td><td>Mid-season transfers double-counted detailed stats</td><td>447 internal mismatches; Understat sided with combined numbers 79/82</td><td>Merge same-competition rows per season; keep per-club split.</td></tr>
+    <tr><td>16</td><td>Qualifiers not in detailed stats</td><td>Remaining mismatches analysed</td><td>Keep full numbers, add a visible note on the row.</td></tr>
+    <tr><td>17</td><td>Career minutes looked wrong (246 apps, 2,158 min)</td><td>Screenshot (Mbappé)</td><td>Caption: detailed columns cover 2023/24 onwards.</td></tr>
+    <tr><td>18</td><td>No minutes for goalkeepers</td><td>Inspected keeper data</td><td>Left as "–" (no estimating) and explained on the page.</td></tr>
+    <tr><td>19</td><td>Local test server served a stale build</td><td>404/500 in tests</td><td>Stop old server before restarting; test against a fresh build.</td></tr>
+    <tr><td>20</td><td>Broken-image icons for missing photos</td><td>Pre-handover review</td><td><code>Img</code> component hides failed images.</td></tr>
+    <tr><td>21</td><td>45 players with no senior games → empty tables</td><td>Shape check of all files</td><td>Clear "no appearances yet" message.</td></tr>
+    <tr><td>22</td><td>Partial data almost committed to Git</td><td>Git hook warning</td><td>Moved partial output out; committed only the verified final build.</td></tr>
+    <tr><td>23</td><td>A GitHub token was pasted into chat</td><td>Visible in conversation</td><td>Token revoked immediately; tokens belong in environment variables, never in chat or code.</td></tr>
+    <tr><td>24</td><td>Commits shown as "Unverified"</td><td>Git hook</td><td>Fresh branch <code>claude/data-pipeline-v2</code> with verified identity (no history rewrite needed).</td></tr>
+  </table>
+</section>
+
+<!-- ============================== 15 ============================== -->
+<section class="chapter">
+  <h2><span class="num">15</span>Other folders in the repository</h2>
+  <p>The <code>project-material/</code> folder also contains parts of the first version. They are <b>not used by the live site</b>,
+  but they're worth understanding because they show a different ("bigger") architecture.</p>
+  <table>
+    <tr><th>Folder</th><th>Language / tech</th><th>What it is</th><th>Status</th></tr>
+    <tr><td><code>backend/main.py</code>, <code>models.py</code>, <code>schemas.py</code>, <code>database.py</code></td><td>Python, FastAPI, SQLAlchemy, Pydantic, SQLite</td><td>REST API (<code>/players</code>, <code>/players/{id}</code>, <code>/stats/summary</code>) over a SQLite DB with tables <code>players</code> and <code>player_competition_stats</code>.</td><td><span class="pill grey">replaced</span> by static JSON</td></tr>
+    <tr><td><code>backend/*.py</code> (~55 scripts)</td><td>Python</td><td>Earlier data fixes: enrich, dedupe, "brutal" verification loops, valuation.</td><td><span class="pill grey">legacy</span></td></tr>
+    <tr><td><code>backend/sql_app.db</code>, <code>real_data.csv</code>, <code>raw_data_*.txt</code></td><td>SQLite / CSV / text</td><td>Old dataset.</td><td><span class="pill grey">legacy</span></td></tr>
+    <tr><td><code>ingestion/ingest.py</code></td><td>Python, requests, pandas, boto3</td><td>API-Football → AWS S3 loader.</td><td><span class="pill grey">never run in production</span></td></tr>
+    <tr><td><code>ml_model/train.py</code></td><td>Python, XGBoost, scikit-learn, pandas</td><td>Market-value model trained from a Postgres feature table.</td><td><span class="pill grey">not used</span></td></tr>
+    <tr><td><code>dbt/</code></td><td>dbt (SQL transformations)</td><td>Project config only; no models written.</td><td><span class="pill grey">scaffold</span></td></tr>
+    <tr><td><code>terraform/</code></td><td>Terraform (HCL), AWS</td><td>Infrastructure as code: ECS cluster, RDS Postgres, load balancer, S3 bucket.</td><td><span class="pill grey">never deployed</span></td></tr>
+  </table>
+  <div class="box"><b class="t">When would you use that bigger architecture?</b>
+  When data changes every few seconds (live scores), users write data (accounts, comments), or the dataset is far too big
+  to ship as files. For read-only stats refreshed daily, it adds cost and failure points without benefit. Start simple;
+  add a database and API only when a requirement forces you to.</div>
+</section>
+
+<!-- ============================== 16 ============================== -->
+<section class="chapter">
+  <h2><span class="num">16</span>How to run, update and extend it</h2>
+  <h3>16.1 Refresh the data (e.g. weekly)</h3>
+<pre>git clone https://github.com/ssupreethsg/football-transfer-market.git
+cd football-transfer-market &amp;&amp; git checkout claude/data-pipeline-v2
+cd project-material/backend/pipeline
+pip install requests
+
+rm -rf cache/players cache/deep cache/teams cache/leagues   <span class="c"># force fresh downloads</span>
+python scrape_fotmob.py squads
+python scrape_fotmob.py profiles --workers 10
+python scrape_fotmob.py deep --workers 10 --seasons 4
+python build_dataset.py
+python verify_dataset.py            <span class="c"># must print "hard errors: 0"</span></pre>
+
+  <h3>16.2 Run the website locally</h3>
+<pre>cd ../../frontend
+npm ci                 <span class="c"># install exact dependency versions</span>
+npm run dev            <span class="c"># http://localhost:3000, live reload</span>
+npm run lint &amp;&amp; npm run build   <span class="c"># what must pass before deploying</span></pre>
+
+  <h3>16.3 Deploy</h3>
+<pre>vercel link --project frontend      <span class="c"># once</span>
+vercel deploy                       <span class="c"># preview; test it</span>
+vercel promote &lt;preview-url&gt;        <span class="c"># make that build live</span></pre>
+
+  <h3>16.4 Ideas for extending it</h3>
+  <ul>
+    <li><b>Automatic weekly refresh:</b> a GitHub Actions workflow that runs the pipeline, commits the new data, and Vercel redeploys.</li>
+    <li><b>More history:</b> <code>--seasons 8</code> for detailed stats further back (longer run).</li>
+    <li><b>Charts:</b> goals per season as a bar chart on the player page.</li>
+    <li><b>Compare two players</b> side by side (both files are already separate JSONs).</li>
+    <li><b>Transfers page:</b> FotMob league pages also contain transfers; a new pipeline stage + page.</li>
+  </ul>
+</section>
+
+<!-- ============================== 17 ============================== -->
+<section class="chapter">
+  <h2><span class="num">17</span>Lessons for your next project</h2>
+  <h3>17.1 A planning template (copy this)</h3>
+  <table>
+    <tr><th>Question</th><th>This project's answer</th></tr>
+    <tr><td>1. What exactly must the user see/do?</td><td>Search players; see career + season stats split by competition.</td></tr>
+    <tr><td>2. Where does the data come from, and is it allowed and reachable?</td><td>FotMob (Opta), Understat; tested with curl first.</td></tr>
+    <tr><td>3. How often does it change?</td><td>After each match day → batch rebuild is fine.</td></tr>
+    <tr><td>4. Does anyone write data?</td><td>No → no database or backend needed.</td></tr>
+    <tr><td>5. What's the smallest end-to-end slice?</td><td>One player (Haaland), raw data to screen.</td></tr>
+    <tr><td>6. How will I know it's correct?</td><td>Independent source + internal invariants + browser tests.</td></tr>
+    <tr><td>7. Where will it run, and what if my laptop is off?</td><td>Vercel CDN; laptop irrelevant.</td></tr>
+  </table>
+
+  <h3>17.2 Data and pipeline checklist</h3>
+  <ul>
+    <li>Look at real raw responses before writing transform code (several bugs came from guessing field names).</li>
+    <li>Cache every request; make every stage resumable; write files atomically.</li>
+    <li><b>Unknown ≠ 0.</b> Keep <code>null</code>, show "–".</li>
+    <li>Never let a fallback silently pretend to succeed.</li>
+    <li>Watch for double counting when combining two views of the same data.</li>
+    <li>Separate counts (sum) from rates (weighted average).</li>
+    <li>Verify against an independent source, and verify the verifier.</li>
+    <li>Build one example end to end before scaling up.</li>
+  </ul>
+
+  <h3>17.3 Frontend checklist</h3>
+  <ul>
+    <li>Write the data shape as TypeScript types first; let the compiler check you.</li>
+    <li>Keep files small: one big file (the old 947-line page) is hard to fix; we split into page, view, table, grid, helpers.</li>
+    <li>Load only what a page needs (index vs one player file).</li>
+    <li>Design every state: loading, error, not found, empty, missing image.</li>
+    <li>Read your framework version's docs; Next.js 16 changed APIs (e.g. <code>params</code> is a Promise).</li>
+    <li>Run lint, build and a real-browser click-through before every deploy.</li>
+  </ul>
+
+  <h3>17.4 Deployment and security checklist</h3>
+  <ul>
+    <li>Deploy to preview, test, then promote. Never debug on production.</li>
+    <li>Never paste tokens or passwords into chats, code or commits; use environment variables; revoke anything exposed.</li>
+    <li>Use fine-grained tokens limited to one repository, with short expiry.</li>
+    <li>Don't commit generated or partial data; commit the verified final output.</li>
+    <li>Don't point production at <code>localhost</code>.</li>
+  </ul>
+</section>
+
+<!-- ============================== 18 ============================== -->
+<section class="chapter">
+  <h2><span class="num">18</span>Glossary</h2>
+  <table>
+    <tr><th>Term</th><th>Meaning</th></tr>
+    <tr><td>API</td><td>A URL that returns data (usually JSON) for programs instead of a web page for people.</td></tr>
+    <tr><td>JSON</td><td>Text format for data: <code>{"name": "Haaland", "goals": 27}</code>.</td></tr>
+    <tr><td>Scraper</td><td>Program that downloads data from websites/APIs automatically.</td></tr>
+    <tr><td>Cache</td><td>Saved copy of a download so it doesn't need to be fetched again.</td></tr>
+    <tr><td>Rate limit</td><td>Maximum request speed, to be polite and avoid being blocked.</td></tr>
+    <tr><td>Pipeline</td><td>Chain of steps that turns raw input into finished output (collect → transform → verify).</td></tr>
+    <tr><td>Static site</td><td>A site whose files are prepared in advance; the server just hands them out.</td></tr>
+    <tr><td>CDN</td><td>Network of servers worldwide holding copies of your files near visitors (Vercel provides one).</td></tr>
+    <tr><td>Next.js</td><td>React framework adding routing, building and hosting conventions.</td></tr>
+    <tr><td>React component</td><td>Function returning UI; re-runs when its state changes.</td></tr>
+    <tr><td>useState / useEffect / useMemo</td><td>React hooks: store values / run code after render (e.g. fetch) / cache a computed result.</td></tr>
+    <tr><td>Server vs client component</td><td>Runs on the server (no interactivity) vs in the browser (<code>"use client"</code>, clicks and state).</td></tr>
+    <tr><td>TypeScript type</td><td>Description of a data shape the compiler checks your code against.</td></tr>
+    <tr><td>Tailwind</td><td>CSS written as small class names in the markup.</td></tr>
+    <tr><td>Lint</td><td>Automatic check for code mistakes and bad patterns.</td></tr>
+    <tr><td>Preview / production deployment</td><td>A private test copy of the site / the public live site.</td></tr>
+    <tr><td>Branch / commit / push</td><td>Line of work / saved snapshot / upload snapshots to GitHub.</td></tr>
+    <tr><td>Opta (Stats Perform)</td><td>Company that records match events; the data source behind FotMob and the leagues.</td></tr>
+    <tr><td>xG / xA</td><td>Expected goals / expected assists: chance quality, from 0 to 1 per shot or pass.</td></tr>
+    <tr><td>Null</td><td>"No value / unknown". Different from 0.</td></tr>
+  </table>
+  <p class="small" style="margin-top:20px">End of guide. Everything described here is in the repository on branch <code>claude/data-pipeline-v2</code>;
+  the pipeline README (<code>project-material/backend/pipeline/README.md</code>) has the short version of how to run it.</p>
+</section>
+
+</body>
+</html>
